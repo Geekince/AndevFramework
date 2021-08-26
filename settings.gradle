@@ -1,0 +1,17 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "AndevFramework"
+include ':app'
+include ':libUtils'
+include ':libJava'
+include ':libWidget'
+include ':libBase'
+include ':libEngine'
+include ':libData'
+include ':libApp'
