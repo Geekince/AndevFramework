@@ -1,4 +1,4 @@
-package com.andev.framework.widget;
+package com.andev.framework.widget.assist;
 
 import android.annotation.SuppressLint;
 import android.graphics.Paint;

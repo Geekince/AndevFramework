@@ -36,6 +36,7 @@ Thanks：
 - https://github.com/CymChad/BaseRecyclerViewAdapterHelper
 - https://github.com/youth5201314/banner
 - https://github.com/chrisbanes/PhotoView
+- https://github.com/YummyLau/PanelSwitchHelper
 
 - https://github.com/iqiyi/xCrash
 - https://github.com/square/leakcanary

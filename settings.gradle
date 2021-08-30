@@ -7,7 +7,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "AndevFramework"
-include ':app'
+include ':demo'
 include ':libUtils'
 include ':libJava'
 include ':libWidget'

@@ -1,0 +1,59 @@
+package com.andev.framework.base.expand.viewbinding
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.viewbinding.ViewBinding
+import com.andev.framework.base.able.IDevBaseViewBinding
+import com.andev.framework.base.fragment.DevBaseFragment
+import com.andev.framework.base.utils.ViewBindingUtils
+
+/**
+ * detail: Fragment ViewBinding 基类
+ * @author Ttt
+ */
+abstract class DevBaseViewBindingFragment<VB : ViewBinding> : DevBaseFragment(),
+    IDevBaseViewBinding<VB> {
+
+    private var _binding: VB? = null
+    val binding: VB get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+        if (isViewBinding()) {
+            // ViewBinding 初始化处理
+            _binding = viewBinding(inflater, container)
+        }
+        return mContentView
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if (isDetachBinding()) _binding = null
+    }
+
+    // =======================
+    // = IDevBaseViewBinding =
+    // =======================
+
+    final override fun viewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): VB {
+        return ViewBindingUtils.viewBindingJavaClass(
+            inflater,
+            container,
+            getBindingView(),
+            javaClass
+        )
+    }
+
+    final override fun getBindingView(): View? {
+        return mContentView
+    }
+}
