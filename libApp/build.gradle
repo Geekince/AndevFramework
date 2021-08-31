@@ -38,6 +38,7 @@ dependencies {
     implementation 'androidx.startup:startup-runtime:1.1.0'
 
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
+    api 'com.github.jenly1314:app-monitor:1.0.0'
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 
