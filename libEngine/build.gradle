@@ -29,9 +29,14 @@ android {
     }
 }
 
+configurations {
+    cleanedAnnotations
+    compile.exclude group: 'org.jetbrains' , module:'annotations'
+}
+
 dependencies {
-    implementation project(path: ':libUtils')
-    implementation project(path: ':libData')
+    api project(path: ':libUtils')
+    api project(path: ':libData')
 
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api "androidx.work:work-runtime:2.5.0"

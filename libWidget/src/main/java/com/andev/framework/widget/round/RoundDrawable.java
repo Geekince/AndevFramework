@@ -13,7 +13,7 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
-import dev.widget.R;
+import com.andev.framework.widget.R;
 
 /**
  * detail: 圆角 Drawable

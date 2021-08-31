@@ -30,8 +30,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import dev.utils.LogPrintUtils;
-import dev.widget.R;
+import com.andev.framework.utils.LogPrintUtils;
+import com.andev.framework.widget.R;
 
 /**
  * detail: 圆角图片

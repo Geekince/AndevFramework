@@ -7,6 +7,8 @@ import android.animation.ValueAnimator;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.LinearInterpolator;
 
+import com.andev.framework.widget.WaveView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ import java.util.List;
 public class WaveHelper {
 
     // 波浪 View
-    private WaveView    mWaveView;
+    private WaveView mWaveView;
     // 波浪动画集合
     private AnimatorSet mAnimatorSet;
 
