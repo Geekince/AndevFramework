@@ -47,7 +47,7 @@ dependencies {
     api 'androidx.viewpager2:viewpager2:1.0.0'
     api 'androidx.palette:palette:1.0.0'
     api "androidx.customview:customview:1.1.0"
-    api "androidx.dynamicanimation:dynamicanimation:1.1.0"
+    api "androidx.dynamicanimation:dynamicanimation:1.1.0-alpha03"
     api "androidx.vectordrawable:vectordrawable:1.1.0"
     api "androidx.vectordrawable:vectordrawable-animated:1.1.0"
 
