@@ -18,13 +18,13 @@ Android Development Framework
 
 [![](https://jitpack.io/v/Geekince/AndevFramework.svg)](https://jitpack.io/#Geekince/AndevFramework)
 
-com.github.Geekince.AndevFramework:libEngine:V1.0.1.2
-com.github.Geekince.AndevFramework:libUtils:V1.0.1.2
-com.github.Geekince.AndevFramework:libWidget:V1.0.1.2
-com.github.Geekince.AndevFramework:libJava:V1.0.1.2
-com.github.Geekince.AndevFramework:libApp:V1.0.1.2
-com.github.Geekince.AndevFramework:libData:V1.0.1.2
-com.github.Geekince.AndevFramework:libBase:V1.0.1.2
+- com.github.Geekince.AndevFramework:libEngine:V1.0.1.2
+- com.github.Geekince.AndevFramework:libUtils:V1.0.1.2
+- com.github.Geekince.AndevFramework:libWidget:V1.0.1.2
+- com.github.Geekince.AndevFramework:libJava:V1.0.1.2
+- com.github.Geekince.AndevFramework:libApp:V1.0.1.2
+- com.github.Geekince.AndevFramework:libData:V1.0.1.2
+- com.github.Geekince.AndevFramework:libBase:V1.0.1.2
 
 Thanks：
 
