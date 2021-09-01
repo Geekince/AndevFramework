@@ -1,44 +1,38 @@
-package com.andev.framework.data.adapter;
+package com.andev.framework.widget.adapter;
+
+import android.app.Activity;
+import android.content.Context;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.andev.framework.data.DevPage;
+import com.andev.framework.data.multiselect.DevMultiSelectMap;
 import com.andev.framework.data.multiselect.IMultiSelectEdit;
 
 /**
- * detail: DataManager List Extend
- *
+ * detail: DataManager RecyclerView Adapter Extend
  * @author Ttt
  * <pre>
- *     在 {@link DevDataList} 基础上添加 {@link DevDataAdapterExt2} 功能
+ *     在 {@link DevDataAdapterExt} 基础上
+ *     实现多选辅助: 内部不判 null, 需先调用 {@link #setMultiSelectMap(DevMultiSelectMap)} 初始化
  * </pre>
  */
-public abstract class DevDataListExt<T>
-        extends DevDataList<T>
-        implements IMultiSelectEdit<DevDataListExt<T>> {
+public abstract class DevDataAdapterExt2<T, VH extends RecyclerView.ViewHolder>
+        extends DevDataAdapterExt<T, VH>
+        implements IMultiSelectEdit<DevDataAdapterExt2<T, VH>> {
 
-    public DevDataListExt() {
+    public DevDataAdapterExt2() {
     }
 
-    public DevDataListExt(DevPage.PageConfig pageConfig) {
-        super(pageConfig);
+    public DevDataAdapterExt2(Context context) {
+        super(context);
     }
 
-    public DevDataListExt(
-            int page,
-            int pageSize
-    ) {
-        super(page, pageSize);
+    public DevDataAdapterExt2(Activity activity) {
+        super(activity);
     }
-
-    public DevDataListExt(DevPage<T> page) {
-        super(page);
-    }
-
-    // ======================
-    // = DevDataAdapterExt2 =
-    // ======================
 
     // =============
     // = 对外公开方法 =
@@ -49,7 +43,6 @@ public abstract class DevDataListExt<T>
 
     /**
      * 是否通知适配器 ( 通用: 如多选操作后是否通知适配器 )
-     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isNotifyAdapter() {
@@ -58,11 +51,10 @@ public abstract class DevDataListExt<T>
 
     /**
      * 设置是否通知适配器 ( 通用: 如多选操作后是否通知适配器 )
-     *
      * @param notifyAdapter {@code true} yes, {@code false} no
-     * @return {@link DevDataListExt}
+     * @return {@link DevDataAdapterExt2}
      */
-    public DevDataListExt<T> setNotifyAdapter(boolean notifyAdapter) {
+    public DevDataAdapterExt2<T, VH> setNotifyAdapter(boolean notifyAdapter) {
         isNotifyAdapter = notifyAdapter;
         return this;
     }
@@ -80,19 +72,19 @@ public abstract class DevDataListExt<T>
     }
 
     @Override
-    public DevDataListExt<T> setEditState(boolean isEdit) {
+    public DevDataAdapterExt2<T, VH> setEditState(boolean isEdit) {
         this.isEdit = isEdit;
         if (isNotifyAdapter) mAssist.notifyDataChanged();
         return this;
     }
 
     @Override
-    public DevDataListExt<T> toggleEditState() {
+    public DevDataAdapterExt2<T, VH> toggleEditState() {
         return setEditState(!isEdit);
     }
 
     @Override
-    public DevDataListExt<T> clearSelectAll() {
+    public DevDataAdapterExt2<T, VH> clearSelectAll() {
         mMultiSelectMap.clearSelects();
         if (isNotifyAdapter) mAssist.notifyDataChanged();
         return this;
@@ -128,7 +120,7 @@ public abstract class DevDataListExt<T>
     // =
 
     @Override
-    public DevDataListExt<T> selectAll() {
+    public DevDataAdapterExt2<T, VH> selectAll() {
         LinkedHashMap<String, T> maps = new LinkedHashMap<>();
         for (int i = 0, len = getDataCount(); i < len; i++) {
             T item = getDataItem(i);
@@ -140,7 +132,7 @@ public abstract class DevDataListExt<T>
     }
 
     @Override
-    public DevDataListExt<T> inverseSelect() {
+    public DevDataAdapterExt2<T, VH> inverseSelect() {
         if (isNotSelect()) return selectAll();
 
         List<String> keys = mMultiSelectMap.getSelectKeys();
@@ -166,7 +158,6 @@ public abstract class DevDataListExt<T>
      * <pre>
      *     用于 {@link #selectAll()}、{@link #inverseSelect()}
      * </pre>
-     *
      * @param item     泛型实体类 Item
      * @param position 索引
      * @return 多选标记 Key

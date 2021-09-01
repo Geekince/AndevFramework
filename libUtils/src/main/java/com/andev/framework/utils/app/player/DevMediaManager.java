@@ -18,6 +18,7 @@ import com.andev.framework.utils.common.CloseUtils;
 
 /**
  * detail: MediaPlayer 统一管理类
+ *
  * @author Ttt
  */
 public final class DevMediaManager
@@ -35,12 +36,13 @@ public final class DevMediaManager
     private static String TAG = DevMediaManager.class.getSimpleName();
 
     // MediaPlayer 对象
-    private                 MediaPlayer     mMediaPlayer;
+    private MediaPlayer mMediaPlayer;
     // DevMediaManager 实例
     private static volatile DevMediaManager sInstance;
 
     /**
      * 获取 DevMediaManager 实例
+     *
      * @return {@link DevMediaManager}
      */
     public static DevMediaManager getInstance() {
@@ -116,6 +118,7 @@ public final class DevMediaManager
 
     /**
      * 设置流类型
+     *
      * @param streamType Audio streamType
      * @return {@link DevMediaManager}
      */
@@ -139,6 +142,7 @@ public final class DevMediaManager
 
     /**
      * 播放 Raw 资源
+     *
      * @param rawId 播放资源
      * @return {@code true} 执行成功, {@code false} 执行失败
      */
@@ -148,6 +152,7 @@ public final class DevMediaManager
 
     /**
      * 播放 Raw 资源
+     *
      * @param rawId     播放资源
      * @param isLooping 是否循环播放
      * @return {@code true} 执行成功, {@code false} 执行失败
@@ -158,7 +163,7 @@ public final class DevMediaManager
     ) {
         try {
             mPlayRawId = rawId;
-            mPlayUri   = null;
+            mPlayUri = null;
             // 预播放
             return playPrepare(new MediaSet() {
                 @Override
@@ -195,6 +200,7 @@ public final class DevMediaManager
 
     /**
      * 播放 Assets 资源
+     *
      * @param playUri 播放地址
      * @return {@code true} 执行成功, {@code false} 执行失败
      */
@@ -204,6 +210,7 @@ public final class DevMediaManager
 
     /**
      * 播放 Assets 资源
+     *
      * @param playUri   播放地址
      * @param isLooping 是否循环播放
      * @return {@code true} 执行成功, {@code false} 执行失败
@@ -261,6 +268,7 @@ public final class DevMediaManager
 
     /**
      * 预加载播放 (file-path or http/rtsp URL) http 资源、本地资源
+     *
      * @param playUri 播放地址
      * @return {@code true} 执行成功, {@code false} 执行失败
      */
@@ -270,6 +278,7 @@ public final class DevMediaManager
 
     /**
      * 预加载播放 (file-path or http/rtsp URL) http 资源、本地资源
+     *
      * @param playUri   播放地址
      * @param isLooping 是否循环播放
      * @return {@code true} 执行成功, {@code false} 执行失败
@@ -280,7 +289,7 @@ public final class DevMediaManager
     ) {
         try {
             mPlayRawId = -1;
-            mPlayUri   = playUri;
+            mPlayUri = playUri;
             // 预播放
             return playPrepare(new MediaSet() {
                 @Override
@@ -308,6 +317,7 @@ public final class DevMediaManager
 
     /**
      * 预加载播放 ( 最终调用方法, 加载成功触发 onPrepared, 该方法内调用 mMediaPlayer.start() )
+     *
      * @param mediaSet 播放设置
      * @return {@code true} 执行成功, {@code false} 执行失败
      */
@@ -344,6 +354,7 @@ public final class DevMediaManager
 
     /**
      * 是否播放中
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isPlaying() {
@@ -380,6 +391,7 @@ public final class DevMediaManager
 
     /**
      * 是否忽略错误类型
+     *
      * @param errorWhat onError 方法回调 what
      * @return {@code true} yes, {@code false} no
      */
@@ -405,6 +417,7 @@ public final class DevMediaManager
 
     /**
      * 播放出错回调
+     *
      * @param mp    {@link MediaPlayer}
      * @param what  异常 what
      * @param extra 异常 extra
@@ -428,6 +441,7 @@ public final class DevMediaManager
 
     /**
      * 视频大小改变通知
+     *
      * @param mp     {@link MediaPlayer}
      * @param width  宽度
      * @param height 高度
@@ -442,7 +456,7 @@ public final class DevMediaManager
                 TAG, "onVideoSizeChanged - width: %s, height: %s",
                 width, height
         );
-        mVideoWidth  = width;
+        mVideoWidth = width;
         mVideoHeight = height;
         // 触发回调
         if (mMediaListener != null) {
@@ -452,6 +466,7 @@ public final class DevMediaManager
 
     /**
      * 使用 mMediaPlayer.prepareAsync() 异步播放准备成功回调
+     *
      * @param mp {@link MediaPlayer}
      */
     @Override
@@ -465,6 +480,7 @@ public final class DevMediaManager
 
     /**
      * 视频播放结束回调
+     *
      * @param mp {@link MediaPlayer}
      */
     @Override
@@ -478,6 +494,7 @@ public final class DevMediaManager
 
     /**
      * MediaPlayer 缓冲更新回调
+     *
      * @param mp      {@link MediaPlayer}
      * @param percent 缓冲百分比进度
      */
@@ -495,6 +512,7 @@ public final class DevMediaManager
 
     /**
      * 滑动加载完成回调
+     *
      * @param mp {@link MediaPlayer}
      */
     @Override
@@ -515,6 +533,7 @@ public final class DevMediaManager
 
     /**
      * detail: MediaPlayer 回调接口
+     *
      * @author Ttt
      */
     public interface MediaListener {
@@ -531,6 +550,7 @@ public final class DevMediaManager
 
         /**
          * MediaPlayer 缓冲更新回调
+         *
          * @param percent 缓冲百分比进度
          */
         void onBufferingUpdate(int percent);
@@ -542,6 +562,7 @@ public final class DevMediaManager
 
         /**
          * 播放出错回调
+         *
          * @param what  异常 what
          * @param extra 异常 extra
          * @return {@code true} 处理异常, {@code false} 调用 OnCompletionListener
@@ -553,6 +574,7 @@ public final class DevMediaManager
 
         /**
          * 视频大小改变通知
+         *
          * @param width  宽度
          * @param height 高度
          */
@@ -564,6 +586,7 @@ public final class DevMediaManager
 
     /**
      * 设置 MediaPlayer 回调事件
+     *
      * @param mediaListener {@link MediaListener} MediaPlayer 回调事件
      * @return {@link DevMediaManager}
      */
@@ -574,12 +597,14 @@ public final class DevMediaManager
 
     /**
      * detail: Media 播放设置
+     *
      * @author Ttt
      */
     public static abstract class MediaSet {
 
         /**
          * 是否循环播放 ( 默认不循环 )
+         *
          * @return {@code true} yes, {@code false} no
          */
         public boolean isLooping() {
@@ -588,6 +613,7 @@ public final class DevMediaManager
 
         /**
          * 获取播放音量 ( 设置, 默认使用全局统一音量 )
+         *
          * @return 播放音量
          */
         public float getVolume() {
@@ -596,6 +622,7 @@ public final class DevMediaManager
 
         /**
          * 设置播放配置
+         *
          * @param mediaPlayer {@link MediaPlayer}
          * @throws Exception 设置异常
          */
@@ -609,6 +636,7 @@ public final class DevMediaManager
 
     /**
      * 判断 MediaPlayer 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isNullMediaPlayer() {
@@ -617,6 +645,7 @@ public final class DevMediaManager
 
     /**
      * 判断 MediaPlayer 是否不为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isNotNullMediaPlayer() {
@@ -625,6 +654,7 @@ public final class DevMediaManager
 
     /**
      * 获取 MediaPlayer 对象
+     *
      * @return {@link MediaPlayer}
      */
     public MediaPlayer getMediaPlayer() {
@@ -633,6 +663,7 @@ public final class DevMediaManager
 
     /**
      * 设置 MediaPlayer 对象
+     *
      * @param mediaPlayer {@link MediaPlayer}
      * @return {@link DevMediaManager}
      */
@@ -643,6 +674,7 @@ public final class DevMediaManager
 
     /**
      * 设置日志打印 TAG
+     *
      * @param tag 日志 TAG
      * @return {@link DevMediaManager}
      */
@@ -653,6 +685,7 @@ public final class DevMediaManager
 
     /**
      * 获取播放音量
+     *
      * @return 播放音量
      */
     public float getVolume() {
@@ -661,6 +694,7 @@ public final class DevMediaManager
 
     /**
      * 设置播放音量
+     *
      * @param volume 播放音量
      * @return {@link DevMediaManager}
      */
@@ -674,30 +708,31 @@ public final class DevMediaManager
     // ==========
 
     // 流类型
-    private int    mStreamType  = AudioManager.STREAM_MUSIC;
+    private int mStreamType = AudioManager.STREAM_MUSIC;
     // 本地资源
-    private int    mPlayRawId   = -1;
+    private int mPlayRawId = -1;
     // 播放路径 / 地址
-    private String mPlayUri     = null;
+    private String mPlayUri = null;
     // 视频宽度
-    private int    mVideoWidth  = 0;
+    private int mVideoWidth = 0;
     // 视频高度
-    private int    mVideoHeight = 0;
+    private int mVideoHeight = 0;
     // 播放音量
-    private float  mVolume      = -1f;
+    private float mVolume = -1f;
 
     /**
      * 清空播放信息
      */
     private void clearMediaPlayerData() {
-        mPlayRawId   = -1;
-        mPlayUri     = null;
-        mVideoWidth  = 0;
+        mPlayRawId = -1;
+        mPlayUri = null;
+        mVideoWidth = 0;
         mVideoHeight = 0;
     }
 
     /**
      * 获取播放资源 id
+     *
      * @return 播放资源 id
      */
     public int getPlayRawId() {
@@ -706,6 +741,7 @@ public final class DevMediaManager
 
     /**
      * 获取播放地址
+     *
      * @return 播放地址
      */
     public String getPlayUri() {
@@ -714,6 +750,7 @@ public final class DevMediaManager
 
     /**
      * 获取视频宽度
+     *
      * @return 视频宽度
      */
     public int getVideoWidth() {
@@ -722,6 +759,7 @@ public final class DevMediaManager
 
     /**
      * 获取视频高度
+     *
      * @return 视频高度
      */
     public int getVideoHeight() {
@@ -730,6 +768,7 @@ public final class DevMediaManager
 
     /**
      * 获取播放时间
+     *
      * @return 播放时间
      */
     public int getCurrentPosition() {
@@ -741,6 +780,7 @@ public final class DevMediaManager
 
     /**
      * 获取资源总时间
+     *
      * @return 资源总时间
      */
     public int getDuration() {
@@ -752,6 +792,7 @@ public final class DevMediaManager
 
     /**
      * 获取播放进度百分比
+     *
      * @return 播放进度百分比
      */
     public int getPlayPercent() {

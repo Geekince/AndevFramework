@@ -1,4 +1,4 @@
-package com.andev.framework.base.adapter
+package com.andev.framework.widget.recyclerview
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.andev.framework.base.utils.ViewBindingUtils
+import com.andev.framework.widget.utils.ViewBindingUtils
 
 /**
  * detail: RecyclerView ViewBinding ViewHolder

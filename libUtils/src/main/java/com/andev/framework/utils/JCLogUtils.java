@@ -12,6 +12,7 @@ import javax.xml.transform.stream.StreamSource;
 
 /**
  * detail: Java Common 日志打印工具类 ( 简化版 )
+ *
  * @author Ttt
  * <pre>
  *     项目内部使用 ( 主要打印 Java 日志 )
@@ -23,18 +24,18 @@ public final class JCLogUtils {
     }
 
     // 是否打印日志 线上 (release) = false, 开发 (debug) = true
-    private static       boolean JUDGE_PRINT_LOG         = false;
+    private static boolean JUDGE_PRINT_LOG = false;
     // 判断是否控制台打印信息
-    private static       boolean JUDGE_CONTROL_PRINT_LOG = false;
+    private static boolean JUDGE_CONTROL_PRINT_LOG = false;
     // 默认 DEFAULT_TAG
-    private static final String  DEFAULT_TAG             = JCLogUtils.class.getSimpleName();
+    private static final String DEFAULT_TAG = JCLogUtils.class.getSimpleName();
 
     // ==========
     // = 日志类型 =
     // ==========
 
     // INFO 模式
-    public static final int INFO  = 0;
+    public static final int INFO = 0;
     // DEBUG 模式
     public static final int DEBUG = 1;
     // ERROR 模式
@@ -42,6 +43,7 @@ public final class JCLogUtils {
 
     /**
      * 判断是否打印日志
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isPrintLog() {
@@ -50,6 +52,7 @@ public final class JCLogUtils {
 
     /**
      * 设置是否打印日志
+     *
      * @param judgePrintLog 是否允许打印日志
      */
     public static void setPrintLog(final boolean judgePrintLog) {
@@ -58,6 +61,7 @@ public final class JCLogUtils {
 
     /**
      * 设置是否在控制台打印日志
+     *
      * @param judgeControlPrintLog 是否允许控制台打印日志
      */
     public static void setControlPrintLog(final boolean judgeControlPrintLog) {
@@ -66,6 +70,7 @@ public final class JCLogUtils {
 
     /**
      * 判断字符串是否为 null
+     *
      * @param str 待校验的字符串
      * @return {@code true} yes, {@code false} no
      */
@@ -77,6 +82,7 @@ public final class JCLogUtils {
 
     /**
      * 最终打印日志方法 ( 全部调用此方法 )
+     *
      * @param logType 日志类型
      * @param tag     打印 Tag
      * @param message 日志信息
@@ -102,6 +108,7 @@ public final class JCLogUtils {
 
     /**
      * 处理信息
+     *
      * @param message 日志信息
      * @param args    占位符替换
      * @return 处理 ( 格式化 ) 后准备打印的日志信息
@@ -133,6 +140,7 @@ public final class JCLogUtils {
 
     /**
      * 拼接错误信息
+     *
      * @param throwable 异常
      * @param message   需要打印的消息
      * @param args      动态参数
@@ -266,9 +274,9 @@ public final class JCLogUtils {
                 return;
             }
             try {
-                Source       xmlInput    = new StreamSource(new StringReader(xml));
-                StreamResult xmlOutput   = new StreamResult(new StringWriter());
-                Transformer  transformer = TransformerFactory.newInstance().newTransformer();
+                Source xmlInput = new StreamSource(new StringReader(xml));
+                StreamResult xmlOutput = new StreamResult(new StringWriter());
+                Transformer transformer = TransformerFactory.newInstance().newTransformer();
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                 transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
                 transformer.transform(xmlInput, xmlOutput);
@@ -277,7 +285,7 @@ public final class JCLogUtils {
                 // 打印信息
                 printLog(DEBUG, tag, message);
             } catch (Exception e) {
-                String    errorInfo;
+                String errorInfo;
                 Throwable throwable = e.getCause();
                 if (throwable != null) {
                     errorInfo = throwable.toString();
@@ -301,6 +309,7 @@ public final class JCLogUtils {
 
     /**
      * 设置日志输出接口
+     *
      * @param print 日志输出接口
      */
     public static void setPrint(final Print print) {
@@ -309,12 +318,14 @@ public final class JCLogUtils {
 
     /**
      * detail: 日志输出接口
+     *
      * @author Ttt
      */
     public interface Print {
 
         /**
          * 日志打印
+         *
          * @param logType 日志类型
          * @param tag     打印 Tag
          * @param message 日志信息

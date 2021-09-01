@@ -17,6 +17,7 @@ import javax.xml.transform.stream.StreamSource;
 
 /**
  * detail: Android 日志打印工具类 ( 简化版 )
+ *
  * @author Ttt
  * <pre>
  *     项目内部使用 ( 主要打印 Android 日志 )
@@ -28,14 +29,15 @@ public final class LogPrintUtils {
     }
 
     // JSON 格式内容缩进
-    private static final int     JSON_INDENT     = 4;
+    private static final int JSON_INDENT = 4;
     // 是否打印日志 线上 (release) = false, 开发 (debug) = true
-    private static       boolean JUDGE_PRINT_LOG = false;
+    private static boolean JUDGE_PRINT_LOG = false;
     // 默认 DEFAULT_TAG
-    private static final String  DEFAULT_TAG     = LogPrintUtils.class.getSimpleName();
+    private static final String DEFAULT_TAG = LogPrintUtils.class.getSimpleName();
 
     /**
      * 判断是否打印日志
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isPrintLog() {
@@ -44,6 +46,7 @@ public final class LogPrintUtils {
 
     /**
      * 设置是否打印日志
+     *
      * @param judgePrintLog 是否允许打印日志
      */
     public static void setPrintLog(final boolean judgePrintLog) {
@@ -52,6 +55,7 @@ public final class LogPrintUtils {
 
     /**
      * 判断字符串是否为 null
+     *
      * @param str 待校验的字符串
      * @return {@code true} yes, {@code false} no
      */
@@ -63,6 +67,7 @@ public final class LogPrintUtils {
 
     /**
      * 最终打印日志方法 ( 全部调用此方法 )
+     *
      * @param logType 日志类型
      * @param tag     打印 Tag
      * @param message 日志信息
@@ -79,6 +84,7 @@ public final class LogPrintUtils {
 
     /**
      * 处理信息
+     *
      * @param message 日志信息
      * @param args    占位符替换
      * @return 处理 ( 格式化 ) 后准备打印的日志信息
@@ -110,6 +116,7 @@ public final class LogPrintUtils {
 
     /**
      * 拼接错误信息
+     *
      * @param throwable 异常
      * @param message   需要打印的消息
      * @param args      动态参数
@@ -317,7 +324,7 @@ public final class LogPrintUtils {
                     printLog(Log.DEBUG, tag, "json content format error");
                 }
             } catch (Exception e) {
-                String    errorInfo;
+                String errorInfo;
                 Throwable throwable = e.getCause();
                 if (throwable != null) {
                     errorInfo = throwable.toString();
@@ -344,9 +351,9 @@ public final class LogPrintUtils {
                 return;
             }
             try {
-                Source       xmlInput    = new StreamSource(new StringReader(xml));
-                StreamResult xmlOutput   = new StreamResult(new StringWriter());
-                Transformer  transformer = TransformerFactory.newInstance().newTransformer();
+                Source xmlInput = new StreamSource(new StringReader(xml));
+                StreamResult xmlOutput = new StreamResult(new StringWriter());
+                Transformer transformer = TransformerFactory.newInstance().newTransformer();
                 transformer.setOutputProperty(OutputKeys.INDENT, "yes");
                 transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
                 transformer.transform(xmlInput, xmlOutput);
@@ -355,7 +362,7 @@ public final class LogPrintUtils {
                 // 打印信息
                 printLog(Log.DEBUG, tag, message);
             } catch (Exception e) {
-                String    errorInfo;
+                String errorInfo;
                 Throwable throwable = e.getCause();
                 if (throwable != null) {
                     errorInfo = throwable.toString();
@@ -405,6 +412,7 @@ public final class LogPrintUtils {
 
     /**
      * 设置日志输出接口
+     *
      * @param print 日志输出接口
      */
     public static void setPrint(final Print print) {
@@ -413,12 +421,14 @@ public final class LogPrintUtils {
 
     /**
      * detail: 日志输出接口
+     *
      * @author Ttt
      */
     public interface Print {
 
         /**
          * 日志打印
+         *
          * @param logType 日志类型
          * @param tag     打印 Tag
          * @param message 日志信息

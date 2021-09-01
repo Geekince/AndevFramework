@@ -8,6 +8,7 @@ import com.andev.framework.engine.share.IShareEngine.EngineItem;
 
 /**
  * detail: Share Engine
+ *
  * @author Ttt
  */
 public final class DevShareEngine {
@@ -19,6 +20,7 @@ public final class DevShareEngine {
 
     /**
      * 获取 Engine
+     *
      * @return {@link IShareEngine}
      */
     public static IShareEngine<? super EngineConfig, ? super EngineItem> getEngine() {
@@ -27,6 +29,7 @@ public final class DevShareEngine {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link IShareEngine}
      */
@@ -36,6 +39,7 @@ public final class DevShareEngine {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link IShareEngine}
      * @return {@link IShareEngine}
      */
@@ -45,6 +49,7 @@ public final class DevShareEngine {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link IShareEngine}
      * @return {@link IShareEngine}
@@ -65,6 +70,7 @@ public final class DevShareEngine {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public static void removeEngine(final String key) {
@@ -77,6 +83,7 @@ public final class DevShareEngine {
 
     /**
      * 获取 DevEngine Generic Assist
+     *
      * @return DevEngine Generic Assist
      */
     public static DevEngineAssist<IShareEngine<? super EngineConfig, ? super EngineItem>> getAssist() {
@@ -85,6 +92,7 @@ public final class DevShareEngine {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public static Map<String, IShareEngine<? super EngineConfig, ? super EngineItem>> getEngineMaps() {
@@ -93,6 +101,7 @@ public final class DevShareEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean contains() {
@@ -101,6 +110,7 @@ public final class DevShareEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -110,6 +120,7 @@ public final class DevShareEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isEmpty() {
@@ -118,6 +129,7 @@ public final class DevShareEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

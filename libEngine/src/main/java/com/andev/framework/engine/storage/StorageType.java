@@ -6,6 +6,7 @@ import com.andev.framework.utils.common.StringUtils;
 
 /**
  * detail: Storage Type
+ *
  * @author Ttt
  */
 public enum StorageType {
@@ -50,6 +51,7 @@ public enum StorageType {
 
     /**
      * 通过文件后缀判断存储类型
+     *
      * @param extension 文件后缀
      * @return 存储类型
      */
@@ -76,6 +78,7 @@ public enum StorageType {
 
     /**
      * 通过 mimeType 判断存储类型
+     *
      * @param mimeType 资源类型
      * @return 存储类型
      */
@@ -89,6 +92,7 @@ public enum StorageType {
 
     /**
      * 通过 fileName 判断存储类型
+     *
      * @param fileName 文件名
      * @return 存储类型
      */
@@ -104,6 +108,7 @@ public enum StorageType {
 
     /**
      * 通过 mimeType 获取对应存储文件夹
+     *
      * @param mimeType 资源类型
      * @return 存储文件夹
      */
@@ -115,6 +120,7 @@ public enum StorageType {
 
     /**
      * 通过存储类型获取对应存储文件夹
+     *
      * @param type 存储类型
      * @return 存储文件夹
      */

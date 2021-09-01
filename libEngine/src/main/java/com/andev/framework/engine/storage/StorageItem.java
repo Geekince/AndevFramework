@@ -13,6 +13,7 @@ import com.andev.framework.utils.common.StringUtils;
 
 /**
  * detail: Storage Item Params
+ *
  * @author Ttt
  * <pre>
  *     可传入输出 Uri 或通过拼接路径创建 Uri 二选一
@@ -29,8 +30,7 @@ import com.andev.framework.utils.common.StringUtils;
  *     可以使用快捷创建方法 {@link #createExternalItem(String, String, String)}
  * </pre>
  */
-public final class StorageItem
-        extends IStorageEngine.EngineItem {
+public final class StorageItem extends IStorageEngine.EngineItem {
 
     private StorageItem() {
     }
@@ -66,9 +66,9 @@ public final class StorageItem
     // ==============================================
 
     // 图片格式
-    private Bitmap.CompressFormat mFormat  = Bitmap.CompressFormat.PNG;
+    private Bitmap.CompressFormat mFormat = Bitmap.CompressFormat.PNG;
     // 图片质量
-    private int                   mQuality = 100;
+    private int mQuality = 100;
 
     // =============
     // = 对外公开方法 =
@@ -151,6 +151,7 @@ public final class StorageItem
 
     /**
      * 获取内部存储完整路径
+     *
      * @return 内部存储完整路径
      */
     public File getInternalFile() {
@@ -164,6 +165,7 @@ public final class StorageItem
 
     /**
      * 获取外部存储完整路径
+     *
      * @return 外部存储完整路径
      */
     public File getExternalFile() {
@@ -172,6 +174,7 @@ public final class StorageItem
 
     /**
      * 获取外部存储完整路径
+     *
      * @param fileName 文件名
      * @return 外部存储完整路径
      */
@@ -185,6 +188,7 @@ public final class StorageItem
 
     /**
      * 获取外部存储文件夹路径
+     *
      * @return 外部存储文件夹路径
      */
     public File getExternalFolder() {
@@ -201,6 +205,7 @@ public final class StorageItem
 
     /**
      * 创建指定输出 Uri Item
+     *
      * @param outputUri 输出 Uri
      * @return {@link StorageItem}
      */
@@ -214,6 +219,7 @@ public final class StorageItem
 
     /**
      * 创建内部存储路径信息 Item
+     *
      * @param filePath 存储路径 ( 不包含文件名, 纯路径 ) 只会在内部存储时使用
      * @param fileName 存储文件名 ( 可不携带后缀 )
      * @return {@link StorageItem}
@@ -236,12 +242,13 @@ public final class StorageItem
      *     根据 fileName 获取后缀推导出 mimeType
      *     如果系统不支持的格式、文件名不含后缀则可能获取失败 ( 将直接返回 null Item )
      * </pre>
+     *
      * @param fileName 存储文件名 ( 必须携带后缀 )
      * @return {@link StorageItem}
      */
     public static StorageItem createExternalItem(final String fileName) {
         String fileExtension = FileUtils.getFileExtension(fileName);
-        String mimeType      = MediaStoreUtils.getMimeTypeFromExtension(fileExtension);
+        String mimeType = MediaStoreUtils.getMimeTypeFromExtension(fileExtension);
         if (mimeType == null) return null;
         String name = FileUtils.getFileNameNoExtension(fileName);
         return createExternalItem(name, mimeType);
@@ -249,6 +256,7 @@ public final class StorageItem
 
     /**
      * 创建外部存储路径信息 Item
+     *
      * @param fileName 存储文件名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType 资源类型
      * @return {@link StorageItem}
@@ -265,6 +273,7 @@ public final class StorageItem
 
     /**
      * 创建外部存储路径信息 Item
+     *
      * @param fileName 存储文件名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType 资源类型
      * @param folder   存储文件夹 ( 不包含完整路径, 只需要文件夹名 )
@@ -292,6 +301,7 @@ public final class StorageItem
      *     根据 fileName 获取后缀推导出 mimeType
      *     如果系统不支持的格式、文件名不含后缀则可能获取失败 ( 将直接返回 null Item )
      * </pre>
+     *
      * @param fileName 存储文件名 ( 必须携带后缀 )
      * @param folder   存储文件夹 ( 不包含完整路径, 只需要文件夹名 )
      * @return {@link StorageItem}
@@ -301,7 +311,7 @@ public final class StorageItem
             final String folder
     ) {
         String fileExtension = FileUtils.getFileExtension(fileName);
-        String mimeType      = MediaStoreUtils.getMimeTypeFromExtension(fileExtension);
+        String mimeType = MediaStoreUtils.getMimeTypeFromExtension(fileExtension);
         if (mimeType == null) return null;
         String name = FileUtils.getFileNameNoExtension(fileName);
         return createExternalItem(name, mimeType, folder);

@@ -8,6 +8,7 @@ import com.andev.framework.engine.storage.IStorageEngine.EngineResult;
 
 /**
  * detail: Storage Engine
+ *
  * @author Ttt
  */
 public final class DevStorageEngine {
@@ -19,6 +20,7 @@ public final class DevStorageEngine {
 
     /**
      * 获取 Engine
+     *
      * @return {@link IStorageEngine}
      */
     public static IStorageEngine<? super EngineItem, ? super EngineResult> getEngine() {
@@ -27,6 +29,7 @@ public final class DevStorageEngine {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link IStorageEngine}
      */
@@ -36,6 +39,7 @@ public final class DevStorageEngine {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link IStorageEngine}
      * @return {@link IStorageEngine}
      */
@@ -45,6 +49,7 @@ public final class DevStorageEngine {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link IStorageEngine}
      * @return {@link IStorageEngine}
@@ -65,6 +70,7 @@ public final class DevStorageEngine {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public static void removeEngine(final String key) {
@@ -77,6 +83,7 @@ public final class DevStorageEngine {
 
     /**
      * 获取 DevEngine Generic Assist
+     *
      * @return DevEngine Generic Assist
      */
     public static DevEngineAssist<IStorageEngine<? super EngineItem, ? super EngineResult>> getAssist() {
@@ -85,6 +92,7 @@ public final class DevStorageEngine {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public static Map<String, IStorageEngine<? super EngineItem, ? super EngineResult>> getEngineMaps() {
@@ -93,6 +101,7 @@ public final class DevStorageEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean contains() {
@@ -101,6 +110,7 @@ public final class DevStorageEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -110,6 +120,7 @@ public final class DevStorageEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isEmpty() {
@@ -118,6 +129,7 @@ public final class DevStorageEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

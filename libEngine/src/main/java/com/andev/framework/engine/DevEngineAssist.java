@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * detail: DevEngine Generic Assist
+ *
  * @author Ttt
  */
 public class DevEngineAssist<Engine> {
@@ -16,6 +17,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 获取 Engine
+     *
      * @return {@link Engine}
      */
     public Engine getEngine() {
@@ -24,6 +26,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link Engine}
      */
@@ -33,6 +36,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link Engine}
      * @return {@link Engine}
      */
@@ -42,6 +46,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link Engine}
      * @return {@link Engine}
@@ -63,6 +68,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public void removeEngine(final String key) {
@@ -75,6 +81,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public Map<String, Engine> getEngineMaps() {
@@ -83,6 +90,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean contains() {
@@ -91,6 +99,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -100,6 +109,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isEmpty() {
@@ -108,6 +118,7 @@ public class DevEngineAssist<Engine> {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

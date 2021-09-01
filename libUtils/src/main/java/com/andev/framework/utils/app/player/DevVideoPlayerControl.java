@@ -10,6 +10,7 @@ import com.andev.framework.utils.LogPrintUtils;
 
 /**
  * detail: 视频播放控制器
+ *
  * @author Ttt
  */
 public class DevVideoPlayerControl
@@ -31,14 +32,15 @@ public class DevVideoPlayerControl
     // ========
 
     // 播放预览载体 SurfaceView
-    private final SurfaceView   mSurfaceView;
+    private final SurfaceView mSurfaceView;
     // 画面预览回调
-    private       SurfaceHolder mSurfaceHolder;
+    private SurfaceHolder mSurfaceHolder;
     // 判断是否自动播放
-    private       boolean       mAutoPlay;
+    private boolean mAutoPlay;
 
     /**
      * 构造函数
+     *
      * @param surfaceView {@link SurfaceView}
      */
     public DevVideoPlayerControl(final SurfaceView surfaceView) {
@@ -47,6 +49,7 @@ public class DevVideoPlayerControl
 
     /**
      * 构造函数
+     *
      * @param surfaceView {@link SurfaceView}
      * @param autoPlay    是否自动播放
      */
@@ -55,7 +58,7 @@ public class DevVideoPlayerControl
             final boolean autoPlay
     ) {
         this.mSurfaceView = surfaceView;
-        this.mAutoPlay    = autoPlay;
+        this.mAutoPlay = autoPlay;
 
         // 初始化 DevMediaManager 回调事件类
         DevMediaManager.getInstance().setMediaListener(this);
@@ -89,6 +92,7 @@ public class DevVideoPlayerControl
 
     /**
      * Surface 改变通知
+     *
      * @param holder {@link SurfaceHolder}
      * @param format {@link PixelFormat} 像素格式
      * @param width  宽度
@@ -109,6 +113,7 @@ public class DevVideoPlayerControl
 
     /**
      * Surface 创建
+     *
      * @param holder {@link SurfaceHolder}
      */
     @Override
@@ -126,6 +131,7 @@ public class DevVideoPlayerControl
 
     /**
      * Surface 销毁
+     *
      * @param holder {@link SurfaceHolder}
      */
     @Override
@@ -185,6 +191,7 @@ public class DevVideoPlayerControl
 
     /**
      * 缓存进度
+     *
      * @param percent 缓冲百分比进度
      */
     @Override
@@ -210,6 +217,7 @@ public class DevVideoPlayerControl
 
     /**
      * 播放出错回调
+     *
      * @param what  异常 what
      * @param extra 异常 extra
      * @return {@code true} 处理异常, {@code false} 调用 OnCompletionListener
@@ -232,6 +240,7 @@ public class DevVideoPlayerControl
 
     /**
      * 视频大小改变通知
+     *
      * @param width  宽度
      * @param height 高度
      */
@@ -257,6 +266,7 @@ public class DevVideoPlayerControl
 
     /**
      * 设置播放监听事件
+     *
      * @param mediaListener {@link DevMediaManager.MediaListener}
      * @return {@link DevVideoPlayerControl}
      */
@@ -285,6 +295,7 @@ public class DevVideoPlayerControl
 
     /**
      * 开始播放
+     *
      * @param playUri 播放地址
      */
     public void startPlayer(final String playUri) {
@@ -293,6 +304,7 @@ public class DevVideoPlayerControl
 
     /**
      * 开始播放
+     *
      * @param playUri   播放地址
      * @param isLooping 是否循环播放
      */
@@ -319,6 +331,7 @@ public class DevVideoPlayerControl
 
     /**
      * 开始播放
+     *
      * @param mediaSet 播放设置
      */
     public void startPlayer(final DevMediaManager.MediaSet mediaSet) {
@@ -330,6 +343,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取 SurfaceView
+     *
      * @return {@link SurfaceView}
      */
     public SurfaceView getSurfaceView() {
@@ -340,6 +354,7 @@ public class DevVideoPlayerControl
 
     /**
      * 是否播放中
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isPlaying() {
@@ -348,6 +363,7 @@ public class DevVideoPlayerControl
 
     /**
      * 是否播放中
+     *
      * @param uri 播放地址
      * @return {@code true} yes, {@code false} no
      */
@@ -369,6 +385,7 @@ public class DevVideoPlayerControl
 
     /**
      * 判断是否自动播放
+     *
      * @return {@code true} yes, {@code false} no
      */
     public boolean isAutoPlay() {
@@ -377,6 +394,7 @@ public class DevVideoPlayerControl
 
     /**
      * 设置自动播放
+     *
      * @param autoPlay 是否自动播放
      * @return {@link DevVideoPlayerControl}
      */
@@ -387,6 +405,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取播放地址
+     *
      * @return 播放地址
      */
     public String getPlayUri() {
@@ -395,6 +414,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取视频宽度
+     *
      * @return 视频宽度
      */
     public int getVideoWidth() {
@@ -403,6 +423,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取视频高度
+     *
      * @return 视频高度
      */
     public int getVideoHeight() {
@@ -411,6 +432,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取播放时间
+     *
      * @return 播放时间
      */
     public int getCurrentPosition() {
@@ -419,6 +441,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取资源总时间
+     *
      * @return 资源总时间
      */
     public int getDuration() {
@@ -427,6 +450,7 @@ public class DevVideoPlayerControl
 
     /**
      * 获取播放进度百分比
+     *
      * @return 播放进度百分比
      */
     public int getPlayPercent() {

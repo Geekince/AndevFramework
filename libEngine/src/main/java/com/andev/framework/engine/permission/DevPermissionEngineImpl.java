@@ -10,10 +10,10 @@ import com.andev.framework.utils.app.permission.PermissionUtils;
 
 /**
  * detail: DevUtils Permission Engine 实现
+ *
  * @author Ttt
  */
-public class DevPermissionEngineImpl
-        implements IPermissionEngine {
+public class DevPermissionEngineImpl implements IPermissionEngine {
 
     // =============
     // = 对外公开方法 =

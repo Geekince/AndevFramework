@@ -42,6 +42,7 @@ import com.andev.framework.utils.app.ViewUtils;
 
 /**
  * detail: 简化链式设置 View Helper 类
+ *
  * @author Ttt
  * <pre>
  *     整合 {@link ViewHelper}、{@link DevHelper} 部分代码
@@ -58,6 +59,7 @@ public final class QuickHelper {
 
     /**
      * 构造函数
+     *
      * @param target 目标 View
      */
     public QuickHelper(final View target) {
@@ -66,6 +68,7 @@ public final class QuickHelper {
 
     /**
      * 获取 QuickHelper
+     *
      * @param target 目标 View
      * @return {@link QuickHelper}
      */
@@ -75,6 +78,7 @@ public final class QuickHelper {
 
     /**
      * 获取 View
+     *
      * @param <T> 泛型
      * @return {@link View}
      */
@@ -84,6 +88,7 @@ public final class QuickHelper {
 
     /**
      * 获取目标 View
+     *
      * @return {@link View}
      */
     private View targetView() {
@@ -92,6 +97,7 @@ public final class QuickHelper {
 
     /**
      * 获取目标 View ( 转 ViewGroup )
+     *
      * @return {@link ViewGroup}
      */
     private ViewGroup targetViewGroup() {
@@ -105,6 +111,7 @@ public final class QuickHelper {
 
     /**
      * 获取目标 View ( 转 ImageView )
+     *
      * @return {@link ImageView}
      */
     private ImageView targetImageView() {
@@ -118,6 +125,7 @@ public final class QuickHelper {
 
     /**
      * 获取目标 View ( 转 TextView )
+     *
      * @return {@link TextView}
      */
     private TextView targetTextView() {
@@ -131,6 +139,7 @@ public final class QuickHelper {
 
     /**
      * 获取目标 View ( 转 EditText )
+     *
      * @return {@link EditText}
      */
     private EditText targetEditText() {
@@ -148,6 +157,7 @@ public final class QuickHelper {
 
     /**
      * 获取 ViewHelper
+     *
      * @return {@link ViewHelper}
      */
     public ViewHelper viewHelper() {
@@ -156,6 +166,7 @@ public final class QuickHelper {
 
     /**
      * 获取 DevHelper
+     *
      * @return {@link DevHelper}
      */
     public DevHelper devHelper() {
@@ -164,6 +175,7 @@ public final class QuickHelper {
 
     /**
      * 获取 QuickHelper
+     *
      * @param target 目标 View
      * @return {@link QuickHelper}
      */
@@ -181,6 +193,7 @@ public final class QuickHelper {
 
     /**
      * 在主线程 Handler 中执行任务
+     *
      * @param runnable 可执行的任务
      * @return {@link QuickHelper}
      */
@@ -191,6 +204,7 @@ public final class QuickHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable    可执行的任务
      * @param delayMillis 延迟时间
      * @return {@link QuickHelper}
@@ -205,6 +219,7 @@ public final class QuickHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable    可执行的任务
      * @param delayMillis 延迟时间
      * @param number      轮询次数
@@ -223,6 +238,7 @@ public final class QuickHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable      可执行的任务
      * @param delayMillis   延迟时间
      * @param number        轮询次数
@@ -243,6 +259,7 @@ public final class QuickHelper {
 
     /**
      * 在主线程 Handler 中清除任务
+     *
      * @param runnable 需要清除的任务
      * @return {@link QuickHelper}
      */
@@ -257,6 +274,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Hint 文本
+     *
      * @param text Hint text
      * @return {@link QuickHelper}
      */
@@ -267,6 +285,7 @@ public final class QuickHelper {
 
     /**
      * 设置文本
+     *
      * @param text TextView text
      * @return {@link QuickHelper}
      */
@@ -282,6 +301,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Html 内容
+     *
      * @param content Html content
      * @return {@link QuickHelper}
      */
@@ -292,6 +312,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Hint 字体颜色
+     *
      * @param color R.color.id
      * @return {@link QuickHelper}
      */
@@ -302,6 +323,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Hint 字体颜色
+     *
      * @param colors {@link ColorStateList}
      * @return {@link QuickHelper}
      */
@@ -312,6 +334,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体颜色
+     *
      * @param color R.color.id
      * @return {@link QuickHelper}
      */
@@ -322,6 +345,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体颜色
+     *
      * @param colors {@link ColorStateList}
      * @return {@link QuickHelper}
      */
@@ -332,6 +356,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体
+     *
      * @param typeface {@link Typeface} 字体样式
      * @return {@link QuickHelper}
      */
@@ -342,6 +367,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体大小 ( px 像素 )
+     *
      * @param size 字体大小
      * @return {@link QuickHelper}
      */
@@ -352,6 +378,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体大小 ( sp 缩放像素 )
+     *
      * @param size 字体大小
      * @return {@link QuickHelper}
      */
@@ -362,6 +389,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体大小 ( dp 与设备无关的像素 )
+     *
      * @param size 字体大小
      * @return {@link QuickHelper}
      */
@@ -372,6 +400,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体大小 ( inches 英寸 )
+     *
      * @param size 字体大小
      * @return {@link QuickHelper}
      */
@@ -382,6 +411,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体大小
+     *
      * @param unit 字体参数类型
      * @param size 字体大小
      * @return {@link QuickHelper}
@@ -396,6 +426,7 @@ public final class QuickHelper {
 
     /**
      * 清空 flags
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper clearFlags() {
@@ -405,6 +436,7 @@ public final class QuickHelper {
 
     /**
      * 设置 TextView flags
+     *
      * @param flags flags
      * @return {@link QuickHelper}
      */
@@ -415,6 +447,7 @@ public final class QuickHelper {
 
     /**
      * 设置 TextView 抗锯齿 flags
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setAntiAliasFlag() {
@@ -424,6 +457,7 @@ public final class QuickHelper {
 
     /**
      * 设置 TextView 是否加粗
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setBold() {
@@ -433,6 +467,7 @@ public final class QuickHelper {
 
     /**
      * 设置 TextView 是否加粗
+     *
      * @param isBold {@code true} yes, {@code false} no
      * @return {@link QuickHelper}
      */
@@ -443,6 +478,7 @@ public final class QuickHelper {
 
     /**
      * 设置 TextView 是否加粗
+     *
      * @param typeface {@link Typeface} 字体样式
      * @param isBold   {@code true} yes, {@code false} no
      * @return {@link QuickHelper}
@@ -457,6 +493,7 @@ public final class QuickHelper {
 
     /**
      * 设置下划线
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setUnderlineText() {
@@ -466,6 +503,7 @@ public final class QuickHelper {
 
     /**
      * 设置下划线并加清晰
+     *
      * @param isAntiAlias 是否消除锯齿
      * @return {@link QuickHelper}
      */
@@ -476,6 +514,7 @@ public final class QuickHelper {
 
     /**
      * 设置中划线
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setStrikeThruText() {
@@ -485,6 +524,7 @@ public final class QuickHelper {
 
     /**
      * 设置中划线并加清晰
+     *
      * @param isAntiAlias 是否消除锯齿
      * @return {@link QuickHelper}
      */
@@ -495,6 +535,7 @@ public final class QuickHelper {
 
     /**
      * 设置文字水平间距
+     *
      * @param letterSpacing 文字水平间距值
      * @return {@link QuickHelper}
      */
@@ -507,6 +548,7 @@ public final class QuickHelper {
 
     /**
      * 设置文字行间距 ( 行高 )
+     *
      * @param lineSpacing 文字行间距 ( 行高 ), android:lineSpacingExtra
      * @return {@link QuickHelper}
      */
@@ -517,6 +559,7 @@ public final class QuickHelper {
 
     /**
      * 设置文字行间距 ( 行高 )、行间距倍数
+     *
      * @param lineSpacing 文字行间距 ( 行高 ), android:lineSpacingExtra
      * @param multiplier  行间距倍数, android:lineSpacingMultiplier
      * @return {@link QuickHelper}
@@ -531,6 +574,7 @@ public final class QuickHelper {
 
     /**
      * 设置字体水平方向的缩放
+     *
      * @param size 缩放比例
      * @return {@link QuickHelper}
      */
@@ -541,6 +585,7 @@ public final class QuickHelper {
 
     /**
      * 设置是否保留字体留白间隙区域
+     *
      * @param includePadding 是否保留字体留白间隙区域
      * @return {@link QuickHelper}
      */
@@ -551,6 +596,7 @@ public final class QuickHelper {
 
     /**
      * 设置输入类型
+     *
      * @param type 类型
      * @return {@link QuickHelper}
      */
@@ -561,6 +607,7 @@ public final class QuickHelper {
 
     /**
      * 设置软键盘右下角按钮类型
+     *
      * @param imeOptions 软键盘按钮类型
      * @return {@link QuickHelper}
      */
@@ -571,6 +618,7 @@ public final class QuickHelper {
 
     /**
      * 设置行数
+     *
      * @param lines 行数
      * @return {@link QuickHelper}
      */
@@ -581,6 +629,7 @@ public final class QuickHelper {
 
     /**
      * 设置最大行数
+     *
      * @param maxLines 最大行数
      * @return {@link QuickHelper}
      */
@@ -591,6 +640,7 @@ public final class QuickHelper {
 
     /**
      * 设置最小行数
+     *
      * @param minLines 最小行数
      * @return {@link QuickHelper}
      */
@@ -601,6 +651,7 @@ public final class QuickHelper {
 
     /**
      * 设置最大字符宽度限制
+     *
      * @param maxEms 最大字符
      * @return {@link QuickHelper}
      */
@@ -611,6 +662,7 @@ public final class QuickHelper {
 
     /**
      * 设置最小字符宽度限制
+     *
      * @param minEms 最小字符
      * @return {@link QuickHelper}
      */
@@ -621,6 +673,7 @@ public final class QuickHelper {
 
     /**
      * 设置指定字符宽度
+     *
      * @param ems 字符
      * @return {@link QuickHelper}
      */
@@ -631,6 +684,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Ellipsize 效果
+     *
      * @param where {@link TextUtils.TruncateAt}
      * @return {@link QuickHelper}
      */
@@ -641,6 +695,7 @@ public final class QuickHelper {
 
     /**
      * 设置自动识别文本链接
+     *
      * @param mask {@link android.text.util.Linkify}
      * @return {@link QuickHelper}
      */
@@ -651,6 +706,7 @@ public final class QuickHelper {
 
     /**
      * 设置文本全为大写
+     *
      * @param allCaps 是否全部大写
      * @return {@link QuickHelper}
      */
@@ -661,6 +717,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Text Gravity
+     *
      * @param gravity {@link android.view.Gravity}
      * @return {@link QuickHelper}
      */
@@ -675,6 +732,7 @@ public final class QuickHelper {
 
     /**
      * 设置内容
+     *
      * @param content  文本内容
      * @param isSelect 是否设置光标
      * @return {@link QuickHelper}
@@ -689,6 +747,7 @@ public final class QuickHelper {
 
     /**
      * 追加内容 ( 当前光标位置追加 )
+     *
      * @param content  文本内容
      * @param isSelect 是否设置光标
      * @return {@link QuickHelper}
@@ -703,6 +762,7 @@ public final class QuickHelper {
 
     /**
      * 追加内容
+     *
      * @param content  文本内容
      * @param start    开始添加的位置
      * @param isSelect 是否设置光标
@@ -719,6 +779,7 @@ public final class QuickHelper {
 
     /**
      * 设置长度限制
+     *
      * @param maxLength 长度限制
      * @return {@link QuickHelper}
      */
@@ -734,6 +795,7 @@ public final class QuickHelper {
 
     /**
      * 设置长度限制, 并且设置内容
+     *
      * @param content   文本内容
      * @param maxLength 长度限制
      * @return {@link QuickHelper}
@@ -753,6 +815,7 @@ public final class QuickHelper {
 
     /**
      * 设置是否显示光标
+     *
      * @param visible 是否显示光标
      * @return {@link QuickHelper}
      */
@@ -763,6 +826,7 @@ public final class QuickHelper {
 
     /**
      * 设置光标在第一位
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setSelectionToTop() {
@@ -772,6 +836,7 @@ public final class QuickHelper {
 
     /**
      * 设置光标在最后一位
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper setSelectionToBottom() {
@@ -781,6 +846,7 @@ public final class QuickHelper {
 
     /**
      * 设置光标位置
+     *
      * @param index 光标位置
      * @return {@link QuickHelper}
      */
@@ -793,6 +859,7 @@ public final class QuickHelper {
 
     /**
      * 设置文本视图显示转换
+     *
      * @param method {@link TransformationMethod}
      * @return {@link QuickHelper}
      */
@@ -808,6 +875,7 @@ public final class QuickHelper {
 
     /**
      * 设置密码文本视图显示转换
+     *
      * @param isDisplayPassword 是否显示密码
      * @return {@link QuickHelper}
      */
@@ -823,6 +891,7 @@ public final class QuickHelper {
 
     /**
      * 设置密码文本视图显示转换
+     *
      * @param isDisplayPassword 是否显示密码
      * @param isSelectBottom    是否设置光标到最后
      * @return {@link QuickHelper}
@@ -839,6 +908,7 @@ public final class QuickHelper {
 
     /**
      * 添加输入监听事件
+     *
      * @param watcher 输入监听
      * @return {@link QuickHelper}
      */
@@ -849,6 +919,7 @@ public final class QuickHelper {
 
     /**
      * 移除输入监听事件
+     *
      * @param watcher 输入监听
      * @return {@link QuickHelper}
      */
@@ -859,6 +930,7 @@ public final class QuickHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param keyListener {@link KeyListener}
      * @return {@link QuickHelper}
      */
@@ -869,6 +941,7 @@ public final class QuickHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param accepted 允许输入的内容, 如: 0123456789
      * @return {@link QuickHelper}
      */
@@ -879,6 +952,7 @@ public final class QuickHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param accepted 允许输入的内容
      * @return {@link QuickHelper}
      */
@@ -893,6 +967,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 是否保持宽高比
+     *
      * @param adjustViewBounds 是否调整此视图的边界以保持可绘制的原始纵横比
      * @return {@link QuickHelper}
      */
@@ -903,6 +978,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 最大高度
+     *
      * @param maxHeight 最大高度
      * @return {@link QuickHelper}
      */
@@ -913,6 +989,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 最大宽度
+     *
      * @param maxWidth 最大宽度
      * @return {@link QuickHelper}
      */
@@ -925,6 +1002,7 @@ public final class QuickHelper {
 
     /**
      * 设置背景图片
+     *
      * @param background 背景图片
      * @return {@link QuickHelper}
      */
@@ -935,6 +1013,7 @@ public final class QuickHelper {
 
     /**
      * 设置背景颜色
+     *
      * @param color 背景颜色
      * @return {@link QuickHelper}
      */
@@ -945,6 +1024,7 @@ public final class QuickHelper {
 
     /**
      * 设置背景资源
+     *
      * @param resId resource identifier
      * @return {@link QuickHelper}
      */
@@ -955,6 +1035,7 @@ public final class QuickHelper {
 
     /**
      * 设置背景着色颜色
+     *
      * @param tint 着色颜色
      * @return {@link QuickHelper}
      */
@@ -967,6 +1048,7 @@ public final class QuickHelper {
 
     /**
      * 设置背景着色模式
+     *
      * @param tintMode 着色模式 {@link PorterDuff.Mode}
      * @return {@link QuickHelper}
      */
@@ -979,6 +1061,7 @@ public final class QuickHelper {
 
     /**
      * 设置前景图片
+     *
      * @param foreground 前景图片
      * @return {@link QuickHelper}
      */
@@ -991,6 +1074,7 @@ public final class QuickHelper {
 
     /**
      * 设置前景重心
+     *
      * @param gravity 重心
      * @return {@link QuickHelper}
      */
@@ -1003,6 +1087,7 @@ public final class QuickHelper {
 
     /**
      * 设置前景着色颜色
+     *
      * @param tint 着色颜色
      * @return {@link QuickHelper}
      */
@@ -1015,6 +1100,7 @@ public final class QuickHelper {
 
     /**
      * 设置前景着色模式
+     *
      * @param tintMode 着色模式 {@link PorterDuff.Mode}
      * @return {@link QuickHelper}
      */
@@ -1027,6 +1113,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView Level
+     *
      * @param level level Image
      * @return {@link QuickHelper}
      */
@@ -1037,6 +1124,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView Bitmap
+     *
      * @param bitmap {@link Bitmap}
      * @return {@link QuickHelper}
      */
@@ -1047,6 +1135,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView Drawable
+     *
      * @param drawable {@link Bitmap}
      * @return {@link QuickHelper}
      */
@@ -1057,6 +1146,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 资源
+     *
      * @param resId resource identifier
      * @return {@link QuickHelper}
      */
@@ -1067,6 +1157,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView Matrix
+     *
      * @param matrix {@link Matrix}
      * @return {@link QuickHelper}
      */
@@ -1077,6 +1168,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 着色颜色
+     *
      * @param tint 着色颜色
      * @return {@link QuickHelper}
      */
@@ -1089,6 +1181,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 着色模式
+     *
      * @param tintMode 着色模式 {@link PorterDuff.Mode}
      * @return {@link QuickHelper}
      */
@@ -1101,6 +1194,7 @@ public final class QuickHelper {
 
     /**
      * 设置 ImageView 缩放类型
+     *
      * @param scaleType 缩放类型 {@link ImageView.ScaleType}
      * @return {@link QuickHelper}
      */
@@ -1111,6 +1205,7 @@ public final class QuickHelper {
 
     /**
      * ImageView 着色处理
+     *
      * @param color 颜色值
      * @return {@link QuickHelper}
      */
@@ -1121,6 +1216,7 @@ public final class QuickHelper {
 
     /**
      * ImageView 着色处理, 并且设置 Drawable
+     *
      * @param drawable {@link Drawable}
      * @param color    颜色值
      * @return {@link QuickHelper}
@@ -1135,6 +1231,7 @@ public final class QuickHelper {
 
     /**
      * ImageView 着色处理
+     *
      * @param colorFilter 颜色过滤 ( 效果 )
      * @return {@link QuickHelper}
      */
@@ -1145,6 +1242,7 @@ public final class QuickHelper {
 
     /**
      * ImageView 着色处理, 并且设置 Drawable
+     *
      * @param drawable    {@link Drawable}
      * @param colorFilter 颜色过滤 ( 效果 )
      * @return {@link QuickHelper}
@@ -1159,6 +1257,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 图片资源
+     *
      * @param resId resource identifier
      * @return {@link QuickHelper}
      */
@@ -1169,6 +1268,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 图片资源
+     *
      * @param resId        resource identifier
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
@@ -1183,6 +1283,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 图片资源
+     *
      * @param resId resource identifier
      * @return {@link QuickHelper}
      */
@@ -1193,6 +1294,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 图片资源
+     *
      * @param resId        resource identifier
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
@@ -1207,6 +1309,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bitmap
+     *
      * @param bitmap {@link Bitmap}
      * @return {@link QuickHelper}
      */
@@ -1217,6 +1320,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bitmap
+     *
      * @param bitmap       {@link Bitmap}
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
@@ -1231,6 +1335,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Drawable
+     *
      * @param drawable {@link drawable}
      * @return {@link QuickHelper}
      */
@@ -1241,6 +1346,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Drawable
+     *
      * @param drawable     {@link drawable}
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
@@ -1255,6 +1361,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 缩放模式
+     *
      * @param scaleType {@link ImageView.ScaleType}
      * @return {@link QuickHelper}
      */
@@ -1265,6 +1372,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 缩放模式
+     *
      * @param scaleType    {@link ImageView.ScaleType}
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
@@ -1283,6 +1391,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 宽度、高度
+     *
      * @param width  View 宽度
      * @param height View 高度
      * @return {@link QuickHelper}
@@ -1297,6 +1406,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 宽度、高度
+     *
      * @param width     View 宽度
      * @param height    View 高度
      * @param nullNewLP 如果 LayoutParams 为 null 是否创建新的
@@ -1313,6 +1423,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 宽度
+     *
      * @param width View 宽度
      * @return {@link QuickHelper}
      */
@@ -1323,6 +1434,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 宽度
+     *
      * @param width     View 宽度
      * @param nullNewLP 如果 LayoutParams 为 null 是否创建新的
      * @return {@link QuickHelper}
@@ -1337,6 +1449,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 高度
+     *
      * @param height View 高度
      * @return {@link QuickHelper}
      */
@@ -1347,6 +1460,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 高度
+     *
      * @param height    View 高度
      * @param nullNewLP 如果 LayoutParams 为 null 是否创建新的
      * @return {@link QuickHelper}
@@ -1361,6 +1475,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 最小高度
+     *
      * @param minHeight 最小高度
      * @return {@link QuickHelper}
      */
@@ -1371,6 +1486,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 最小宽度
+     *
      * @param minWidth 最小宽度
      * @return {@link QuickHelper}
      */
@@ -1381,6 +1497,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 透明度
+     *
      * @param alpha 透明度
      * @return {@link QuickHelper}
      */
@@ -1391,6 +1508,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Tag
+     *
      * @param object Tag
      * @return {@link QuickHelper}
      */
@@ -1406,6 +1524,7 @@ public final class QuickHelper {
      * <pre>
      *     无滚动过程
      * </pre>
+     *
      * @param x X 轴开始坐标
      * @param y Y 轴开始坐标
      * @return {@link QuickHelper}
@@ -1423,6 +1542,7 @@ public final class QuickHelper {
      * <pre>
      *     无滚动过程
      * </pre>
+     *
      * @param x X 轴开始坐标
      * @param y Y 轴开始坐标
      * @return {@link QuickHelper}
@@ -1445,6 +1565,7 @@ public final class QuickHelper {
      *     blocksDescendants : ViewGroup 会覆盖子类控件而直接获得焦点
      *     android:descendantFocusability="blocksDescendants"
      * </pre>
+     *
      * @param focusability {@link ViewGroup#FOCUS_BEFORE_DESCENDANTS}、{@link ViewGroup#FOCUS_AFTER_DESCENDANTS}、{@link ViewGroup#FOCUS_BLOCK_DESCENDANTS}
      * @return {@link QuickHelper}
      */
@@ -1459,6 +1580,7 @@ public final class QuickHelper {
      *     设置滑动到边缘时无效果模式 {@link View#OVER_SCROLL_NEVER}
      *     android:overScrollMode="never"
      * </pre>
+     *
      * @param overScrollMode {@link View#OVER_SCROLL_ALWAYS}、{@link View#OVER_SCROLL_IF_CONTENT_SCROLLS}、{@link View#OVER_SCROLL_NEVER}
      * @return {@link QuickHelper}
      */
@@ -1471,6 +1593,7 @@ public final class QuickHelper {
 
     /**
      * 设置是否绘制横向滚动条
+     *
      * @param horizontalScrollBarEnabled {@code true} yes, {@code false} no
      * @return {@link QuickHelper}
      */
@@ -1481,6 +1604,7 @@ public final class QuickHelper {
 
     /**
      * 设置是否绘制垂直滚动条
+     *
      * @param verticalScrollBarEnabled {@code true} yes, {@code false} no
      * @return {@link QuickHelper}
      */
@@ -1493,6 +1617,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 滚动效应
+     *
      * @param isScrollContainer 是否需要滚动效应
      * @return {@link QuickHelper}
      */
@@ -1503,6 +1628,7 @@ public final class QuickHelper {
 
     /**
      * 设置下一个获取焦点的 View id
+     *
      * @param nextFocusForwardId 下一个获取焦点的 View id
      * @return {@link QuickHelper}
      */
@@ -1513,6 +1639,7 @@ public final class QuickHelper {
 
     /**
      * 设置向下移动焦点时, 下一个获取焦点的 View id
+     *
      * @param nextFocusDownId 下一个获取焦点的 View id
      * @return {@link QuickHelper}
      */
@@ -1523,6 +1650,7 @@ public final class QuickHelper {
 
     /**
      * 设置向左移动焦点时, 下一个获取焦点的 View id
+     *
      * @param nextFocusLeftId 下一个获取焦点的 View id
      * @return {@link QuickHelper}
      */
@@ -1533,6 +1661,7 @@ public final class QuickHelper {
 
     /**
      * 设置向右移动焦点时, 下一个获取焦点的 View id
+     *
      * @param nextFocusRightId 下一个获取焦点的 View id
      * @return {@link QuickHelper}
      */
@@ -1543,6 +1672,7 @@ public final class QuickHelper {
 
     /**
      * 设置向上移动焦点时, 下一个获取焦点的 View id
+     *
      * @param nextFocusUpId 下一个获取焦点的 View id
      * @return {@link QuickHelper}
      */
@@ -1553,6 +1683,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 旋转度数
+     *
      * @param rotation 旋转度数
      * @return {@link QuickHelper}
      */
@@ -1563,6 +1694,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 水平旋转度数
+     *
      * @param rotationX 水平旋转度数
      * @return {@link QuickHelper}
      */
@@ -1573,6 +1705,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 竖直旋转度数
+     *
      * @param rotationY 竖直旋转度数
      * @return {@link QuickHelper}
      */
@@ -1583,6 +1716,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 水平方向缩放比例
+     *
      * @param scaleX 水平方向缩放比例
      * @return {@link QuickHelper}
      */
@@ -1593,6 +1727,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 竖直方向缩放比例
+     *
      * @param scaleY 竖直方向缩放比例
      * @return {@link QuickHelper}
      */
@@ -1603,6 +1738,7 @@ public final class QuickHelper {
 
     /**
      * 设置文本的显示方式
+     *
      * @param textAlignment 文本的显示方式
      * @return {@link QuickHelper}
      */
@@ -1615,6 +1751,7 @@ public final class QuickHelper {
 
     /**
      * 设置文本的显示方向
+     *
      * @param textDirection 文本的显示方向
      * @return {@link QuickHelper}
      */
@@ -1627,6 +1764,7 @@ public final class QuickHelper {
 
     /**
      * 设置水平方向偏转量
+     *
      * @param pivotX 水平方向偏转量
      * @return {@link QuickHelper}
      */
@@ -1637,6 +1775,7 @@ public final class QuickHelper {
 
     /**
      * 设置竖直方向偏转量
+     *
      * @param pivotY 竖直方向偏转量
      * @return {@link QuickHelper}
      */
@@ -1647,6 +1786,7 @@ public final class QuickHelper {
 
     /**
      * 设置水平方向的移动距离
+     *
      * @param translationX 水平方向的移动距离
      * @return {@link QuickHelper}
      */
@@ -1657,6 +1797,7 @@ public final class QuickHelper {
 
     /**
      * 设置竖直方向的移动距离
+     *
      * @param translationY 竖直方向的移动距离
      * @return {@link QuickHelper}
      */
@@ -1667,6 +1808,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 硬件加速类型
+     *
      * @param layerType 硬件加速类型
      * @param paint     {@link Paint}
      * @return {@link QuickHelper}
@@ -1683,6 +1825,7 @@ public final class QuickHelper {
 
     /**
      * 请求重新对 View 布局
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper requestLayout() {
@@ -1692,6 +1835,7 @@ public final class QuickHelper {
 
     /**
      * View 请求获取焦点
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper requestFocus() {
@@ -1701,6 +1845,7 @@ public final class QuickHelper {
 
     /**
      * View 清除焦点
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper clearFocus() {
@@ -1710,6 +1855,7 @@ public final class QuickHelper {
 
     /**
      * View 请求更新
+     *
      * @param allParent 是否全部父布局 View 都请求
      * @return {@link QuickHelper}
      */
@@ -1722,6 +1868,7 @@ public final class QuickHelper {
 
     /**
      * 设置是否限制子 View 在其边界内绘制
+     *
      * @param clipChildren {@code true} yes, {@code false} no
      * @return {@link QuickHelper}
      */
@@ -1732,6 +1879,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View LayoutParams
+     *
      * @param params LayoutParams
      * @return {@link QuickHelper}
      */
@@ -1742,6 +1890,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否在触摸模式下获得焦点
+     *
      * @param focusableInTouchMode {@code true} 可获取, {@code false} 不可获取
      * @return {@link QuickHelper}
      */
@@ -1752,6 +1901,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否可以获取焦点
+     *
      * @param focusable {@code true} 可获取, {@code false} 不可获取
      * @return {@link QuickHelper}
      */
@@ -1762,6 +1912,7 @@ public final class QuickHelper {
 
     /**
      * 切换获取焦点状态
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper toggleFocusable() {
@@ -1771,6 +1922,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否选中
+     *
      * @param selected {@code true} 选中, {@code false} 非选中
      * @return {@code true} 选中, {@code false} 非选中
      */
@@ -1781,6 +1933,7 @@ public final class QuickHelper {
 
     /**
      * 切换选中状态
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper toggleSelected() {
@@ -1790,6 +1943,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否启用
+     *
      * @param enabled {@code true} 启用, {@code false} 禁用
      * @return {@link QuickHelper}
      */
@@ -1800,6 +1954,7 @@ public final class QuickHelper {
 
     /**
      * 切换 View 是否启用状态
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper toggleEnabled() {
@@ -1809,6 +1964,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否可以点击
+     *
      * @param clickable {@code true} 可点击, {@code false} 不可点击
      * @return {@link QuickHelper}
      */
@@ -1819,6 +1975,7 @@ public final class QuickHelper {
 
     /**
      * 切换 View 是否可以点击状态
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper toggleClickable() {
@@ -1828,6 +1985,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 是否可以长按
+     *
      * @param longClickable {@code true} 可长按, {@code false} 不可长按
      * @return {@link QuickHelper}
      */
@@ -1838,6 +1996,7 @@ public final class QuickHelper {
 
     /**
      * 切换 View 是否可以长按状态
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper toggleLongClickable() {
@@ -1847,6 +2006,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 显示的状态
+     *
      * @param isVisibility {@code true} View.VISIBLE, {@code false} View.GONE
      * @return {@link QuickHelper}
      */
@@ -1857,6 +2017,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 显示的状态
+     *
      * @param isVisibility {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @return {@link QuickHelper}
      */
@@ -1867,6 +2028,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View 显示的状态
+     *
      * @param isVisibility {@code true} View.VISIBLE, {@code false} View.INVISIBLE
      * @return {@link QuickHelper}
      */
@@ -1877,6 +2039,7 @@ public final class QuickHelper {
 
     /**
      * 切换 View 显示的状态
+     *
      * @param views View[]
      * @return {@link QuickHelper}
      */
@@ -1887,6 +2050,7 @@ public final class QuickHelper {
 
     /**
      * 反转 View 显示的状态
+     *
      * @param state {@link View#VISIBLE}、{@link View#INVISIBLE}、{@link View#GONE}
      * @param views View[]
      * @return {@link QuickHelper}
@@ -1901,6 +2065,7 @@ public final class QuickHelper {
 
     /**
      * 反转 View 显示的状态
+     *
      * @param isVisibility {@code true} View.VISIBLE, {@code false} View.GONE
      * @param views        View[]
      * @return {@link QuickHelper}
@@ -1915,6 +2080,7 @@ public final class QuickHelper {
 
     /**
      * 把自身从父 View 中移除
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper removeSelfFromParent() {
@@ -1924,6 +2090,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Layout Gravity
+     *
      * @param gravity Gravity
      * @return {@link QuickHelper}
      */
@@ -1934,6 +2101,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Layout Gravity
+     *
      * @param gravity      Gravity
      * @param isReflection 是否使用反射
      * @return {@link QuickHelper}
@@ -1948,6 +2116,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Left Margin
+     *
      * @param leftMargin Left Margin
      * @return {@link QuickHelper}
      */
@@ -1958,6 +2127,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Left Margin
+     *
      * @param leftMargin Left Margin
      * @param reset      是否重置清空其他 margin
      * @return {@link QuickHelper}
@@ -1972,6 +2142,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Top Margin
+     *
      * @param topMargin Top Margin
      * @return {@link QuickHelper}
      */
@@ -1982,6 +2153,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Top Margin
+     *
      * @param topMargin Top Margin
      * @param reset     是否重置清空其他 margin
      * @return {@link QuickHelper}
@@ -1996,6 +2168,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Right Margin
+     *
      * @param rightMargin Right Margin
      * @return {@link QuickHelper}
      */
@@ -2006,6 +2179,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Right Margin
+     *
      * @param rightMargin Right Margin
      * @param reset       是否重置清空其他 margin
      * @return {@link QuickHelper}
@@ -2020,6 +2194,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bottom Margin
+     *
      * @param bottomMargin Bottom Margin
      * @return {@link QuickHelper}
      */
@@ -2030,6 +2205,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bottom Margin
+     *
      * @param bottomMargin Bottom Margin
      * @param reset        是否重置清空其他 margin
      * @return {@link QuickHelper}
@@ -2044,6 +2220,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Margin 边距
+     *
      * @param leftRight Left and Right Margin
      * @param topBottom Top and bottom Margin
      * @return {@link QuickHelper}
@@ -2058,6 +2235,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Margin 边距
+     *
      * @param margin Margin
      * @return {@link QuickHelper}
      */
@@ -2068,6 +2246,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Margin 边距
+     *
      * @param left   Left Margin
      * @param top    Top Margin
      * @param right  Right Margin
@@ -2086,6 +2265,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Left Padding
+     *
      * @param leftPadding Left Padding
      * @return {@link QuickHelper}
      */
@@ -2096,6 +2276,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Left Padding
+     *
      * @param leftPadding Left Padding
      * @param reset       是否重置清空其他 Padding
      * @return {@link QuickHelper}
@@ -2110,6 +2291,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Top Padding
+     *
      * @param topPadding Top Padding
      * @return {@link QuickHelper}
      */
@@ -2120,6 +2302,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Top Padding
+     *
      * @param topPadding Top Padding
      * @param reset      是否重置清空其他 Padding
      * @return {@link QuickHelper}
@@ -2134,6 +2317,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Right Padding
+     *
      * @param rightPadding Right Padding
      * @return {@link QuickHelper}
      */
@@ -2144,6 +2328,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Right Padding
+     *
      * @param rightPadding Right Padding
      * @param reset        是否重置清空其他 Padding
      * @return {@link QuickHelper}
@@ -2158,6 +2343,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bottom Padding
+     *
      * @param bottomPadding Bottom Padding
      * @return {@link QuickHelper}
      */
@@ -2168,6 +2354,7 @@ public final class QuickHelper {
 
     /**
      * 设置 View Bottom Padding
+     *
      * @param bottomPadding Bottom Padding
      * @param reset         是否重置清空其他 Padding
      * @return {@link QuickHelper}
@@ -2182,6 +2369,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Padding 边距
+     *
      * @param leftRight Left and Right Padding
      * @param topBottom Top and bottom Padding
      * @return {@link QuickHelper}
@@ -2196,6 +2384,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Padding 边距
+     *
      * @param padding Padding
      * @return {@link QuickHelper}
      */
@@ -2206,6 +2395,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Padding 边距
+     *
      * @param left   Left Padding
      * @param top    Top Padding
      * @param right  Right Padding
@@ -2224,6 +2414,7 @@ public final class QuickHelper {
 
     /**
      * 设置 CompoundDrawables Padding
+     *
      * @param padding CompoundDrawables Padding
      * @return {@link QuickHelper}
      */
@@ -2234,6 +2425,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Left CompoundDrawables
+     *
      * @param left left Drawable
      * @return {@link QuickHelper}
      */
@@ -2244,6 +2436,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Top CompoundDrawables
+     *
      * @param top top Drawable
      * @return {@link QuickHelper}
      */
@@ -2254,6 +2447,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Right CompoundDrawables
+     *
      * @param right right Drawable
      * @return {@link QuickHelper}
      */
@@ -2264,6 +2458,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Bottom CompoundDrawables
+     *
      * @param bottom bottom Drawable
      * @return {@link QuickHelper}
      */
@@ -2279,6 +2474,7 @@ public final class QuickHelper {
      *     需要先设置 Drawable 的 setBounds
      *     {@link dev.utils.app.image.ImageUtils#setBounds}
      * </pre>
+     *
      * @param left   left Drawable
      * @param top    top Drawable
      * @param right  right Drawable
@@ -2297,6 +2493,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Left CompoundDrawables ( 按照原有比例大小显示图片 )
+     *
      * @param left left Drawable
      * @return {@link QuickHelper}
      */
@@ -2307,6 +2504,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Top CompoundDrawables ( 按照原有比例大小显示图片 )
+     *
      * @param top top Drawable
      * @return {@link QuickHelper}
      */
@@ -2317,6 +2515,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Right CompoundDrawables ( 按照原有比例大小显示图片 )
+     *
      * @param right right Drawable
      * @return {@link QuickHelper}
      */
@@ -2327,6 +2526,7 @@ public final class QuickHelper {
 
     /**
      * 设置 Bottom CompoundDrawables ( 按照原有比例大小显示图片 )
+     *
      * @param bottom bottom Drawable
      * @return {@link QuickHelper}
      */
@@ -2337,6 +2537,7 @@ public final class QuickHelper {
 
     /**
      * 设置 CompoundDrawables ( 按照原有比例大小显示图片 )
+     *
      * @param left   left Drawable
      * @param top    top Drawable
      * @param right  right Drawable
@@ -2359,6 +2560,7 @@ public final class QuickHelper {
 
     /**
      * 设置 RelativeLayout View 布局规则
+     *
      * @param verb 布局位置
      * @return {@link QuickHelper}
      */
@@ -2369,6 +2571,7 @@ public final class QuickHelper {
 
     /**
      * 设置 RelativeLayout View 布局规则
+     *
      * @param verb    布局位置
      * @param subject 关联 View id
      * @return {@link QuickHelper}
@@ -2383,6 +2586,7 @@ public final class QuickHelper {
 
     /**
      * 移除 RelativeLayout View 布局规则
+     *
      * @param verb 布局位置
      * @return {@link QuickHelper}
      */
@@ -2397,6 +2601,7 @@ public final class QuickHelper {
 
     /**
      * 设置动画
+     *
      * @param animation {@link Animation}
      * @return {@link QuickHelper}
      */
@@ -2407,6 +2612,7 @@ public final class QuickHelper {
 
     /**
      * 清空动画
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper clearAnimation() {
@@ -2416,6 +2622,7 @@ public final class QuickHelper {
 
     /**
      * 启动动画
+     *
      * @param animation {@link Animation}
      * @return {@link QuickHelper}
      */
@@ -2426,6 +2633,7 @@ public final class QuickHelper {
 
     /**
      * 取消动画
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper cancelAnimation() {
@@ -2439,6 +2647,7 @@ public final class QuickHelper {
 
     /**
      * 设置点击事件
+     *
      * @param onClickListener {@link View.OnClickListener}
      * @return {@link QuickHelper}
      */
@@ -2449,6 +2658,7 @@ public final class QuickHelper {
 
     /**
      * 设置长按事件
+     *
      * @param onLongClickListener {@link View.OnLongClickListener}
      * @return {@link QuickHelper}
      */
@@ -2459,6 +2669,7 @@ public final class QuickHelper {
 
     /**
      * 设置触摸事件
+     *
      * @param onTouchListener {@link View.OnTouchListener}
      * @return {@link QuickHelper}
      */
@@ -2469,6 +2680,7 @@ public final class QuickHelper {
 
     /**
      * 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域
+     *
      * @param range 点击范围
      * @return {@link QuickHelper}
      */
@@ -2479,6 +2691,7 @@ public final class QuickHelper {
 
     /**
      * 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域
+     *
      * @param top    top range
      * @param bottom bottom range
      * @param left   left range
@@ -2501,6 +2714,7 @@ public final class QuickHelper {
 
     /**
      * 滑动到指定索引 ( 有滚动过程 )
+     *
      * @param position 索引
      * @return {@link QuickHelper}
      */
@@ -2511,6 +2725,7 @@ public final class QuickHelper {
 
     /**
      * 滑动到指定索引 ( 无滚动过程 )
+     *
      * @param position 索引
      * @return {@link QuickHelper}
      */
@@ -2525,6 +2740,7 @@ public final class QuickHelper {
 
     /**
      * 滑动到顶部 ( 有滚动过程 )
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper smoothScrollToTop() {
@@ -2534,6 +2750,7 @@ public final class QuickHelper {
 
     /**
      * 滑动到顶部 ( 无滚动过程 )
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper scrollToTop() {
@@ -2552,6 +2769,7 @@ public final class QuickHelper {
      *     smoothScrollToBottom(view)
      *     smoothScrollBy(view, 0, Integer.MAX_VALUE);
      * </pre>
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper smoothScrollToBottom() {
@@ -2566,6 +2784,7 @@ public final class QuickHelper {
      *     scrollToBottom(view)
      *     scrollBy(view, 0, Integer.MAX_VALUE);
      * </pre>
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper scrollToBottom() {
@@ -2579,6 +2798,7 @@ public final class QuickHelper {
 
     /**
      * 滚动到指定位置 ( 有滚动过程, 相对于初始位置移动 )
+     *
      * @param x X 轴开始坐标
      * @param y Y 轴开始坐标
      * @return {@link QuickHelper}
@@ -2593,6 +2813,7 @@ public final class QuickHelper {
 
     /**
      * 滚动到指定位置 ( 有滚动过程, 相对于上次移动的最后位置移动 )
+     *
      * @param x X 轴开始坐标
      * @param y Y 轴开始坐标
      * @return {@link QuickHelper}
@@ -2607,6 +2828,7 @@ public final class QuickHelper {
 
     /**
      * 滚动方向 ( 有滚动过程 )
+     *
      * @param direction 滚动方向 如: View.FOCUS_UP、View.FOCUS_DOWN
      * @return {@link QuickHelper}
      */
@@ -2629,6 +2851,7 @@ public final class QuickHelper {
 
     /**
      * 打开软键盘
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper openKeyboard() {
@@ -2638,6 +2861,7 @@ public final class QuickHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper openKeyboardDelay() {
@@ -2647,6 +2871,7 @@ public final class QuickHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link QuickHelper}
      */
@@ -2661,6 +2886,7 @@ public final class QuickHelper {
 
     /**
      * 关闭软键盘
+     *
      * @return {@link QuickHelper}
      */
     public QuickHelper closeKeyboard() {
@@ -2670,6 +2896,7 @@ public final class QuickHelper {
 
     /**
      * 关闭软键盘
+     *
      * @param dialog {@link Dialog}
      * @return {@link QuickHelper}
      */
@@ -2680,6 +2907,7 @@ public final class QuickHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param dialog {@link Dialog}
      * @return {@link QuickHelper}
      */
@@ -2690,6 +2918,7 @@ public final class QuickHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param dialog      {@link Dialog}
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link QuickHelper}
@@ -2708,6 +2937,7 @@ public final class QuickHelper {
 
     /**
      * 在 onCreate 中获取视图的尺寸 ( 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 )
+     *
      * @param listener {@link SizeUtils.OnGetSizeListener}
      * @return {@link QuickHelper}
      */

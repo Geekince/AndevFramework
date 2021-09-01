@@ -5,6 +5,7 @@ import android.content.Context;
 
 /**
  * detail: Push Engine 接口
+ *
  * @author Ttt
  */
 public interface IPushEngine<Config extends IPushEngine.EngineConfig,
@@ -12,6 +13,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * detail: Push Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -19,6 +21,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * detail: Push ( Data、Params ) Item
+     *
      * @author Ttt
      */
     class EngineItem {
@@ -30,6 +33,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 初始化方法
+     *
      * @param application {@link Application}
      * @param config      Push Config
      */
@@ -40,6 +44,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 绑定
+     *
      * @param context {@link Context}
      * @param config  Push Config
      */
@@ -50,6 +55,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 解绑
+     *
      * @param context {@link Context}
      * @param config  Push Config
      */
@@ -62,6 +68,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 推送进程启动通知
+     *
      * @param context {@link Context}
      * @param pid     Push 进程 ID
      */
@@ -72,6 +79,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 初始化 Client Id 成功通知
+     *
      * @param context  {@link Context}
      * @param clientId 唯一 ID 用于标识当前应用
      */
@@ -82,6 +90,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 设备 ( 厂商 ) Token 通知
+     *
      * @param context     {@link Context}
      * @param deviceToken 设备 Token
      */
@@ -92,6 +101,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 在线状态变化通知
+     *
      * @param context {@link Context}
      * @param online  是否在线
      */
@@ -102,6 +112,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 命令回执通知
+     *
      * @param context {@link Context}
      * @param message Push ( Data、Params ) Item
      */
@@ -112,6 +123,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 推送消息送达通知
+     *
      * @param context {@link Context}
      * @param message Push ( Data、Params ) Item
      */
@@ -122,6 +134,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 推送消息点击通知
+     *
      * @param context {@link Context}
      * @param message Push ( Data、Params ) Item
      */
@@ -132,6 +145,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 透传消息送达通知
+     *
      * @param context {@link Context}
      * @param message Push ( Data、Params ) Item
      */
@@ -146,6 +160,7 @@ public interface IPushEngine<Config extends IPushEngine.EngineConfig,
 
     /**
      * 传入 Object 转换 Engine Message
+     *
      * @param message Message Object
      * @return Engine Message
      */

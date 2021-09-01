@@ -9,12 +9,13 @@ import com.andev.framework.utils.common.ConvertUtils;
 
 /**
  * detail: MMKV Key-Value Engine 实现
+ *
  * @author Ttt
  */
 public class MMKVKeyValueEngineImpl
         implements IKeyValueEngine<MMKVConfig> {
 
-    private final MMKVConfig       mConfig;
+    private final MMKVConfig mConfig;
     // MMKV
     private final MMKVUtils.Holder mHolder;
 
@@ -222,8 +223,8 @@ public class MMKVKeyValueEngineImpl
             Type typeOfT,
             T defaultValue
     ) {
-        String json   = getString(key, null);
-        T      object = (T) DevJSONEngine.getEngine().fromJson(json, typeOfT);
+        String json = getString(key, null);
+        T object = (T) DevJSONEngine.getEngine().fromJson(json, typeOfT);
         if (object == null) return defaultValue;
         return object;
     }

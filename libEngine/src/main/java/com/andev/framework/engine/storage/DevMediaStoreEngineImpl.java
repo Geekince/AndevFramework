@@ -20,6 +20,7 @@ import com.andev.framework.utils.common.StringUtils;
 
 /**
  * detail: DevUtils MediaStore Engine 实现
+ *
  * @author Ttt
  * <pre>
  *     如果需要设置全局结果监听, 可以新增构造函数传入 {@link OnDevInsertListener}
@@ -35,6 +36,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一张图片到外部存储空间 ( SDCard )
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -52,6 +54,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条视频到外部存储空间 ( SDCard )
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -69,6 +72,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条音频到外部存储空间 ( SDCard )
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -86,6 +90,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条文件资源到外部存储空间 ( SDCard )
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -106,6 +111,7 @@ public class DevMediaStoreEngineImpl
      * <pre>
      *     并不局限于多媒体, 如文本存储、其他文件写入等
      * </pre>
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -127,6 +133,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一张图片到内部存储空间
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -144,6 +151,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条视频到内部存储空间
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -161,6 +169,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条音频到内部存储空间
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -178,6 +187,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 插入一条文件资源到内部存储空间
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -198,6 +208,7 @@ public class DevMediaStoreEngineImpl
      * <pre>
      *     并不局限于多媒体, 如文本存储、其他文件写入等
      * </pre>
+     *
      * @param params   {@link EngineItem}
      * @param source   {@link DevSource}
      * @param listener {@link OnInsertListener}
@@ -223,6 +234,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 当属于 NONE 类型则进行只能校验
+     *
      * @param params 原始参数
      * @param source 原始数据
      * @param type   存储类型
@@ -253,6 +265,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 通用内部预校验
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param listener 回调接口
@@ -299,6 +312,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 获取输出 Uri ( 存储文件 Uri )
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param external 是否外部存储
@@ -374,6 +388,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 获取输出文件路径
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param external 是否外部存储
@@ -439,6 +454,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 内部插入数据方法 ( 外部存储空间 )
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param listener 回调接口
@@ -458,6 +474,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 内部插入数据方法 ( 内部存储空间 )
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param listener 回调接口
@@ -477,6 +494,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 内部插入数据方法 ( 后台运行 )
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param listener 回调接口
@@ -505,6 +523,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 内部插入数据方法 ( 最终方法 )
+     *
      * @param params   原始参数
      * @param source   原始数据
      * @param listener 回调接口
@@ -600,6 +619,7 @@ public class DevMediaStoreEngineImpl
 
     /**
      * 最终回调方法
+     *
      * @param result   存储结果
      * @param params   原始参数
      * @param source   原始数据

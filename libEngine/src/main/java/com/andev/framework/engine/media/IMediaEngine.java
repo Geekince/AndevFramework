@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * detail: Media Selector Engine 接口
+ *
  * @author Ttt
  */
 public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
@@ -17,6 +18,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * detail: Media Selector Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -24,6 +26,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * detail: Media Selector Data
+     *
      * @author Ttt
      */
     class EngineData {
@@ -35,6 +38,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册拍照
+     *
      * @param activity {@link Activity}
      * @return {@code true} success, {@code false} fail
      */
@@ -42,6 +46,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册拍照
+     *
      * @param activity {@link Activity}
      * @param config   配置信息
      * @return {@code true} success, {@code false} fail
@@ -53,6 +58,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册拍照
+     *
      * @param fragment {@link Fragment}
      * @return {@code true} success, {@code false} fail
      */
@@ -60,6 +66,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册拍照
+     *
      * @param fragment {@link Fragment}
      * @param config   配置信息
      * @return {@code true} success, {@code false} fail
@@ -73,6 +80,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册选择
+     *
      * @param activity {@link Activity}
      * @return {@code true} success, {@code false} fail
      */
@@ -80,6 +88,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册选择
+     *
      * @param activity {@link Activity}
      * @param config   配置信息
      * @return {@code true} success, {@code false} fail
@@ -91,6 +100,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册选择
+     *
      * @param fragment {@link Fragment}
      * @return {@code true} success, {@code false} fail
      */
@@ -98,6 +108,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 打开相册选择
+     *
      * @param fragment {@link Fragment}
      * @param config   配置信息
      * @return {@code true} success, {@code false} fail
@@ -113,30 +124,35 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取全局配置
+     *
      * @return 全局配置信息
      */
     Config getConfig();
 
     /**
      * 设置全局配置
+     *
      * @param config 新的配置信息
      */
     void setConfig(Config config);
 
     /**
      * 获取拍照存储地址
+     *
      * @return 拍照存储地址
      */
     String getCameraSavePath();
 
     /**
      * 获取压缩图片存储地址
+     *
      * @return 压缩图片存储地址
      */
     String getCompressSavePath();
 
     /**
      * 设置存储地址
+     *
      * @param cameraSavePath   拍照存储地址
      * @param compressSavePath 压缩图片存储地址
      */
@@ -147,12 +163,14 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取图片大于多少才进行压缩 (kb)
+     *
      * @return 最小压缩大小
      */
     int getMinimumCompressSize();
 
     /**
      * 设置图片大于多少才进行压缩 (kb)
+     *
      * @param minimumCompressSize 最小压缩大小
      */
     void setMinimumCompressSize(int minimumCompressSize);
@@ -163,6 +181,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 删除缓存文件
+     *
      * @param context {@link Context}
      * @param type    类型 ( 图片、视频 )
      */
@@ -173,12 +192,14 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 删除全部缓存文件
+     *
      * @param context {@link Context}
      */
     void deleteAllCacheDirFile(Context context);
 
     /**
      * 是否图片选择 ( onActivityResult )
+     *
      * @param requestCode 请求 code
      * @param resultCode  resultCode
      * @return {@code true} success, {@code false} fail
@@ -192,6 +213,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取 Media Selector Data List
+     *
      * @param data onActivityResult Intent data
      * @return Media Selector Data List
      */
@@ -199,6 +221,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取 Media Selector Path List
+     *
      * @param data     onActivityResult Intent data
      * @param original 是否使用原图地址
      * @return Media Selector Path List
@@ -210,6 +233,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取 Single Media Selector Data
+     *
      * @param data onActivityResult Intent data
      * @return Single Media Selector Data
      */
@@ -217,6 +241,7 @@ public interface IMediaEngine<Config extends IMediaEngine.EngineConfig,
 
     /**
      * 获取 Single Media Selector Path
+     *
      * @param data     onActivityResult Intent data
      * @param original 是否使用原图地址
      * @return Single Media Selector Path

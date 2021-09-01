@@ -1,17 +1,17 @@
-package com.andev.framework.data.adapter;
+package com.andev.framework.widget.adapter;
 
 import android.app.Activity;
 import android.content.Context;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.andev.framework.data.assist.EditTextWatcherAssist;
+import com.andev.framework.widget.assist.EditTextWatcherAssist;
 import com.andev.framework.data.DevObject;
 import com.andev.framework.data.DevPage;
 import com.andev.framework.data.expand.RequestState;
 import com.andev.framework.data.multiselect.DevMultiSelectMap;
 import com.andev.framework.data.callback.DevCallback;
-import com.andev.framework.data.callback.DevItemClickCallback;
+import com.andev.framework.widget.callback.DevItemClickCallback;
 
 /**
  * detail: DataManager RecyclerView Adapter Extend

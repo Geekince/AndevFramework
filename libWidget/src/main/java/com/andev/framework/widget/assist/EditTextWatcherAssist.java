@@ -1,4 +1,4 @@
-package com.andev.framework.data.assist;
+package com.andev.framework.widget.assist;
 
 import android.text.Editable;
 import android.text.TextUtils;

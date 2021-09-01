@@ -7,6 +7,7 @@ import com.andev.framework.other.GsonUtils;
 
 /**
  * detail: Gson JSON Engine 实现
+ *
  * @author Ttt
  */
 public class GsonEngineImpl

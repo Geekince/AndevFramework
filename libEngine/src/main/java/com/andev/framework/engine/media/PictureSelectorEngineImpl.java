@@ -20,23 +20,24 @@ import com.andev.framework.utils.LogPrintUtils;
 
 /**
  * detail: PictureSelector Media Selector Engine 实现
+ *
  * @author Ttt
  */
 public class PictureSelectorEngineImpl
         implements IMediaEngine<MediaConfig, LocalMediaData> {
 
     // 日志 TAG
-    private final String      TAG                   = PictureSelectorEngineImpl.class.getSimpleName();
+    private final String TAG = PictureSelectorEngineImpl.class.getSimpleName();
     // 全局请求跳转回传 code
-    private final int         PIC_REQUEST_CODE      = 159857;
+    private final int PIC_REQUEST_CODE = 159857;
     // 全局配置信息
-    private final MediaConfig PIC_CONFIG            = new MediaConfig();
+    private final MediaConfig PIC_CONFIG = new MediaConfig();
     // 拍照存储地址
-    private       String      CAMERA_SAVE_PATH      = null;
+    private String CAMERA_SAVE_PATH = null;
     // 压缩图片存储地址
-    private       String      COMPRESS_SAVE_PATH    = null;
+    private String COMPRESS_SAVE_PATH = null;
     // 图片大于多少才进行压缩 (kb)
-    private       int         MINIMUM_COMPRESS_SIZE = 0;
+    private int MINIMUM_COMPRESS_SIZE = 0;
 
     // =============
     // = 对外公开方法 =
@@ -137,7 +138,7 @@ public class PictureSelectorEngineImpl
             String cameraSavePath,
             String compressSavePath
     ) {
-        CAMERA_SAVE_PATH   = cameraSavePath;
+        CAMERA_SAVE_PATH = cameraSavePath;
         COMPRESS_SAVE_PATH = compressSavePath;
         // 设置配置
         PIC_CONFIG.setCameraSavePath(cameraSavePath)
@@ -193,8 +194,8 @@ public class PictureSelectorEngineImpl
 
     @Override
     public List<LocalMediaData> getSelectors(Intent data) {
-        List<LocalMedia>     result = PictureSelector.obtainMultipleResult(data);
-        List<LocalMediaData> lists  = new ArrayList<>();
+        List<LocalMedia> result = PictureSelector.obtainMultipleResult(data);
+        List<LocalMediaData> lists = new ArrayList<>();
         if (result != null) {
             for (LocalMedia localMedia : result) {
                 if (localMedia != null) {
@@ -211,7 +212,7 @@ public class PictureSelectorEngineImpl
             boolean original
     ) {
         List<LocalMediaData> result = getSelectors(data);
-        List<String>         lists  = new ArrayList<>();
+        List<String> lists = new ArrayList<>();
         if (result != null) {
             for (LocalMediaData media : result) {
                 if (media != null) {
@@ -246,6 +247,7 @@ public class PictureSelectorEngineImpl
 
     /**
      * 获取图片选择器对象
+     *
      * @param activity {@link Activity}
      * @param fragment {@link Fragment}
      * @return {@link PictureSelector}
@@ -264,6 +266,7 @@ public class PictureSelectorEngineImpl
 
     /**
      * 是否跳转成功
+     *
      * @param pictureSelectionModel 图片选择配置模型
      * @return {@code true} success, {@code false} fail
      */
@@ -281,6 +284,7 @@ public class PictureSelectorEngineImpl
      *     // 结果回调 onActivityResult requestCode
      *     pictureSelectionModel.forResult(requestCode);
      * </pre>
+     *
      * @param pictureSelector {@link PictureSelector}
      * @param config          {@link MediaConfig}
      * @param isCamera        是否拍照
@@ -358,6 +362,7 @@ public class PictureSelectorEngineImpl
 
     /**
      * 转换 List
+     *
      * @param lists {@link LocalMediaData} list
      * @return {@link LocalMedia} list
      */

@@ -55,6 +55,7 @@ import com.andev.framework.utils.common.assist.record.RecordConfig;
 
 /**
  * detail: Dev 工具类链式调用 Helper 类
+ *
  * @author Ttt
  * <pre>
  *     通过 DevApp 工具类快捷实现
@@ -66,12 +67,13 @@ import com.andev.framework.utils.common.assist.record.RecordConfig;
 public final class DevHelper {
 
     // TimeKeeper
-    private final        TimeKeeper mTimeKeeper = new TimeKeeper();
+    private final TimeKeeper mTimeKeeper = new TimeKeeper();
     // DevHelper
-    private static final DevHelper  HELPER      = new DevHelper();
+    private static final DevHelper HELPER = new DevHelper();
 
     /**
      * 获取单例 DevHelper
+     *
      * @return {@link DevHelper}
      */
     public static DevHelper get() {
@@ -84,6 +86,7 @@ public final class DevHelper {
 
     /**
      * 获取 ViewHelper
+     *
      * @return {@link ViewHelper}
      */
     public ViewHelper viewHelper() {
@@ -92,6 +95,7 @@ public final class DevHelper {
 
     /**
      * 获取 DevHelper
+     *
      * @return {@link DevHelper}
      */
     public DevHelper devHelper() {
@@ -100,6 +104,7 @@ public final class DevHelper {
 
     /**
      * 获取 QuickHelper
+     *
      * @param target 目标 View
      * @return {@link QuickHelper}
      */
@@ -113,6 +118,7 @@ public final class DevHelper {
 
     /**
      * 在主线程 Handler 中执行任务
+     *
      * @param runnable 可执行的任务
      * @return {@link DevHelper}
      */
@@ -123,6 +129,7 @@ public final class DevHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable    可执行的任务
      * @param delayMillis 延迟时间
      * @return {@link DevHelper}
@@ -137,6 +144,7 @@ public final class DevHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable    可执行的任务
      * @param delayMillis 延迟时间
      * @param number      轮询次数
@@ -155,6 +163,7 @@ public final class DevHelper {
 
     /**
      * 在主线程 Handler 中执行延迟任务
+     *
      * @param runnable      可执行的任务
      * @param delayMillis   延迟时间
      * @param number        轮询次数
@@ -175,6 +184,7 @@ public final class DevHelper {
 
     /**
      * 在主线程 Handler 中清除任务
+     *
      * @param runnable 需要清除的任务
      * @return {@link DevHelper}
      */
@@ -189,6 +199,7 @@ public final class DevHelper {
 
     /**
      * 运行定时器
+     *
      * @param timer {@link DevTimer}
      * @return {@link DevHelper}
      */
@@ -199,6 +210,7 @@ public final class DevHelper {
 
     /**
      * 关闭定时器
+     *
      * @param timer {@link DevTimer}
      * @return {@link DevHelper}
      */
@@ -213,6 +225,7 @@ public final class DevHelper {
 
     /**
      * Bitmap 通知回收
+     *
      * @param bitmap 待回收图片
      * @return {@link DevHelper}
      */
@@ -227,6 +240,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( JPEG )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @return {@link DevHelper}
@@ -240,6 +254,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( JPEG )
+     *
      * @param bitmap 待保存图片
      * @param file   存储路径
      * @return {@link DevHelper}
@@ -255,6 +270,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( JPEG )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @param quality  质量
@@ -270,6 +286,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( JPEG )
+     *
      * @param bitmap  待保存图片
      * @param file    存储路径
      * @param quality 质量
@@ -287,6 +304,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( PNG )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @return {@link DevHelper}
@@ -300,6 +318,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( PNG )
+     *
      * @param bitmap 待保存图片
      * @param file   存储路径
      * @return {@link DevHelper}
@@ -315,6 +334,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( PNG )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @param quality  质量
@@ -330,6 +350,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( PNG )
+     *
      * @param bitmap  待保存图片
      * @param file    存储路径
      * @param quality 质量
@@ -347,6 +368,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( WEBP )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @return {@link DevHelper}
@@ -360,6 +382,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( WEBP )
+     *
      * @param bitmap 待保存图片
      * @param file   存储路径
      * @return {@link DevHelper}
@@ -375,6 +398,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( WEBP )
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @param quality  质量
@@ -390,6 +414,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard ( WEBP )
+     *
      * @param bitmap  待保存图片
      * @param file    存储路径
      * @param quality 质量
@@ -407,6 +432,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard
+     *
      * @param bitmap   待保存图片
      * @param filePath 存储路径
      * @param format   如 Bitmap.CompressFormat.PNG
@@ -425,6 +451,7 @@ public final class DevHelper {
 
     /**
      * 保存图片到 SDCard
+     *
      * @param bitmap  待保存图片
      * @param file    存储路径
      * @param format  如 Bitmap.CompressFormat.PNG
@@ -447,6 +474,7 @@ public final class DevHelper {
 
     /**
      * 添加输入监听事件
+     *
      * @param editText {@link EditText}
      * @param watcher  输入监听
      * @return {@link DevHelper}
@@ -461,6 +489,7 @@ public final class DevHelper {
 
     /**
      * 移除输入监听事件
+     *
      * @param editText {@link EditText}
      * @param watcher  输入监听
      * @return {@link DevHelper}
@@ -475,6 +504,7 @@ public final class DevHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param editText    {@link EditText}
      * @param keyListener {@link KeyListener}
      * @return {@link DevHelper}
@@ -489,6 +519,7 @@ public final class DevHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param editText {@link EditText}
      * @param accepted 允许输入的内容, 如: 0123456789
      * @return {@link DevHelper}
@@ -503,6 +534,7 @@ public final class DevHelper {
 
     /**
      * 设置 KeyListener
+     *
      * @param editText {@link EditText}
      * @param accepted 允许输入的内容
      * @return {@link DevHelper}
@@ -521,6 +553,7 @@ public final class DevHelper {
 
     /**
      * 日志记录
+     *
      * @param config 日志记录配置信息
      * @param logs   日志内容数组
      * @return {@link DevHelper}
@@ -539,6 +572,7 @@ public final class DevHelper {
 
     /**
      * 清除内部缓存 ( path /data/data/package/cache )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cleanAppCache() {
@@ -548,6 +582,7 @@ public final class DevHelper {
 
     /**
      * 清除内部文件 ( path /data/data/package/files )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cleanAppFiles() {
@@ -557,6 +592,7 @@ public final class DevHelper {
 
     /**
      * 清除内部数据库 ( path /data/data/package/databases )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cleanAppDbs() {
@@ -566,6 +602,7 @@ public final class DevHelper {
 
     /**
      * 根据名称清除数据库 ( path /data/data/package/databases/dbName )
+     *
      * @param dbName 数据库名
      * @return {@link DevHelper}
      */
@@ -576,6 +613,7 @@ public final class DevHelper {
 
     /**
      * 清除内部 SP ( path /data/data/package/shared_prefs )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cleanAppSp() {
@@ -585,6 +623,7 @@ public final class DevHelper {
 
     /**
      * 清除内部 SP ( path /data/data/package/shared_prefs )
+     *
      * @param spName SP 文件名
      * @return {@link DevHelper}
      */
@@ -595,6 +634,7 @@ public final class DevHelper {
 
     /**
      * 清除外部缓存 ( path /storage/emulated/0/android/data/package/cache )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cleanCache() {
@@ -609,6 +649,7 @@ public final class DevHelper {
      * <pre>
      *     使用需小心请不要误删, 而且只支持目录下的文件删除
      * </pre>
+     *
      * @param filePath 文件路径
      * @return {@link DevHelper}
      */
@@ -622,6 +663,7 @@ public final class DevHelper {
      * <pre>
      *     使用需小心请不要误删, 而且只支持目录下的文件删除
      * </pre>
+     *
      * @param file 文件路径
      * @return {@link DevHelper}
      */
@@ -632,6 +674,7 @@ public final class DevHelper {
 
     /**
      * 清除本应用所有的数据
+     *
      * @param filePaths 文件路径数组
      * @return {@link DevHelper}
      */
@@ -646,6 +689,7 @@ public final class DevHelper {
 
     /**
      * 复制文本到剪贴板
+     *
      * @param text 文本
      * @return {@link DevHelper}
      */
@@ -656,6 +700,7 @@ public final class DevHelper {
 
     /**
      * 复制 URI 到剪贴板
+     *
      * @param uri {@link Uri}
      * @return {@link DevHelper}
      */
@@ -666,6 +711,7 @@ public final class DevHelper {
 
     /**
      * 复制意图到剪贴板
+     *
      * @param intent {@link Intent}
      * @return {@link DevHelper}
      */
@@ -680,6 +726,7 @@ public final class DevHelper {
 
     /**
      * 通知刷新本地资源
+     *
      * @param filePath 文件路径
      * @return {@link DevHelper}
      */
@@ -690,6 +737,7 @@ public final class DevHelper {
 
     /**
      * 通知刷新本地资源
+     *
      * @param file 文件
      * @return {@link DevHelper}
      */
@@ -704,6 +752,7 @@ public final class DevHelper {
 
     /**
      * 显示 Dialog
+     *
      * @param dialog {@link Dialog}
      * @param <T>    泛型
      * @return {@link DevHelper}
@@ -715,6 +764,7 @@ public final class DevHelper {
 
     /**
      * 关闭 Dialog
+     *
      * @param dialog {@link Dialog}
      * @return {@link DevHelper}
      */
@@ -725,6 +775,7 @@ public final class DevHelper {
 
     /**
      * 关闭多个 Dialog
+     *
      * @param dialogs {@link Dialog} 数组
      * @return {@link DevHelper}
      */
@@ -737,6 +788,7 @@ public final class DevHelper {
 
     /**
      * 关闭 DialogFragment
+     *
      * @param dialog {@link DialogFragment}
      * @return {@link DevHelper}
      */
@@ -747,6 +799,7 @@ public final class DevHelper {
 
     /**
      * 关闭多个 DialogFragment
+     *
      * @param dialogs {@link DialogFragment} 数组
      * @return {@link DevHelper}
      */
@@ -759,6 +812,7 @@ public final class DevHelper {
 
     /**
      * 关闭 PopupWindow
+     *
      * @param popupWindow {@link PopupWindow}
      * @return {@link DevHelper}
      */
@@ -769,6 +823,7 @@ public final class DevHelper {
 
     /**
      * 关闭多个 PopupWindow
+     *
      * @param popupWindows {@link PopupWindow} 数组
      * @return {@link DevHelper}
      */
@@ -781,6 +836,7 @@ public final class DevHelper {
 
     /**
      * 自动关闭 dialog
+     *
      * @param dialog      {@link Dialog}
      * @param delayMillis 延迟关闭时间
      * @param handler     {@link Handler}
@@ -798,6 +854,7 @@ public final class DevHelper {
 
     /**
      * 自动关闭 DialogFragment
+     *
      * @param dialog      {@link DialogFragment}
      * @param delayMillis 延迟关闭时间
      * @param handler     {@link Handler}
@@ -815,6 +872,7 @@ public final class DevHelper {
 
     /**
      * 自动关闭 PopupWindow
+     *
      * @param popupWindow {@link PopupWindow}
      * @param delayMillis 延迟关闭时间
      * @param handler     {@link Handler}
@@ -840,6 +898,7 @@ public final class DevHelper {
 
     /**
      * 设置某个 View 内所有非 EditText 的子 View OnTouchListener 事件
+     *
      * @param view     {@link View}
      * @param activity {@link Activity}
      * @return {@link DevHelper}
@@ -854,6 +913,7 @@ public final class DevHelper {
 
     /**
      * 注册软键盘改变监听
+     *
      * @param activity {@link Activity}
      * @param listener {@link KeyBoardUtils.OnSoftInputChangedListener}
      * @return {@link DevHelper}
@@ -868,6 +928,7 @@ public final class DevHelper {
 
     /**
      * 注册软键盘改变监听
+     *
      * @param activity {@link Activity}
      * @param listener {@link KeyBoardUtils.OnSoftInputChangedListener}
      * @return {@link DevHelper}
@@ -886,6 +947,7 @@ public final class DevHelper {
 
     /**
      * 打开软键盘
+     *
      * @return {@link DevHelper}
      */
     public DevHelper openKeyboard() {
@@ -895,6 +957,7 @@ public final class DevHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @return {@link DevHelper}
      */
     public DevHelper openKeyboardDelay() {
@@ -904,6 +967,7 @@ public final class DevHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
      */
@@ -916,6 +980,7 @@ public final class DevHelper {
 
     /**
      * 打开软键盘
+     *
      * @param editText {@link EditText}
      * @return {@link DevHelper}
      */
@@ -926,6 +991,7 @@ public final class DevHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @param editText {@link EditText}
      * @return {@link DevHelper}
      */
@@ -936,6 +1002,7 @@ public final class DevHelper {
 
     /**
      * 延时打开软键盘
+     *
      * @param editText    {@link EditText}
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
@@ -954,6 +1021,7 @@ public final class DevHelper {
 
     /**
      * 关闭软键盘
+     *
      * @return {@link DevHelper}
      */
     public DevHelper closeKeyboard() {
@@ -963,6 +1031,7 @@ public final class DevHelper {
 
     /**
      * 关闭软键盘
+     *
      * @param editText {@link EditText}
      * @return {@link DevHelper}
      */
@@ -973,6 +1042,7 @@ public final class DevHelper {
 
     /**
      * 关闭软键盘
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -983,6 +1053,7 @@ public final class DevHelper {
 
     /**
      * 关闭 dialog 中打开的键盘
+     *
      * @param dialog {@link Dialog}
      * @return {@link DevHelper}
      */
@@ -993,6 +1064,7 @@ public final class DevHelper {
 
     /**
      * 关闭软键盘
+     *
      * @param editText {@link EditText}
      * @param dialog   {@link Dialog}
      * @return {@link DevHelper}
@@ -1011,6 +1083,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param editText {@link EditText}
      * @param dialog   {@link Dialog}
      * @return {@link DevHelper}
@@ -1025,6 +1098,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param editText    {@link EditText}
      * @param dialog      {@link Dialog}
      * @param delayMillis 延迟时间 ( 毫秒 )
@@ -1043,6 +1117,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @return {@link DevHelper}
      */
     public DevHelper closeKeyboardDelay() {
@@ -1052,6 +1127,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
      */
@@ -1062,6 +1138,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param editText {@link EditText}
      * @return {@link DevHelper}
      */
@@ -1072,6 +1149,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param editText    {@link EditText}
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
@@ -1086,6 +1164,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1096,6 +1175,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param activity    {@link Activity}
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
@@ -1110,6 +1190,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param dialog {@link Dialog}
      * @return {@link DevHelper}
      */
@@ -1120,6 +1201,7 @@ public final class DevHelper {
 
     /**
      * 延时关闭软键盘
+     *
      * @param dialog      {@link Dialog}
      * @param delayMillis 延迟时间 ( 毫秒 )
      * @return {@link DevHelper}
@@ -1138,6 +1220,7 @@ public final class DevHelper {
 
     /**
      * 修改系统语言 (APP 多语言, 单独改变 APP 语言 )
+     *
      * @param context {@link Context}
      * @param locale  {@link Locale}
      * @return {@link DevHelper}
@@ -1152,6 +1235,7 @@ public final class DevHelper {
 
     /**
      * 修改系统语言 (APP 多语言, 单独改变 APP 语言 )
+     *
      * @param context  {@link Context}
      * @param language 语言
      * @return {@link DevHelper}
@@ -1170,6 +1254,7 @@ public final class DevHelper {
 
     /**
      * 设置点击事件
+     *
      * @param onClickListener {@link View.OnClickListener}
      * @param views           View 数组
      * @return {@link DevHelper}
@@ -1184,6 +1269,7 @@ public final class DevHelper {
 
     /**
      * 设置长按事件
+     *
      * @param onLongClickListener {@link View.OnLongClickListener}
      * @param views               View 数组
      * @return {@link DevHelper}
@@ -1198,6 +1284,7 @@ public final class DevHelper {
 
     /**
      * 设置触摸事件
+     *
      * @param onTouchListener {@link View.OnTouchListener}
      * @param views           View 数组
      * @return {@link DevHelper}
@@ -1212,6 +1299,7 @@ public final class DevHelper {
 
     /**
      * 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域
+     *
      * @param view  待添加点击范围 View
      * @param range 点击范围
      * @return {@link DevHelper}
@@ -1226,6 +1314,7 @@ public final class DevHelper {
 
     /**
      * 增加控件的触摸范围, 最大范围只能是父布局所包含的的区域
+     *
      * @param view   待添加点击范围 View
      * @param top    top range
      * @param bottom bottom range
@@ -1250,6 +1339,7 @@ public final class DevHelper {
 
     /**
      * 移除通知 ( 移除所有通知 )
+     *
      * @return {@link DevHelper}
      */
     public DevHelper cancelAllNotification() {
@@ -1259,6 +1349,7 @@ public final class DevHelper {
 
     /**
      * 移除通知 ( 移除标记为 id 的通知 )
+     *
      * @param args 消息 id 集合
      * @return {@link DevHelper}
      */
@@ -1269,6 +1360,7 @@ public final class DevHelper {
 
     /**
      * 移除通知 ( 移除标记为 id 的通知 )
+     *
      * @param tag 标记 TAG
      * @param id  消息 id
      * @return {@link DevHelper}
@@ -1283,6 +1375,7 @@ public final class DevHelper {
 
     /**
      * 进行通知
+     *
      * @param id           消息 id
      * @param notification {@link Notification}
      * @return {@link DevHelper}
@@ -1297,6 +1390,7 @@ public final class DevHelper {
 
     /**
      * 进行通知
+     *
      * @param tag          标记 TAG
      * @param id           消息 id
      * @param notification {@link Notification}
@@ -1317,6 +1411,7 @@ public final class DevHelper {
 
     /**
      * 获取 Assets 资源文件数据并保存到本地
+     *
      * @param fileName 文件名
      * @param file     文件存储地址
      * @return {@link DevHelper}
@@ -1331,6 +1426,7 @@ public final class DevHelper {
 
     /**
      * 获取 Raw 资源文件数据并保存到本地
+     *
      * @param resId 资源 id
      * @param file  文件存储地址
      * @return {@link DevHelper}
@@ -1349,6 +1445,7 @@ public final class DevHelper {
 
     /**
      * 设置禁止截屏
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1359,6 +1456,7 @@ public final class DevHelper {
 
     /**
      * 设置屏幕为全屏
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1369,6 +1467,7 @@ public final class DevHelper {
 
     /**
      * 设置屏幕为全屏无标题
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1379,6 +1478,7 @@ public final class DevHelper {
 
     /**
      * 设置屏幕为横屏
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1389,6 +1489,7 @@ public final class DevHelper {
 
     /**
      * 设置屏幕为竖屏
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1399,6 +1500,7 @@ public final class DevHelper {
 
     /**
      * 切换屏幕方向
+     *
      * @param activity {@link Activity}
      * @return {@link DevHelper}
      */
@@ -1413,6 +1515,7 @@ public final class DevHelper {
 
     /**
      * 在 onCreate 中获取视图的尺寸 ( 需回调 onGetSizeListener 接口, 在 onGetSize 中获取 View 宽高 )
+     *
      * @param view     {@link View}
      * @param listener {@link SizeUtils.OnGetSizeListener}
      * @return {@link DevHelper}
@@ -1431,6 +1534,7 @@ public final class DevHelper {
 
     /**
      * 震动
+     *
      * @param millis 震动时长 ( 毫秒 )
      * @return {@link DevHelper}
      */
@@ -1442,6 +1546,7 @@ public final class DevHelper {
 
     /**
      * pattern 模式震动
+     *
      * @param pattern new long[]{400, 800, 1200, 1600}, 就是指定在 400ms、800ms、1200ms、1600ms 这些时间点交替启动、关闭手机震动器
      * @param repeat  指定 pattern 数组的索引, 指定 pattern 数组中从 repeat 索引开始的震动进行循环,
      *                -1 表示只震动一次, 非 -1 表示从 pattern 数组指定下标开始重复震动
@@ -1458,6 +1563,7 @@ public final class DevHelper {
 
     /**
      * 取消震动
+     *
      * @return {@link DevHelper}
      */
     @RequiresPermission(Manifest.permission.VIBRATE)
@@ -1472,6 +1578,7 @@ public final class DevHelper {
 
     /**
      * 关闭 IO
+     *
      * @param closeables Closeable[]
      * @return {@link DevHelper}
      */
@@ -1482,6 +1589,7 @@ public final class DevHelper {
 
     /**
      * 安静关闭 IO
+     *
      * @param closeables Closeable[]
      * @return {@link DevHelper}
      */
@@ -1492,6 +1600,7 @@ public final class DevHelper {
 
     /**
      * 将缓冲区数据输出
+     *
      * @param flushables Flushable[]
      * @return {@link DevHelper}
      */
@@ -1502,6 +1611,7 @@ public final class DevHelper {
 
     /**
      * 安静将缓冲区数据输出
+     *
      * @param flushables Flushable[]
      * @return {@link DevHelper}
      */
@@ -1512,6 +1622,7 @@ public final class DevHelper {
 
     /**
      * 将缓冲区数据输出并关闭流
+     *
      * @param outputStream {@link OutputStream}
      * @return {@link DevHelper}
      */
@@ -1522,6 +1633,7 @@ public final class DevHelper {
 
     /**
      * 安静将缓冲区数据输出并关闭流
+     *
      * @param outputStream {@link OutputStream}
      * @return {@link DevHelper}
      */
@@ -1532,6 +1644,7 @@ public final class DevHelper {
 
     /**
      * 将缓冲区数据输出并关闭流
+     *
      * @param writer {@link Writer}
      * @return {@link DevHelper}
      */
@@ -1542,6 +1655,7 @@ public final class DevHelper {
 
     /**
      * 安静将缓冲区数据输出并关闭流
+     *
      * @param writer {@link Writer}
      * @return {@link DevHelper}
      */
@@ -1556,6 +1670,7 @@ public final class DevHelper {
 
     /**
      * 获取网络时间 ( 默认使用百度链接 )
+     *
      * @param callback 请求时间回调接口
      * @return {@link DevHelper}
      */
@@ -1566,6 +1681,7 @@ public final class DevHelper {
 
     /**
      * 获取网络时间
+     *
      * @param urlStr   请求地址
      * @param callback 请求时间回调接口
      * @return {@link DevHelper}
@@ -1584,6 +1700,7 @@ public final class DevHelper {
 
     /**
      * 设置等待一段时间后, 通知方法 ( 异步 )
+     *
      * @param keepTimeMillis 堵塞时间 ( 毫秒 )
      * @param callback       结束回调通知
      * @return {@link DevHelper}
@@ -1598,6 +1715,7 @@ public final class DevHelper {
 
     /**
      * 设置等待一段时间后, 通知方法 ( 同步 )
+     *
      * @param keepTimeMillis 堵塞时间 ( 毫秒 )
      * @param callback       结束回调通知
      * @return {@link DevHelper}
@@ -1616,6 +1734,7 @@ public final class DevHelper {
 
     /**
      * 设置动画事件
+     *
      * @param animation {@link Animation}
      * @param listener  {@link Animation.AnimationListener}
      * @return {@link DevHelper}

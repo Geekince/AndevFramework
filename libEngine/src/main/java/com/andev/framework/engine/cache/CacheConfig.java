@@ -5,10 +5,10 @@ import com.andev.framework.utils.common.cipher.Cipher;
 
 /**
  * detail: Cache Config
+ *
  * @author Ttt
  */
-public class CacheConfig
-        extends ICacheEngine.EngineConfig {
+public class CacheConfig extends ICacheEngine.EngineConfig {
 
     public final DevCache mDevCache;
 

@@ -6,6 +6,7 @@ import com.andev.framework.engine.DevEngineAssist;
 
 /**
  * detail: Log Engine
+ *
  * @author Ttt
  */
 public final class DevLogEngine {
@@ -17,6 +18,7 @@ public final class DevLogEngine {
 
     /**
      * 获取 Engine
+     *
      * @return {@link ILogEngine}
      */
     public static ILogEngine getEngine() {
@@ -25,6 +27,7 @@ public final class DevLogEngine {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link ILogEngine}
      */
@@ -34,6 +37,7 @@ public final class DevLogEngine {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link ILogEngine}
      * @return {@link ILogEngine}
      */
@@ -43,6 +47,7 @@ public final class DevLogEngine {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link ILogEngine}
      * @return {@link ILogEngine}
@@ -63,6 +68,7 @@ public final class DevLogEngine {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public static void removeEngine(final String key) {
@@ -75,6 +81,7 @@ public final class DevLogEngine {
 
     /**
      * 获取 DevEngine Generic Assist
+     *
      * @return DevEngine Generic Assist
      */
     public static DevEngineAssist<ILogEngine> getAssist() {
@@ -83,6 +90,7 @@ public final class DevLogEngine {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public static Map<String, ILogEngine> getEngineMaps() {
@@ -91,6 +99,7 @@ public final class DevLogEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean contains() {
@@ -99,6 +108,7 @@ public final class DevLogEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -108,6 +118,7 @@ public final class DevLogEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isEmpty() {
@@ -116,6 +127,7 @@ public final class DevLogEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

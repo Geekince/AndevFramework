@@ -21,7 +21,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.andev.framework.utils.BuildConfig;
 import com.andev.framework.utils.JCLogUtils;
 import com.andev.framework.utils.LogPrintUtils;
 import com.andev.framework.utils.app.HandlerUtils;
@@ -34,29 +33,8 @@ import com.andev.framework.utils.common.assist.record.FileRecordUtils;
 
 /**
  * detail: 开发工具类
+ *
  * @author Ttt
- * <pre>
- *     GitHub
- *     @see <a href="https://github.com/afkT/DevUtils"/>
- *     DevApp Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevApp/README.md"/>
- *     DevAssist Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevAssist/README.md"/>
- *     DevBase README
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevBase/README.md"/>
- *     DevBaseMVVM README
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevBaseMVVM/README.md"/>
- *     DevEngine README
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevEngine/README.md"/>
- *     DevHttpCapture Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevHttpCapture/README.md"/>
- *     DevJava Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevJava/README.md"/>
- *     DevWidget Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/DevWidget/README_API.md"/>
- *     DevEnvironment Api
- *     @see <a href="https://github.com/afkT/DevUtils/blob/master/lib/Environment"/>
- * </pre>
  */
 public final class DevUtils {
 
@@ -69,12 +47,13 @@ public final class DevUtils {
     // 全局 Application 对象
     private static Application sApplication;
     // 全局 Context - getApplicationContext()
-    private static Context     sContext;
+    private static Context sContext;
     // 是否内部 Debug 模式
-    private static boolean     sDebug = false;
+    private static boolean sDebug = false;
 
     /**
      * 初始化方法 ( 必须调用 )
+     *
      * @param context {@link Context}
      */
     public static void init(final Context context) {
@@ -118,6 +97,7 @@ public final class DevUtils {
 
     /**
      * 初始化全局 Context
+     *
      * @param context {@link Context}
      */
     private static void initContext(final Context context) {
@@ -128,6 +108,7 @@ public final class DevUtils {
 
     /**
      * 初始化全局 Application
+     *
      * @param context {@link Context}
      */
     private static void initApplication(final Context context) {
@@ -141,6 +122,7 @@ public final class DevUtils {
 
     /**
      * 获取全局 Context
+     *
      * @return {@link Context}
      */
     public static Context getContext() {
@@ -149,6 +131,7 @@ public final class DevUtils {
 
     /**
      * 获取 Context ( 判断 null, 视情况返回全局 Context)
+     *
      * @param context {@link Context}
      * @return {@link Context}
      */
@@ -158,6 +141,7 @@ public final class DevUtils {
 
     /**
      * 获取全局 Application
+     *
      * @return {@link Application}
      */
     public static Application getApplication() {
@@ -176,6 +160,7 @@ public final class DevUtils {
 
     /**
      * 反射获取 Application
+     *
      * @return {@link Application}
      */
     private static Application getApplicationByReflect() {
@@ -183,7 +168,7 @@ public final class DevUtils {
             @SuppressLint("PrivateApi")
             Class<?> activityThread = Class.forName("android.app.ActivityThread");
             Object thread = activityThread.getMethod("currentActivityThread").invoke(null);
-            Object app    = activityThread.getMethod("getApplication").invoke(thread);
+            Object app = activityThread.getMethod("getApplication").invoke(thread);
             if (app == null) {
                 throw new NullPointerException("u should init first");
             }
@@ -198,6 +183,7 @@ public final class DevUtils {
 
     /**
      * 获取 Handler
+     *
      * @return {@link Handler}
      */
     public static Handler getHandler() {
@@ -206,6 +192,7 @@ public final class DevUtils {
 
     /**
      * 执行 UI 线程任务
+     *
      * @param runnable 线程任务
      */
     public static void runOnUiThread(final Runnable runnable) {
@@ -214,6 +201,7 @@ public final class DevUtils {
 
     /**
      * 执行 UI 线程任务 ( 延时执行 )
+     *
      * @param runnable    线程任务
      * @param delayMillis 延时执行时间 ( 毫秒 )
      */
@@ -243,6 +231,7 @@ public final class DevUtils {
 
     /**
      * 判断是否 Debug 模式
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isDebug() {
@@ -254,14 +243,15 @@ public final class DevUtils {
     // ================
 
     // ActivityLifecycleCallbacks 实现类, 监听 Activity
-    private static final ActivityLifecycleImpl   ACTIVITY_LIFECYCLE             = new ActivityLifecycleImpl();
+    private static final ActivityLifecycleImpl ACTIVITY_LIFECYCLE = new ActivityLifecycleImpl();
     // Activity 过滤判断接口
-    private static       ActivityLifecycleFilter sActivityLifecycleFilter;
+    private static ActivityLifecycleFilter sActivityLifecycleFilter;
     // 权限 Activity.class name
-    public static final  String                  PERMISSION_ACTIVITY_CLASS_NAME = "dev.utils.app.permission.PermissionUtils$PermissionActivity";
+    public static final String PERMISSION_ACTIVITY_CLASS_NAME = "dev.utils.app.permission.PermissionUtils$PermissionActivity";
 
     /**
      * 注册绑定 Activity 生命周期事件处理
+     *
      * @param application {@link Application}
      */
     private static void registerActivityLifecycleCallbacks(final Application application) {
@@ -280,6 +270,7 @@ public final class DevUtils {
 
     /**
      * 解除注册 Activity 生命周期事件处理
+     *
      * @param application {@link Application}
      */
     private static void unregisterActivityLifecycleCallbacks(final Application application) {
@@ -299,6 +290,7 @@ public final class DevUtils {
 
     /**
      * 获取 Activity 生命周期 相关信息获取接口类
+     *
      * @return {@link ActivityLifecycleGet}
      */
     public static ActivityLifecycleGet getActivityLifecycleGet() {
@@ -307,6 +299,7 @@ public final class DevUtils {
 
     /**
      * 获取 Activity 生命周期 事件监听接口类
+     *
      * @return {@link ActivityLifecycleNotify}
      */
     public static ActivityLifecycleNotify getActivityLifecycleNotify() {
@@ -315,6 +308,7 @@ public final class DevUtils {
 
     /**
      * 获取 Top Activity
+     *
      * @return {@link Activity}
      */
     public static Activity getTopActivity() {
@@ -323,6 +317,7 @@ public final class DevUtils {
 
     /**
      * 设置 Activity 生命周期 过滤判断接口
+     *
      * @param activityLifecycleFilter Activity 过滤判断接口
      */
     public static void setActivityLifecycleFilter(final ActivityLifecycleFilter activityLifecycleFilter) {
@@ -335,6 +330,7 @@ public final class DevUtils {
 
     /**
      * detail: 对 Activity 的生命周期事件进行集中处理, ActivityLifecycleCallbacks 实现方法
+     *
      * @author Ttt
      */
     private static class ActivityLifecycleImpl
@@ -343,18 +339,18 @@ public final class DevUtils {
             ActivityLifecycleNotify {
 
         // 保存未销毁的 Activity
-        private final LinkedList<Activity>                            mActivityLists         = new LinkedList<>();
+        private final LinkedList<Activity> mActivityLists = new LinkedList<>();
         // APP 状态改变事件
-        private final Map<Object, OnAppStatusChangedListener>         mStatusListenerMaps    = new ConcurrentHashMap<>();
+        private final Map<Object, OnAppStatusChangedListener> mStatusListenerMaps = new ConcurrentHashMap<>();
         // Activity 销毁事件
         private final Map<Activity, Set<OnActivityDestroyedListener>> mDestroyedListenerMaps = new ConcurrentHashMap<>();
 
         // 前台 Activity 总数
-        private int     mForegroundCount = 0;
+        private int mForegroundCount = 0;
         // Activity Configuration 改变次数
-        private int     mConfigCount     = 0;
+        private int mConfigCount = 0;
         // 是否后台 Activity
-        private boolean mIsBackground    = false;
+        private boolean mIsBackground = false;
 
         // ==============================
         // = ActivityLifecycleCallbacks =
@@ -456,6 +452,7 @@ public final class DevUtils {
 
         /**
          * 保存 Activity 栈顶
+         *
          * @param activity {@link Activity}
          */
         private void setTopActivity(final Activity activity) {
@@ -474,20 +471,21 @@ public final class DevUtils {
 
         /**
          * 反射获取栈顶 Activity
+         *
          * @return {@link Activity}
          */
         private Activity getTopActivityByReflect() {
             try {
                 @SuppressLint("PrivateApi")
                 Class<?> activityThreadClass = Class.forName("android.app.ActivityThread");
-                Object activityThread  = activityThreadClass.getMethod("currentActivityThread").invoke(null);
-                Field  activitiesField = activityThreadClass.getDeclaredField("mActivityLists");
+                Object activityThread = activityThreadClass.getMethod("currentActivityThread").invoke(null);
+                Field activitiesField = activityThreadClass.getDeclaredField("mActivityLists");
                 activitiesField.setAccessible(true);
                 Map<?, ?> activities = (Map<?, ?>) activitiesField.get(activityThread);
                 if (activities == null) return null;
                 for (Object activityRecord : activities.values()) {
                     Class<?> activityRecordClass = activityRecord.getClass();
-                    Field    pausedField         = activityRecordClass.getDeclaredField("paused");
+                    Field pausedField = activityRecordClass.getDeclaredField("paused");
                     pausedField.setAccessible(true);
                     if (!pausedField.getBoolean(activityRecord)) {
                         Field activityField = activityRecordClass.getDeclaredField("activity");
@@ -507,6 +505,7 @@ public final class DevUtils {
 
         /**
          * 获取最顶部 ( 当前或最后一个显示 ) Activity
+         *
          * @return {@link Activity}
          */
         @Override
@@ -526,6 +525,7 @@ public final class DevUtils {
 
         /**
          * 判断某个 Activity 是否 Top Activity
+         *
          * @param activityClassName Activity.class.getCanonicalName()
          * @return {@code true} yes, {@code false} no
          */
@@ -541,6 +541,7 @@ public final class DevUtils {
 
         /**
          * 判断某个 Class(Activity) 是否 Top Activity
+         *
          * @param clazz Activity.class or this.getClass()
          * @return {@code true} yes, {@code false} no
          */
@@ -556,6 +557,7 @@ public final class DevUtils {
 
         /**
          * 判断应用是否在后台 ( 不可见 )
+         *
          * @return {@code true} yes, {@code false} no
          */
         @Override
@@ -565,6 +567,7 @@ public final class DevUtils {
 
         /**
          * 获取 Activity 总数
+         *
          * @return 已打开 Activity 总数
          */
         @Override
@@ -578,6 +581,7 @@ public final class DevUtils {
 
         /**
          * 添加 APP 状态改变事件监听
+         *
          * @param object   key
          * @param listener APP 状态改变监听事件
          */
@@ -591,6 +595,7 @@ public final class DevUtils {
 
         /**
          * 移除 APP 状态改变事件监听
+         *
          * @param object key
          */
         @Override
@@ -610,6 +615,7 @@ public final class DevUtils {
 
         /**
          * 添加 Activity 销毁通知事件
+         *
          * @param activity {@link Activity}
          * @param listener Activity 销毁通知事件
          */
@@ -632,6 +638,7 @@ public final class DevUtils {
 
         /**
          * 移除 Activity 销毁通知事件
+         *
          * @param activity {@link Activity}
          */
         @Override
@@ -654,6 +661,7 @@ public final class DevUtils {
 
         /**
          * 发送状态改变通知
+         *
          * @param isForeground 是否在前台
          */
         private void postStatus(final boolean isForeground) {
@@ -674,6 +682,7 @@ public final class DevUtils {
 
         /**
          * 通知 Activity 销毁, 并且消费 ( 移除 ) 监听事件
+         *
          * @param activity {@link Activity}
          */
         private void consumeOnActivityDestroyedListener(final Activity activity) {
@@ -695,18 +704,21 @@ public final class DevUtils {
 
     /**
      * detail: Activity 生命周期 相关信息获取接口
+     *
      * @author Ttt
      */
     public interface ActivityLifecycleGet {
 
         /**
          * 获取最顶部 ( 当前或最后一个显示 ) Activity
+         *
          * @return {@link Activity}
          */
         Activity getTopActivity();
 
         /**
          * 判断某个 Activity 是否 Top Activity
+         *
          * @param activityClassName Activity.class.getCanonicalName()
          * @return {@code true} yes, {@code false} no
          */
@@ -714,6 +726,7 @@ public final class DevUtils {
 
         /**
          * 判断某个 Class(Activity) 是否 Top Activity
+         *
          * @param clazz Activity.class or this.getClass()
          * @return {@code true} yes, {@code false} no
          */
@@ -721,12 +734,14 @@ public final class DevUtils {
 
         /**
          * 判断应用是否在后台 ( 不可见 )
+         *
          * @return {@code true} yes, {@code false} no
          */
         boolean isBackground();
 
         /**
          * 获取 Activity 总数
+         *
          * @return 已打开 Activity 总数
          */
         int getActivityCount();
@@ -734,12 +749,14 @@ public final class DevUtils {
 
     /**
      * detail: Activity 生命周期 过滤判断接口
+     *
      * @author Ttt
      */
     public interface ActivityLifecycleFilter {
 
         /**
          * 判断是否过滤该类 ( 不进行添加等操作 )
+         *
          * @param activity {@link Activity}
          * @return {@code true} yes, {@code false} no
          */
@@ -748,12 +765,14 @@ public final class DevUtils {
 
     /**
      * detail: Activity 生命周期 通知接口
+     *
      * @author Ttt
      */
     public interface ActivityLifecycleNotify {
 
         /**
          * 添加 APP 状态改变事件监听
+         *
          * @param object   key
          * @param listener APP 状态改变监听事件
          */
@@ -764,6 +783,7 @@ public final class DevUtils {
 
         /**
          * 移除 APP 状态改变事件监听
+         *
          * @param object key
          */
         void removeOnAppStatusChangedListener(Object object);
@@ -777,6 +797,7 @@ public final class DevUtils {
 
         /**
          * 添加 Activity 销毁通知事件
+         *
          * @param activity {@link Activity}
          * @param listener Activity 销毁通知事件
          */
@@ -787,6 +808,7 @@ public final class DevUtils {
 
         /**
          * 移除 Activity 销毁通知事件
+         *
          * @param activity {@link Activity}
          */
         void removeOnActivityDestroyedListener(Activity activity);
@@ -799,6 +821,7 @@ public final class DevUtils {
 
     /**
      * detail: APP 状态改变事件
+     *
      * @author Ttt
      */
     public interface OnAppStatusChangedListener {
@@ -816,12 +839,14 @@ public final class DevUtils {
 
     /**
      * detail: Activity 销毁事件
+     *
      * @author Ttt
      */
     public interface OnActivityDestroyedListener {
 
         /**
          * Activity 销毁通知
+         *
          * @param activity {@link Activity}
          */
         void onActivityDestroyed(Activity activity);
@@ -856,6 +881,7 @@ public final class DevUtils {
 
     /**
      * 设置 ActivityLifecycle 监听回调
+     *
      * @param abstractActivityLifecycle Activity 生命周期监听类
      */
     public static void setAbstractActivityLifecycle(final AbstractActivityLifecycle abstractActivityLifecycle) {
@@ -864,6 +890,7 @@ public final class DevUtils {
 
     /**
      * detail: ActivityLifecycleCallbacks 抽象类
+     *
      * @author Ttt
      */
     public static abstract class AbstractActivityLifecycle
@@ -913,6 +940,7 @@ public final class DevUtils {
 
     /**
      * 获取 FileProvider Authority
+     *
      * @return FileProvider Authority
      */
     public static String getAuthority() {
@@ -926,6 +954,7 @@ public final class DevUtils {
 
     /**
      * 获取 FileProvider File Uri
+     *
      * @param file 文件
      * @return 指定文件 {@link Uri}
      */
@@ -935,6 +964,7 @@ public final class DevUtils {
 
     /**
      * 获取 FileProvider File Path Uri
+     *
      * @param filePath 文件路径
      * @return 指定文件 {@link Uri}
      */
@@ -944,6 +974,7 @@ public final class DevUtils {
 
     /**
      * detail: FileProvider
+     *
      * @author Ttt
      */
     public static final class FileProviderDevApp

@@ -6,6 +6,7 @@ import com.andev.framework.engine.DevEngineAssist;
 
 /**
  * detail: Permission Engine
+ *
  * @author Ttt
  */
 public final class DevPermissionEngine {
@@ -17,6 +18,7 @@ public final class DevPermissionEngine {
 
     /**
      * 获取 Engine
+     *
      * @return {@link IPermissionEngine}
      */
     public static IPermissionEngine getEngine() {
@@ -25,6 +27,7 @@ public final class DevPermissionEngine {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link IPermissionEngine}
      */
@@ -34,6 +37,7 @@ public final class DevPermissionEngine {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link IPermissionEngine}
      * @return {@link IPermissionEngine}
      */
@@ -43,6 +47,7 @@ public final class DevPermissionEngine {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link IPermissionEngine}
      * @return {@link IPermissionEngine}
@@ -63,6 +68,7 @@ public final class DevPermissionEngine {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public static void removeEngine(final String key) {
@@ -75,6 +81,7 @@ public final class DevPermissionEngine {
 
     /**
      * 获取 DevEngine Generic Assist
+     *
      * @return DevEngine Generic Assist
      */
     public static DevEngineAssist<IPermissionEngine> getAssist() {
@@ -83,6 +90,7 @@ public final class DevPermissionEngine {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public static Map<String, IPermissionEngine> getEngineMaps() {
@@ -91,6 +99,7 @@ public final class DevPermissionEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean contains() {
@@ -99,6 +108,7 @@ public final class DevPermissionEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -108,6 +118,7 @@ public final class DevPermissionEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isEmpty() {
@@ -116,6 +127,7 @@ public final class DevPermissionEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

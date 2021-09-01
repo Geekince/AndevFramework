@@ -1,4 +1,4 @@
-package com.andev.framework.widget.decoration
+package com.andev.framework.widget.recyclerview.decoration
 
 import android.graphics.Canvas
 import android.graphics.Paint

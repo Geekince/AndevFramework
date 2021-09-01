@@ -4,6 +4,7 @@ import com.andev.framework.engine.storage.listener.OnInsertListener;
 
 /**
  * detail: 插入多媒体资源事件 封装接口
+ *
  * @author Ttt
  * <pre>
  *     减少需要 OnInsertListener<StorageItem, StorageResult> 声明使用

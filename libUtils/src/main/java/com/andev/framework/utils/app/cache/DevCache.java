@@ -16,17 +16,19 @@ import com.andev.framework.utils.common.cipher.Cipher;
 
 /**
  * detail: 缓存类
+ *
  * @author Ttt
  */
 public final class DevCache {
 
     // 默认缓存文件名
-    private static final String          DEFAULT_NAME = DevCache.class.getSimpleName();
+    private static final String DEFAULT_NAME = DevCache.class.getSimpleName();
     // 缓存管理类
-    private final        DevCacheManager mManager;
+    private final DevCacheManager mManager;
 
     /**
      * 获取 DevCache
+     *
      * @param cachePath 缓存文件夹路径
      * @param cipher    通用加解密中间层
      */
@@ -38,24 +40,24 @@ public final class DevCache {
     }
 
     // 数据类型
-    public static final int     INT             = 1;
-    public static final int     LONG            = 2;
-    public static final int     FLOAT           = 3;
-    public static final int     DOUBLE          = 4;
-    public static final int     BOOLEAN         = 5;
-    public static final int     STRING          = 6;
-    public static final int     BYTES           = 7;
-    public static final int     BITMAP          = 8;
-    public static final int     DRAWABLE        = 9;
-    public static final int     SERIALIZABLE    = 10;
-    public static final int     PARCELABLE      = 11;
-    public static final int     JSON_OBJECT     = 12;
-    public static final int     JSON_ARRAY      = 13;
+    public static final int INT = 1;
+    public static final int LONG = 2;
+    public static final int FLOAT = 3;
+    public static final int DOUBLE = 4;
+    public static final int BOOLEAN = 5;
+    public static final int STRING = 6;
+    public static final int BYTES = 7;
+    public static final int BITMAP = 8;
+    public static final int DRAWABLE = 9;
+    public static final int SERIALIZABLE = 10;
+    public static final int PARCELABLE = 11;
+    public static final int JSON_OBJECT = 12;
+    public static final int JSON_ARRAY = 13;
     // 默认值
-    public static final int     INT_DEFAULT     = 0;
-    public static final long    LONG_DEFAULT    = 0L;
-    public static final float   FLOAT_DEFAULT   = 0F;
-    public static final double  DOUBLE_DEFAULT  = 0D;
+    public static final int INT_DEFAULT = 0;
+    public static final long LONG_DEFAULT = 0L;
+    public static final float FLOAT_DEFAULT = 0F;
+    public static final double DOUBLE_DEFAULT = 0D;
     public static final boolean BOOLEAN_DEFAULT = false;
 
     // =============
@@ -64,6 +66,7 @@ public final class DevCache {
 
     /**
      * 获取 DevCache
+     *
      * @return {@link DevCache}
      */
     public static DevCache newCache() {
@@ -79,6 +82,7 @@ public final class DevCache {
 
     /**
      * 获取 DevCache
+     *
      * @param cachePath 缓存文件夹路径
      * @return {@link DevCache}
      */
@@ -88,6 +92,7 @@ public final class DevCache {
 
     /**
      * 获取 DevCache
+     *
      * @param cachePath 缓存文件夹路径
      * @param cipher    通用加解密中间层
      * @return {@link DevCache}
@@ -109,6 +114,7 @@ public final class DevCache {
 
     /**
      * 获取缓存地址
+     *
      * @return 缓存地址
      */
     public String getCachePath() {
@@ -119,6 +125,7 @@ public final class DevCache {
 
     /**
      * 移除数据
+     *
      * @param key 保存的 key
      */
     public void remove(String key) {
@@ -127,6 +134,7 @@ public final class DevCache {
 
     /**
      * 删除 Key[] 配置、数据文件
+     *
      * @param keys 存储 key[]
      */
     public void removeForKeys(String[] keys) {
@@ -135,6 +143,7 @@ public final class DevCache {
 
     /**
      * 是否存在 key
+     *
      * @param key 保存的 key
      * @return {@code true} yes, {@code false} no
      */
@@ -147,6 +156,7 @@ public final class DevCache {
      * <pre>
      *     如果不存在该 key 也返回过期
      * </pre>
+     *
      * @param key 保存的 key
      * @return {@code true} yes, {@code false} no
      */
@@ -170,6 +180,7 @@ public final class DevCache {
 
     /**
      * 清除某个类型的全部数据
+     *
      * @param type 类型
      */
     public void clearType(int type) {
@@ -178,6 +189,7 @@ public final class DevCache {
 
     /**
      * 通过 Key 获取 Item
+     *
      * @param key 保存的 key
      * @return Item
      */
@@ -187,6 +199,7 @@ public final class DevCache {
 
     /**
      * 获取有效 Key 集合
+     *
      * @return 有效 Key 集合
      */
     public List<Data> getKeys() {
@@ -195,6 +208,7 @@ public final class DevCache {
 
     /**
      * 获取永久有效 Key 集合
+     *
      * @return 永久有效 Key 集合
      */
     public List<Data> getPermanentKeys() {
@@ -203,6 +217,7 @@ public final class DevCache {
 
     /**
      * 获取有效 Key 数量
+     *
      * @return 有效 Key 数量
      */
     public int getCount() {
@@ -211,6 +226,7 @@ public final class DevCache {
 
     /**
      * 获取有效 Key 占用总大小
+     *
      * @return 有效 Key 占用总大小
      */
     public long getSize() {
@@ -223,6 +239,7 @@ public final class DevCache {
 
     /**
      * 保存 int 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -238,6 +255,7 @@ public final class DevCache {
 
     /**
      * 保存 long 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -253,6 +271,7 @@ public final class DevCache {
 
     /**
      * 保存 float 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -268,6 +287,7 @@ public final class DevCache {
 
     /**
      * 保存 double 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -283,6 +303,7 @@ public final class DevCache {
 
     /**
      * 保存 boolean 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -298,6 +319,7 @@ public final class DevCache {
 
     /**
      * 保存 String 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -313,6 +335,7 @@ public final class DevCache {
 
     /**
      * 保存 byte[] 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -328,6 +351,7 @@ public final class DevCache {
 
     /**
      * 保存 Bitmap 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -343,6 +367,7 @@ public final class DevCache {
 
     /**
      * 保存 Drawable 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -358,6 +383,7 @@ public final class DevCache {
 
     /**
      * 保存 Serializable 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -373,6 +399,7 @@ public final class DevCache {
 
     /**
      * 保存 Parcelable 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -388,6 +415,7 @@ public final class DevCache {
 
     /**
      * 保存 JSONObject 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -403,6 +431,7 @@ public final class DevCache {
 
     /**
      * 保存 JSONArray 类型的数据
+     *
      * @param key       保存的 key
      * @param value     存储的数据
      * @param validTime 有效时间 ( 毫秒 ) 小于等于 0 为永久有效
@@ -422,6 +451,7 @@ public final class DevCache {
 
     /**
      * 获取 int 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -431,6 +461,7 @@ public final class DevCache {
 
     /**
      * 获取 long 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -440,6 +471,7 @@ public final class DevCache {
 
     /**
      * 获取 float 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -449,6 +481,7 @@ public final class DevCache {
 
     /**
      * 获取 double 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -458,6 +491,7 @@ public final class DevCache {
 
     /**
      * 获取 boolean 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -467,6 +501,7 @@ public final class DevCache {
 
     /**
      * 获取 String 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -476,6 +511,7 @@ public final class DevCache {
 
     /**
      * 获取 byte[] 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -485,6 +521,7 @@ public final class DevCache {
 
     /**
      * 获取 Bitmap 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -494,6 +531,7 @@ public final class DevCache {
 
     /**
      * 获取 Drawable 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -503,6 +541,7 @@ public final class DevCache {
 
     /**
      * 获取 Serializable 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -512,6 +551,7 @@ public final class DevCache {
 
     /**
      * 获取 Parcelable 类型的数据
+     *
      * @param key     保存的 key
      * @param creator {@link Parcelable.Creator}
      * @return 存储的数据
@@ -525,6 +565,7 @@ public final class DevCache {
 
     /**
      * 获取 JSONObject 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -534,6 +575,7 @@ public final class DevCache {
 
     /**
      * 获取 JSONArray 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -545,6 +587,7 @@ public final class DevCache {
 
     /**
      * 获取 int 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -558,6 +601,7 @@ public final class DevCache {
 
     /**
      * 获取 long 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -571,6 +615,7 @@ public final class DevCache {
 
     /**
      * 获取 float 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -584,6 +629,7 @@ public final class DevCache {
 
     /**
      * 获取 double 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -597,6 +643,7 @@ public final class DevCache {
 
     /**
      * 获取 boolean 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -610,6 +657,7 @@ public final class DevCache {
 
     /**
      * 获取 String 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -623,6 +671,7 @@ public final class DevCache {
 
     /**
      * 获取 byte[] 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -636,6 +685,7 @@ public final class DevCache {
 
     /**
      * 获取 Bitmap 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -649,6 +699,7 @@ public final class DevCache {
 
     /**
      * 获取 Drawable 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -662,6 +713,7 @@ public final class DevCache {
 
     /**
      * 获取 Serializable 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -675,6 +727,7 @@ public final class DevCache {
 
     /**
      * 获取 Parcelable 类型的数据
+     *
      * @param key          保存的 key
      * @param creator      {@link Parcelable.Creator}
      * @param defaultValue 默认值
@@ -690,6 +743,7 @@ public final class DevCache {
 
     /**
      * 获取 JSONObject 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -703,6 +757,7 @@ public final class DevCache {
 
     /**
      * 获取 JSONArray 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -720,6 +775,7 @@ public final class DevCache {
 
     /**
      * detail: 数据源
+     *
      * @author Ttt
      */
     public static final class Data {
@@ -729,11 +785,11 @@ public final class DevCache {
         // 存储 Key
         private final String mKey;
         // 存储类型
-        private       int    mType;
+        private int mType;
         // 保存时间 ( 毫秒 )
-        private       long   mSaveTime;
+        private long mSaveTime;
         // 有效期 ( 毫秒 )
-        private       long   mValidTime;
+        private long mValidTime;
 
         protected Data(
                 String path,
@@ -742,15 +798,16 @@ public final class DevCache {
                 long saveTime,
                 long validTime
         ) {
-            this.mPath      = path;
-            this.mKey       = key;
-            this.mType      = type;
-            this.mSaveTime  = saveTime;
+            this.mPath = path;
+            this.mKey = key;
+            this.mType = type;
+            this.mSaveTime = saveTime;
             this.mValidTime = validTime;
         }
 
         /**
          * 获取存储 Key
+         *
          * @return 存储 Key
          */
         public String getKey() {
@@ -759,6 +816,7 @@ public final class DevCache {
 
         /**
          * 是否永久有效
+         *
          * @return {@code true} yes, {@code false} no
          */
         public boolean isPermanent() {
@@ -767,6 +825,7 @@ public final class DevCache {
 
         /**
          * 是否过期
+         *
          * @return {@code true} yes, {@code false} no
          */
         public boolean isDue() {
@@ -777,6 +836,7 @@ public final class DevCache {
 
         /**
          * 获取文件大小
+         *
          * @return 文件大小
          */
         public long getSize() {
@@ -787,6 +847,7 @@ public final class DevCache {
 
         /**
          * 获取数据存储类型
+         *
          * @return 数据存储类型
          */
         public int getType() {
@@ -795,6 +856,7 @@ public final class DevCache {
 
         /**
          * 获取保存时间 ( 毫秒 )
+         *
          * @return 保存时间 ( 毫秒 )
          */
         public long getSaveTime() {
@@ -803,6 +865,7 @@ public final class DevCache {
 
         /**
          * 获取有效期 ( 毫秒 )
+         *
          * @return 有效期 ( 毫秒 )
          */
         public long getValidTime() {

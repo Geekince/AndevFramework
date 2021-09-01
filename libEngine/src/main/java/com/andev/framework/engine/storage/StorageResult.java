@@ -8,6 +8,7 @@ import com.andev.framework.engine.storage.IStorageEngine;
 
 /**
  * detail: Storage Result
+ *
  * @author Ttt
  * <pre>
  *     外部存储时以 Uri 为准, 可在存储成功通过 {@link com.andev.framework.utils.app.UriUtils#getFilePathByUri(Uri)}
@@ -18,17 +19,17 @@ public final class StorageResult
         extends IStorageEngine.EngineResult {
 
     // 存储结果
-    private final     boolean     mInsertResult;
+    private final boolean mInsertResult;
     // 存储文件 Uri
-    private transient Uri         mUri;
+    private transient Uri mUri;
     // 存储文件地址
-    private           File        mFile;
+    private File mFile;
     // 异常信息
-    private           Exception   mError;
+    private Exception mError;
     // 存储类型
-    private           StorageType mType;
+    private StorageType mType;
     // 是否外部存储
-    private           boolean     mExternal;
+    private boolean mExternal;
 
     public StorageResult(boolean result) {
         this.mInsertResult = result;
@@ -40,6 +41,7 @@ public final class StorageResult
 
     /**
      * 存储成功
+     *
      * @return {@link StorageResult}
      */
     public static StorageResult success() {
@@ -48,6 +50,7 @@ public final class StorageResult
 
     /**
      * 存储失败
+     *
      * @return {@link StorageResult}
      */
     public static StorageResult failure() {

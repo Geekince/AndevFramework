@@ -2,10 +2,10 @@ package com.andev.framework.engine.cache;
 
 /**
  * detail: Cache ( Data、Params ) Item
+ *
  * @author Ttt
  */
-public class DataItem
-        extends ICacheEngine.EngineItem {
+public class DataItem extends ICacheEngine.EngineItem {
 
     public DataItem(
             String key,

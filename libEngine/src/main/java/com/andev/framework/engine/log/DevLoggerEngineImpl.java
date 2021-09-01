@@ -6,6 +6,7 @@ import com.andev.framework.utils.app.logger.LogConfig;
 
 /**
  * detail: DevLogger Log Engine 实现
+ *
  * @author Ttt
  */
 public abstract class DevLoggerEngineImpl

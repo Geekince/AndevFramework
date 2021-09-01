@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * detail: Permission Engine 接口
+ *
  * @author Ttt
  */
 public interface IPermissionEngine {
@@ -17,6 +18,7 @@ public interface IPermissionEngine {
 
     /**
      * detail: 权限请求回调
+     *
      * @author Ttt
      */
     interface Callback {
@@ -34,6 +36,7 @@ public interface IPermissionEngine {
          *     第二个参数 shouldShow ( boolean )
          *     {@code true} 没有勾选不再询问, {@code false} 勾选了不再询问
          * </pre>
+         *
          * @param grantedList  申请通过的权限
          * @param deniedList   申请未通过的权限
          * @param notFoundList 查询不到的权限 ( 包含未注册 )
@@ -51,6 +54,7 @@ public interface IPermissionEngine {
 
     /**
      * 判断是否授予了权限
+     *
      * @param context     {@link Context}
      * @param permissions 待判断权限
      * @return {@code true} yes, {@code false} no
@@ -66,6 +70,7 @@ public interface IPermissionEngine {
      *     拒绝过一次, 再次申请时, 弹出选择进行拒绝, 获取询问勾选状态
      *     true 表示没有勾选不再询问, 而 false 则表示勾选了不再询问
      * </pre>
+     *
      * @param activity    {@link Activity}
      * @param permissions 待判断权限
      * @return {@code true} 没有勾选不再询问, {@code false} 勾选了不再询问
@@ -77,6 +82,7 @@ public interface IPermissionEngine {
 
     /**
      * 获取拒绝权限询问状态集合
+     *
      * @param activity    {@link Activity}
      * @param shouldShow  {@code true} 没有勾选不再询问, {@code false} 勾选了不再询问
      * @param permissions 待判断权限
@@ -94,6 +100,7 @@ public interface IPermissionEngine {
      *     如果存在拒绝了且不再询问则跳转到应用设置页面
      *     否则则再次请求拒绝的权限
      * </pre>
+     *
      * @param activity   {@link Activity}
      * @param callback   权限请求回调
      * @param deniedList 申请未通过的权限集合
@@ -111,6 +118,7 @@ public interface IPermissionEngine {
 
     /**
      * 请求权限
+     *
      * @param activity    {@link Activity}
      * @param permissions 待申请权限
      */
@@ -121,6 +129,7 @@ public interface IPermissionEngine {
 
     /**
      * 请求权限
+     *
      * @param activity    {@link Activity}
      * @param permissions 待申请权限
      * @param callback    权限请求回调

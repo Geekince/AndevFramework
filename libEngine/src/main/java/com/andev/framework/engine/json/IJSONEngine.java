@@ -4,12 +4,14 @@ import java.lang.reflect.Type;
 
 /**
  * detail: JSON Engine 接口
+ *
  * @author Ttt
  */
 public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * detail: JSON Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -21,6 +23,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将对象转换为 JSON String
+     *
      * @param object {@link Object}
      * @return JSON String
      */
@@ -28,6 +31,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将对象转换为 JSON String
+     *
      * @param object {@link Object}
      * @param config 配置信息
      * @return JSON String
@@ -41,6 +45,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将 JSON String 映射为指定类型对象
+     *
      * @param json     JSON String
      * @param classOfT {@link Class} T
      * @param <T>      泛型
@@ -53,6 +58,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将 JSON String 映射为指定类型对象
+     *
      * @param json     JSON String
      * @param classOfT {@link Class} T
      * @param config   配置信息
@@ -69,6 +75,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将 JSON String 映射为指定类型对象
+     *
      * @param json    JSON String
      * @param typeOfT {@link Type} T
      * @param <T>     泛型
@@ -81,6 +88,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 将 JSON String 映射为指定类型对象
+     *
      * @param json    JSON String
      * @param typeOfT {@link Type} T
      * @param config  配置信息
@@ -99,6 +107,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 判断字符串是否 JSON 格式
+     *
      * @param json 待校验 JSON String
      * @return {@code true} yes, {@code false} no
      */
@@ -106,6 +115,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 判断字符串是否 JSON Object 格式
+     *
      * @param json 待校验 JSON String
      * @return {@code true} yes, {@code false} no
      */
@@ -113,6 +123,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * 判断字符串是否 JSON Array 格式
+     *
      * @param json 待校验 JSON String
      * @return {@code true} yes, {@code false} no
      */
@@ -120,6 +131,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * JSON String 缩进处理
+     *
      * @param json JSON String
      * @return JSON String
      */
@@ -127,6 +139,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * JSON String 缩进处理
+     *
      * @param json   JSON String
      * @param config 配置信息
      * @return JSON String
@@ -140,6 +153,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * Object 转 JSON String 并进行缩进处理
+     *
      * @param object {@link Object}
      * @return JSON String
      */
@@ -147,6 +161,7 @@ public interface IJSONEngine<Config extends IJSONEngine.EngineConfig> {
 
     /**
      * Object 转 JSON String 并进行缩进处理
+     *
      * @param object {@link Object}
      * @param config 配置信息
      * @return JSON String

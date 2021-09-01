@@ -6,12 +6,14 @@ import com.andev.framework.utils.common.cipher.Cipher;
 
 /**
  * detail: Key-Value Engine 接口
+ *
  * @author Ttt
  */
 public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * detail: Key-Value Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -32,6 +34,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 Key-Value Engine Config
+     *
      * @return Key-Value Config
      */
     Config getConfig();
@@ -40,18 +43,21 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 移除数据
+     *
      * @param key 保存的 key
      */
     void remove(String key);
 
     /**
      * 移除数组的数据
+     *
      * @param keys 保存的 key 数组
      */
     void removeForKeys(String[] keys);
 
     /**
      * 是否存在 key
+     *
      * @param key 保存的 key
      * @return {@code true} yes, {@code false} no
      */
@@ -68,6 +74,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 int 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -79,6 +86,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 long 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -90,6 +98,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 float 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -101,6 +110,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 double 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -112,6 +122,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 boolean 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -123,6 +134,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存 String 类型的数据
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @return {@code true} success, {@code false} fail
@@ -134,6 +146,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 保存指定类型对象
+     *
      * @param key   保存的 key
      * @param value 存储的数据
      * @param <T>   泛型
@@ -150,6 +163,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 int 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -157,6 +171,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 long 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -164,6 +179,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 float 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -171,6 +187,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 double 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -178,6 +195,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 boolean 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -185,6 +203,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 String 类型的数据
+     *
      * @param key 保存的 key
      * @return 存储的数据
      */
@@ -192,6 +211,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取指定类型对象
+     *
      * @param key     保存的 key
      * @param typeOfT {@link Type} T
      * @param <T>     泛型
@@ -206,6 +226,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 int 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -217,6 +238,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 long 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -228,6 +250,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 float 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -239,6 +262,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 double 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -250,6 +274,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 boolean 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -261,6 +286,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取 String 类型的数据
+     *
      * @param key          保存的 key
      * @param defaultValue 默认值
      * @return 存储的数据
@@ -272,6 +298,7 @@ public interface IKeyValueEngine<Config extends IKeyValueEngine.EngineConfig> {
 
     /**
      * 获取指定类型对象
+     *
      * @param key          保存的 key
      * @param typeOfT      {@link Type} T
      * @param defaultValue 默认值

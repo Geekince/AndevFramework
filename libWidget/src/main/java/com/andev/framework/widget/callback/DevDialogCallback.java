@@ -1,4 +1,4 @@
-package com.andev.framework.data.callback;
+package com.andev.framework.widget.callback;
 
 /**
  * detail: 通用 Dialog 回调

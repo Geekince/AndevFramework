@@ -31,32 +31,33 @@ import com.andev.framework.utils.common.cipher.Cipher;
 
 /**
  * detail: 缓存管理类
+ *
  * @author Ttt
  */
 final class DevCacheManager {
 
     // 不同地址配置缓存对象
-    protected static final Map<String, DevCache> sInstanceMaps    = new HashMap<>();
+    protected static final Map<String, DevCache> sInstanceMaps = new HashMap<>();
     // 日志 TAG
-    private final          String                TAG              = DevCacheManager.class.getSimpleName();
+    private final String TAG = DevCacheManager.class.getSimpleName();
     // 文件后缀
-    private static final   String                DATA_EXTENSION   = ".data";
-    private static final   String                CONFIG_EXTENSION = ".config";
+    private static final String DATA_EXTENSION = ".data";
+    private static final String CONFIG_EXTENSION = ".config";
     // 缓存地址
-    private final          String                mCachePath;
+    private final String mCachePath;
     // 通用加解密中间层
-    private final          Cipher                mCipher;
+    private final Cipher mCipher;
     // 总缓存大小
-    private final          AtomicLong            mCacheSize       = new AtomicLong();
+    private final AtomicLong mCacheSize = new AtomicLong();
     // 总缓存的文件总数
-    private final          AtomicInteger         mCacheCount      = new AtomicInteger();
+    private final AtomicInteger mCacheCount = new AtomicInteger();
 
     public DevCacheManager(
             String cachePath,
             Cipher cipher
     ) {
         this.mCachePath = cachePath;
-        this.mCipher    = cipher;
+        this.mCipher = cipher;
         // 计算文件信息
         calculateCacheSizeAndCacheCount();
     }
@@ -74,7 +75,7 @@ final class DevCacheManager {
                         if (file != null && file.isFile()) {
                             String fileName = file.getName();
                             if (fileName.endsWith(CONFIG_EXTENSION)) {
-                                String        key  = FileUtils.getFileNotSuffix(fileName);
+                                String key = FileUtils.getFileNotSuffix(fileName);
                                 DevCache.Data data = _mapGetData(key);
                                 if (data != null) {
                                     size += data.getSize();
@@ -102,9 +103,9 @@ final class DevCacheManager {
 
     public void remove(String key) {
         if (TextUtils.isEmpty(key)) return;
-        File dataFile   = _getKeyDataFile(key);
+        File dataFile = _getKeyDataFile(key);
         File configFile = _getKeyConfigFile(key);
-        long size       = getDataFileSize(mCachePath, key);
+        long size = getDataFileSize(mCachePath, key);
         if (FileUtils.deleteFile(dataFile)
                 && FileUtils.deleteFile(configFile)) {
             mCacheSize.addAndGet(-size);
@@ -170,7 +171,7 @@ final class DevCacheManager {
 
     public List<DevCache.Data> getPermanentKeys() {
         List<DevCache.Data> lists = new ArrayList<>();
-        HashSet<String>     keys  = new HashSet<>(mDataMaps.keySet());
+        HashSet<String> keys = new HashSet<>(mDataMaps.keySet());
         for (String key : keys) {
             DevCache.Data data = _mapGetData(key);
             if (data != null && data.isPermanent()) {
@@ -552,7 +553,7 @@ final class DevCacheManager {
                 remove(key);
             } else {
                 try {
-                    byte[] bytes  = _get(key);
+                    byte[] bytes = _get(key);
                     Bitmap bitmap = ImageUtils.decodeByteArray(bytes);
                     return ImageUtils.bitmapToDrawable(bitmap);
                 } catch (Exception e) {
@@ -598,7 +599,7 @@ final class DevCacheManager {
                 remove(key);
             } else {
                 try {
-                    byte[] bytes  = _get(key);
+                    byte[] bytes = _get(key);
                     Parcel parcel = Parcel.obtain();
                     parcel.unmarshall(bytes, 0, bytes.length);
                     parcel.setDataPosition(0);
@@ -657,6 +658,7 @@ final class DevCacheManager {
 
     /**
      * 获取 Key 数据文件
+     *
      * @param key 存储 key
      * @return Key 数据文件
      */
@@ -667,6 +669,7 @@ final class DevCacheManager {
 
     /**
      * 获取 Key 配置文件
+     *
      * @param key 存储 key
      * @return Key 配置文件
      */
@@ -677,6 +680,7 @@ final class DevCacheManager {
 
     /**
      * 获取存储数据大小
+     *
      * @param path 文件地址
      * @param key  存储 key
      * @return 存储数据大小
@@ -693,6 +697,7 @@ final class DevCacheManager {
 
     /**
      * 判断是否存在 Key 配置、数据文件
+     *
      * @param key 存储 key
      * @return {@code true} yes, {@code false} no
      */
@@ -725,6 +730,7 @@ final class DevCacheManager {
 
     /**
      * Data Format JSON String
+     *
      * @param data 数据源
      * @return JSON String
      */
@@ -739,24 +745,25 @@ final class DevCacheManager {
 
     /**
      * 读取配置初始化 Data
+     *
      * @param key 存储 key
      * @return {@link DevCache.Data}
      */
     private DevCache.Data _getData(final String key) {
         if (!_isExistKeyFile(key)) return null;
         try {
-            File       configFile = _getKeyConfigFile(key);
-            String     config     = new String(FileUtils.readFileBytes(configFile));
+            File configFile = _getKeyConfigFile(key);
+            String config = new String(FileUtils.readFileBytes(configFile));
             JSONObject jsonObject = new JSONObject(config);
             if (jsonObject.has("key")
                     && jsonObject.has("type")
                     && jsonObject.has("saveTime")
                     && jsonObject.has("validTime")
             ) {
-                String _key      = jsonObject.getString("key");
-                int    type      = jsonObject.getInt("type");
-                long   saveTime  = jsonObject.getLong("saveTime");
-                long   validTime = jsonObject.getLong("validTime");
+                String _key = jsonObject.getString("key");
+                int type = jsonObject.getInt("type");
+                long saveTime = jsonObject.getLong("saveTime");
+                long validTime = jsonObject.getLong("validTime");
                 return new DevCache.Data(mCachePath, _key,
                         type, saveTime, validTime
                 );
@@ -771,6 +778,7 @@ final class DevCacheManager {
 
     /**
      * 保存方法 ( 最终调用 )
+     *
      * @param key       保存的 key
      * @param type      保存类型
      * @param bytes     保存数据
@@ -793,9 +801,9 @@ final class DevCacheManager {
             }
         }
         if (bytes == null) return false;
-        DevCache.Data data   = _mapGetData(key);
-        long          size   = getDataFileSize(mCachePath, key);
-        boolean       result = FileUtils.saveFile(_getKeyDataFile(key), bytes);
+        DevCache.Data data = _mapGetData(key);
+        long size = getDataFileSize(mCachePath, key);
+        boolean result = FileUtils.saveFile(_getKeyDataFile(key), bytes);
         if (result) {
             if (data != null) {
                 data.setSaveTime(System.currentTimeMillis())
@@ -817,6 +825,7 @@ final class DevCacheManager {
 
     /**
      * 获取方法 ( 最终调用 )
+     *
      * @param key 保存的 key
      * @return 保存的数据
      */

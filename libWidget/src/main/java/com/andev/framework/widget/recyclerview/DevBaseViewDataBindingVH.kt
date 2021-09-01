@@ -1,4 +1,4 @@
-package com.andev.framework.base.adapter
+package com.andev.framework.widget.recyclerview
 
 import android.content.Context
 import android.view.LayoutInflater

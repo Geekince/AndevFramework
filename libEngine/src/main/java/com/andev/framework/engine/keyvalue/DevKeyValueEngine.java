@@ -7,6 +7,7 @@ import com.andev.framework.engine.keyvalue.IKeyValueEngine.EngineConfig;
 
 /**
  * detail: Key-Value Engine
+ *
  * @author Ttt
  */
 public final class DevKeyValueEngine {
@@ -18,6 +19,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 获取 Engine
+     *
      * @return {@link IKeyValueEngine}
      */
     public static IKeyValueEngine<? super EngineConfig> getEngine() {
@@ -26,6 +28,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 获取 Engine
+     *
      * @param key key
      * @return {@link IKeyValueEngine}
      */
@@ -35,6 +38,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 设置 Engine
+     *
      * @param engine {@link IKeyValueEngine}
      * @return {@link IKeyValueEngine}
      */
@@ -44,6 +48,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 设置 Engine
+     *
      * @param key    key
      * @param engine {@link IKeyValueEngine}
      * @return {@link IKeyValueEngine}
@@ -64,6 +69,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 移除 Engine
+     *
      * @param key key
      */
     public static void removeEngine(final String key) {
@@ -76,6 +82,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 获取 DevEngine Generic Assist
+     *
      * @return DevEngine Generic Assist
      */
     public static DevEngineAssist<IKeyValueEngine<? super EngineConfig>> getAssist() {
@@ -84,6 +91,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 获取 Engine Map
+     *
      * @return Engine Map
      */
     public static Map<String, IKeyValueEngine<? super EngineConfig>> getEngineMaps() {
@@ -92,6 +100,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean contains() {
@@ -100,6 +109,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 是否存在 Engine
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */
@@ -109,6 +119,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isEmpty() {
@@ -117,6 +128,7 @@ public final class DevKeyValueEngine {
 
     /**
      * 判断 Engine 是否为 null
+     *
      * @param key key
      * @return {@code true} yes, {@code false} no
      */

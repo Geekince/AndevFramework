@@ -1,4 +1,4 @@
-package com.andev.framework.data.adapter;
+package com.andev.framework.widget.adapter;
 
 import android.app.Activity;
 import android.content.Context;

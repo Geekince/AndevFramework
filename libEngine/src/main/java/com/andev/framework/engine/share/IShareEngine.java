@@ -9,6 +9,7 @@ import com.andev.framework.engine.share.listener.ShareListener;
 
 /**
  * detail: Share Engine 接口
+ *
  * @author Ttt
  */
 public interface IShareEngine<Config extends IShareEngine.EngineConfig,
@@ -16,6 +17,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * detail: Share Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -23,6 +25,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * detail: Share ( Data、Params ) Item
+     *
      * @author Ttt
      */
     class EngineItem {
@@ -34,6 +37,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 初始化方法
+     *
      * @param application {@link Application}
      * @param config      Share Config
      */
@@ -46,6 +50,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 打开小程序
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @return {@code true} success, {@code false} fail
@@ -57,6 +62,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享小程序
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -70,6 +76,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享链接
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -83,6 +90,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享图片
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -96,6 +104,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享视频
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -109,6 +118,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享音乐
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -122,6 +132,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享表情
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -135,6 +146,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享文本
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -148,6 +160,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享文件
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -161,6 +174,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 分享操作 ( 通用扩展 )
+     *
      * @param activity {@link Activity}
      * @param params   Share ( Data、Params ) Item
      * @param listener 分享回调
@@ -176,6 +190,7 @@ public interface IShareEngine<Config extends IShareEngine.EngineConfig,
 
     /**
      * 部分平台 Activity onActivityResult 额外调用处理
+     *
      * @param context     {@link Context}
      * @param requestCode 请求 code
      * @param resultCode  resultCode

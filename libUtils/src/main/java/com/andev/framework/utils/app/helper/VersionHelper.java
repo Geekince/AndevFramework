@@ -25,6 +25,7 @@ import com.andev.framework.utils.app.UriUtils;
 
 /**
  * detail: Android 版本适配 Helper 类
+ *
  * @author Ttt
  * <pre>
  *     Android 版本适配 Helper 类, 方便快捷使用
@@ -75,6 +76,7 @@ public final class VersionHelper {
      * <pre>
      *     uri 非 FilePath, 可通过 {@link UriUtils#getMediaUri} 获取
      * </pre>
+     *
      * @param uriString uri 路径
      * @return {@code true} yes, {@code false} no
      */
@@ -84,6 +86,7 @@ public final class VersionHelper {
 
     /**
      * 判断 Uri 路径资源是否存在
+     *
      * @param uri {@link Uri}
      * @return {@code true} yes, {@code false} no
      */
@@ -93,6 +96,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File 获取 Media Uri
+     *
      * @param file 文件
      * @return 指定文件 {@link Uri}
      */
@@ -102,6 +106,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File 获取 Media Uri
+     *
      * @param uri  MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param file 文件
      * @return 指定文件 {@link Uri}
@@ -115,6 +120,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File Path 获取 Media Uri
+     *
      * @param filePath 文件路径
      * @return 指定文件 {@link Uri}
      */
@@ -124,6 +130,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File Path 获取 Media Uri
+     *
      * @param uri      MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param filePath 文件路径
      * @return 指定文件 {@link Uri}
@@ -137,6 +144,7 @@ public final class VersionHelper {
 
     /**
      * 通过 Uri 复制文件
+     *
      * @param uri {@link Uri}
      * @return 复制后的文件路径
      */
@@ -146,6 +154,7 @@ public final class VersionHelper {
 
     /**
      * 通过 Uri 复制文件
+     *
      * @param uri      {@link Uri}
      * @param fileName 文件名 {@link ContentResolverUtils#getDisplayNameColumn}
      * @return 复制后的文件路径
@@ -159,6 +168,7 @@ public final class VersionHelper {
 
     /**
      * 通过 Uri 复制文件
+     *
      * @param uri      {@link Uri}
      * @param file     文件
      * @param fileName 文件名 {@link ContentResolverUtils#getDisplayNameColumn}
@@ -174,6 +184,7 @@ public final class VersionHelper {
 
     /**
      * 通过 Uri 复制文件
+     *
      * @param uri      {@link Uri}
      * @param filePath 文件路径
      * @param fileName 文件名 {@link ContentResolverUtils#getDisplayNameColumn}
@@ -189,6 +200,7 @@ public final class VersionHelper {
 
     /**
      * 通过 Uri 获取文件路径
+     *
      * @param uri {@link Uri}
      * @return 文件路径
      */
@@ -201,6 +213,7 @@ public final class VersionHelper {
      * <pre>
      *     默认不复制文件, 防止影响已经使用该方法的功能 ( 文件过大导致 ANR、耗时操作等 )
      * </pre>
+     *
      * @param uri     {@link Uri}
      * @param isQCopy Android Q 及其以上版本是否复制文件
      * @return 文件路径
@@ -214,6 +227,7 @@ public final class VersionHelper {
 
     /**
      * 获取 FileProvider File Uri
+     *
      * @param file 文件
      * @return 指定文件 {@link Uri}
      */
@@ -223,6 +237,7 @@ public final class VersionHelper {
 
     /**
      * 获取 FileProvider File Path Uri
+     *
      * @param filePath 文件路径
      * @return 指定文件 {@link Uri}
      */
@@ -232,6 +247,7 @@ public final class VersionHelper {
 
     /**
      * 获取 FileProvider File Path Uri ( 自动添加包名 ${applicationId} )
+     *
      * @param file         文件
      * @param fileProvider android:authorities = ${applicationId}.fileProvider
      * @return 指定文件 {@link Uri}
@@ -245,6 +261,7 @@ public final class VersionHelper {
 
     /**
      * 获取 FileProvider File Path Uri
+     *
      * @param file      文件
      * @param authority android:authorities
      * @return 指定文件 {@link Uri}
@@ -266,6 +283,7 @@ public final class VersionHelper {
 
     /**
      * 创建图片 Uri
+     *
      * @return 图片 Uri
      */
     public static Uri createImageUri() {
@@ -274,6 +292,7 @@ public final class VersionHelper {
 
     /**
      * 创建图片 Uri
+     *
      * @param mimeType 资源类型
      * @return 图片 Uri
      */
@@ -283,6 +302,7 @@ public final class VersionHelper {
 
     /**
      * 创建图片 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 图片 Uri
@@ -296,6 +316,7 @@ public final class VersionHelper {
 
     /**
      * 创建图片 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -311,6 +332,7 @@ public final class VersionHelper {
 
     /**
      * 创建图片 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -332,6 +354,7 @@ public final class VersionHelper {
 
     /**
      * 创建视频 Uri
+     *
      * @return 视频 Uri
      */
     public static Uri createVideoUri() {
@@ -340,6 +363,7 @@ public final class VersionHelper {
 
     /**
      * 创建视频 Uri
+     *
      * @param mimeType 资源类型
      * @return 视频 Uri
      */
@@ -349,6 +373,7 @@ public final class VersionHelper {
 
     /**
      * 创建视频 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 视频 Uri
@@ -362,6 +387,7 @@ public final class VersionHelper {
 
     /**
      * 创建视频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -377,6 +403,7 @@ public final class VersionHelper {
 
     /**
      * 创建视频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -398,6 +425,7 @@ public final class VersionHelper {
 
     /**
      * 创建音频 Uri
+     *
      * @return 音频 Uri
      */
     public static Uri createAudioUri() {
@@ -406,6 +434,7 @@ public final class VersionHelper {
 
     /**
      * 创建音频 Uri
+     *
      * @param mimeType 资源类型
      * @return 音频 Uri
      */
@@ -415,6 +444,7 @@ public final class VersionHelper {
 
     /**
      * 创建音频 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 音频 Uri
@@ -428,6 +458,7 @@ public final class VersionHelper {
 
     /**
      * 创建音频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -443,6 +474,7 @@ public final class VersionHelper {
 
     /**
      * 创建音频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -464,6 +496,7 @@ public final class VersionHelper {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName 显示名 ( 需后缀 )
      * @return Download Uri
      */
@@ -474,6 +507,7 @@ public final class VersionHelper {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName 显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType    资源类型
      * @return Download Uri
@@ -488,6 +522,7 @@ public final class VersionHelper {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -507,6 +542,7 @@ public final class VersionHelper {
      * <pre>
      *     Android Q ( 10.0 ) 以下直接通过 File 写入到 {@link Environment#DIRECTORY_DOWNLOADS}
      * </pre>
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -529,6 +565,7 @@ public final class VersionHelper {
 
     /**
      * 创建预存储 Media Uri
+     *
      * @param uri          MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
@@ -549,6 +586,7 @@ public final class VersionHelper {
      * <pre>
      *     也可通过 {@link IntentUtils#getCreateDocumentIntent(String, String)} 创建
      * </pre>
+     *
      * @param uri          MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
@@ -572,6 +610,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param fileName 文件名
      * @return File Uri
      */
@@ -581,6 +620,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param fileName 文件名
      * @param filePath 文件路径
      * @return File Uri
@@ -594,6 +634,7 @@ public final class VersionHelper {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param filePath 文件路径
      * @return File Uri
      */
@@ -609,6 +650,7 @@ public final class VersionHelper {
      *     高版本使用 {@link #createDownloadUri(String)}
      *     并不局限 Download 文件夹操作
      * </pre>
+     *
      * @param file 文件
      * @return File Uri
      */
@@ -620,6 +662,7 @@ public final class VersionHelper {
 
     /**
      * 插入一张图片
+     *
      * @param uri      Media Uri
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @param format   如 Bitmap.CompressFormat.PNG
@@ -637,6 +680,7 @@ public final class VersionHelper {
 
     /**
      * 插入一张图片
+     *
      * @param uri      Media Uri
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -650,6 +694,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条视频
+     *
      * @param uri      Media Uri
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -663,6 +708,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条音频
+     *
      * @param uri      Media Uri
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -676,6 +722,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      Media Uri
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -689,6 +736,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri         Media Uri
      * @param inputStream {@link InputStream}
      * @return {@code true} success, {@code false} fail
@@ -702,6 +750,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param outputStream {@link OutputStream}
      * @param inputStream  {@link InputStream}
      * @return {@code true} success, {@code false} fail
@@ -717,6 +766,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      Media Uri
      * @param filePath 待存储文件路径
      * @return {@code true} success, {@code false} fail
@@ -730,6 +780,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri  Media Uri
      * @param file 待存储文件
      * @return {@code true} success, {@code false} fail
@@ -745,6 +796,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      Media Uri
      * @param drawable 待保存图片
      * @return {@code true} success, {@code false} fail
@@ -758,6 +810,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      Media Uri
      * @param drawable 待保存图片
      * @param format   如 Bitmap.CompressFormat.PNG
@@ -773,6 +826,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      Media Uri
      * @param drawable 待保存图片
      * @param format   如 Bitmap.CompressFormat.PNG
@@ -792,6 +846,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri    Media Uri
      * @param bitmap 待保存图片
      * @return {@code true} success, {@code false} fail
@@ -805,6 +860,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri    Media Uri
      * @param bitmap 待保存图片
      * @param format 如 Bitmap.CompressFormat.PNG
@@ -820,6 +876,7 @@ public final class VersionHelper {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri     Media Uri
      * @param bitmap  待保存图片
      * @param format  如 Bitmap.CompressFormat.PNG
@@ -841,6 +898,7 @@ public final class VersionHelper {
 
     /**
      * 是否获得 MANAGE_EXTERNAL_STORAGE 权限
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean isExternalStorageManager() {
@@ -849,6 +907,7 @@ public final class VersionHelper {
 
     /**
      * 检查是否有 MANAGE_EXTERNAL_STORAGE 权限并跳转设置页面
+     *
      * @return {@code true} yes, {@code false} no
      */
     public static boolean checkExternalStorageAndIntentSetting() {
@@ -863,6 +922,7 @@ public final class VersionHelper {
      *     <p></p>
      *     startIntentSenderForResult(pendingIntent.getIntentSender(), EDIT_REQUEST_CODE, null, 0, 0, 0)
      * </pre>
+     *
      * @param uris 待请求 Uri 集
      * @return {@link PendingIntent}
      */
@@ -875,6 +935,7 @@ public final class VersionHelper {
      * <pre>
      *     对该文件具有读取访问权限的任何应用都可以看到用户已将该文件标记为收藏
      * </pre>
+     *
      * @param uris     待请求 Uri 集
      * @param favorite 是否喜欢
      * @return {@link PendingIntent}
@@ -891,6 +952,7 @@ public final class VersionHelper {
      * <pre>
      *     垃圾箱中的内容会在系统定义的时间段后被永久删除
      * </pre>
+     *
      * @param uris    待请求 Uri 集
      * @param trashed 是否遗弃
      * @return {@link PendingIntent}
@@ -904,6 +966,7 @@ public final class VersionHelper {
 
     /**
      * 获取用户立即永久删除指定的媒体文件 ( 而不是先将其放入垃圾箱 ) 的请求
+     *
      * @param uris 待请求 Uri 集
      * @return {@link PendingIntent}
      */

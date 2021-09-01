@@ -1,20 +1,22 @@
-package com.andev.framework.data.callback;
+package com.andev.framework.widget.callback;
+
+import com.andev.framework.data.callback.BaseCallback;
 
 /**
- * detail: 通用 Item Click 回调
+ * detail: 通用 Click 回调
  * @author Ttt
  */
-public class DevItemClickCallback<T>
+public class DevClickCallback<T>
         extends BaseCallback<T> {
 
-    public DevItemClickCallback() {
+    public DevClickCallback() {
     }
 
-    public DevItemClickCallback(final T object) {
+    public DevClickCallback(final T object) {
         super(object);
     }
 
-    public DevItemClickCallback(
+    public DevClickCallback(
             final T object,
             final Object tag
     ) {
@@ -26,24 +28,24 @@ public class DevItemClickCallback<T>
     // ==========
 
     /**
-     * 点击 Item 回调
+     * 点击回调
      */
-    public void onItemClick() {
+    public void onClick() {
     }
 
     /**
-     * 点击 Item 回调
+     * 点击回调
      * @param value 回调值
      */
-    public void onItemClick(T value) {
+    public void onClick(T value) {
     }
 
     /**
-     * 点击 Item 回调
+     * 点击回调
      * @param value 回调值
      * @param param 回调参数
      */
-    public void onItemClick(
+    public void onClick(
             T value,
             int param
     ) {
@@ -52,24 +54,24 @@ public class DevItemClickCallback<T>
     // =
 
     /**
-     * 长按 Item 回调
+     * 长按回调
      */
-    public void onItemLongClick() {
+    public void onLongClick() {
     }
 
     /**
-     * 长按 Item 回调
+     * 长按回调
      * @param value 回调值
      */
-    public void onItemLongClick(T value) {
+    public void onLongClick(T value) {
     }
 
     /**
-     * 长按 Item 回调
+     * 长按回调
      * @param value 回调值
      * @param param 回调参数
      */
-    public void onItemLongClick(
+    public void onLongClick(
             T value,
             int param
     ) {

@@ -5,6 +5,7 @@ import android.content.Context;
 
 /**
  * detail: Analytics Engine 接口
+ *
  * @author Ttt
  */
 public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
@@ -12,6 +13,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * detail: Analytics Config
+     *
      * @author Ttt
      */
     class EngineConfig {
@@ -19,6 +21,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * detail: Analytics ( Data、Params ) Item
+     *
      * @author Ttt
      */
     class EngineItem {
@@ -30,6 +33,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * 初始化方法
+     *
      * @param application {@link Application}
      * @param config      Analytics Config
      */
@@ -40,6 +44,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * 绑定
+     *
      * @param context {@link Context}
      * @param config  Analytics Config
      */
@@ -50,6 +55,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * 解绑
+     *
      * @param context {@link Context}
      * @param config  Analytics Config
      */
@@ -62,6 +68,7 @@ public interface IAnalyticsEngine<Config extends IAnalyticsEngine.EngineConfig,
 
     /**
      * 数据统计 ( 埋点 ) 方法
+     *
      * @param params Analytics ( Data、Params ) Item
      * @return {@code true} success, {@code false} fail
      */
