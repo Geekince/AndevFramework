@@ -19,7 +19,7 @@ import java.util.Collection;
 import com.andev.framework.utils.app.AppUtils;
 import com.andev.framework.utils.app.ContentResolverUtils;
 import com.andev.framework.utils.app.IntentUtils;
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.app.PathUtils;
 import com.andev.framework.utils.app.UriUtils;
 

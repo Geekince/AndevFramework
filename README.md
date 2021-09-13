@@ -28,7 +28,7 @@ Android Development Framework
 
 Thanks：
 
-- https://github.com/afkT/DevUtils
+- https://github.com/afkT/DevUtils (2021-8-24)
 - https://github.com/goldze/MVVMHabit
 - https://github.com/xuexiangjys/XUI
 - https://github.com/Blankj/AndroidUtilCode
@@ -51,3 +51,7 @@ Thanks：
 - https://github.com/iqiyi/xCrash
 - https://github.com/square/leakcanary
 - https://github.com/didi/DoraemonKit
+
+APK Scan：
+
+- https://www.ostorlab.co/

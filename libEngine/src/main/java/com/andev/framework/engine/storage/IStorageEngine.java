@@ -5,7 +5,7 @@ import android.provider.MediaStore;
 
 import com.andev.framework.data.DevSource;
 import com.andev.framework.engine.storage.listener.OnInsertListener;
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.app.PathUtils;
 
 /**

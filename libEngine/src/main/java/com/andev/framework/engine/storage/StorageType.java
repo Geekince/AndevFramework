@@ -1,6 +1,6 @@
 package com.andev.framework.engine.storage;
 
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.common.FileUtils;
 import com.andev.framework.utils.common.StringUtils;
 

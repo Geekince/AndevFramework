@@ -8,9 +8,8 @@ import java.io.File;
 import java.io.InputStream;
 
 import com.andev.framework.data.DevSource;
-import com.andev.framework.engine.storage.IStorageEngine;
 import com.andev.framework.engine.storage.listener.OnInsertListener;
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.app.UriUtils;
 import com.andev.framework.utils.app.image.ImageUtils;
 import com.andev.framework.utils.common.FileIOUtils;

@@ -5,8 +5,7 @@ import android.net.Uri;
 
 import java.io.File;
 
-import com.andev.framework.engine.storage.IStorageEngine;
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.app.PathUtils;
 import com.andev.framework.utils.common.FileUtils;
 import com.andev.framework.utils.common.StringUtils;

@@ -7,6 +7,7 @@ import java.io.File;
 
 import com.andev.framework.DevUtils;
 import com.andev.framework.utils.LogPrintUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.common.FileUtils;
 
 /**

@@ -37,7 +37,7 @@ import com.andev.framework.utils.app.HandlerUtils;
 import com.andev.framework.utils.app.KeyBoardUtils;
 import com.andev.framework.utils.app.LanguageUtils;
 import com.andev.framework.utils.app.ListenerUtils;
-import com.andev.framework.utils.app.MediaStoreUtils;
+import com.andev.framework.utils.app.permission.storage.MediaStoreUtils;
 import com.andev.framework.utils.app.NotificationUtils;
 import com.andev.framework.utils.app.ResourceUtils;
 import com.andev.framework.utils.app.ScreenUtils;

@@ -1,4 +1,4 @@
-package com.andev.framework.utils.app;
+package com.andev.framework.utils.app.permission.storage;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -26,6 +26,12 @@ import java.util.Collection;
 import com.andev.framework.DevUtils;
 import com.andev.framework.utils.DevFinal;
 import com.andev.framework.utils.LogPrintUtils;
+import com.andev.framework.utils.app.AppUtils;
+import com.andev.framework.utils.app.ContentResolverUtils;
+import com.andev.framework.utils.app.IntentUtils;
+import com.andev.framework.utils.app.PathUtils;
+import com.andev.framework.utils.app.ResourceUtils;
+import com.andev.framework.utils.app.UriUtils;
 import com.andev.framework.utils.app.image.BitmapUtils;
 import com.andev.framework.utils.app.image.ImageUtils;
 import com.andev.framework.utils.common.CloseUtils;
@@ -36,6 +42,7 @@ import com.andev.framework.utils.common.FileUtils;
 
 /**
  * detail: MediaStore 工具类
+ *
  * @author Ttt
  * <pre>
  *     通过 FileProvider Uri 是无法进行读取 ( MediaStore Cursor 无法扫描 内部存储、外部存储 ( 私有目录 ) )
@@ -72,6 +79,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通知刷新本地资源
+     *
      * @param filePath 文件路径
      * @return {@code true} success, {@code false} fail
      */
@@ -90,6 +98,7 @@ public final class MediaStoreUtils {
      *     <p></p>
      *     正确的操作应该是: 不论版本统一存储到 外部存储 ( 私有目录 ) 再通过 MediaStore 插入数据
      * </pre>
+     *
      * @param file 文件
      * @return {@code true} success, {@code false} fail
      * @deprecated Android Q 以后的版本需要通过 MediaStore 插入数据
@@ -108,6 +117,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通知刷新本地资源
+     *
      * @param uri {@link Uri}
      * @return {@code true} success, {@code false} fail
      */
@@ -130,42 +140,43 @@ public final class MediaStoreUtils {
     // ===========
 
     // PNG
-    public static final String MIME_TYPE_IMAGE_PNG       = "image/png";
+    public static final String MIME_TYPE_IMAGE_PNG = "image/png";
     // JPEG
-    public static final String MIME_TYPE_IMAGE_JPG       = "image/jpeg";
+    public static final String MIME_TYPE_IMAGE_JPG = "image/jpeg";
     // 图片类型
-    public static final String MIME_TYPE_IMAGE           = "image/*";
+    public static final String MIME_TYPE_IMAGE = "image/*";
     // MP4
-    public static final String MIME_TYPE_VIDEO_MP4       = "video/mp4";
+    public static final String MIME_TYPE_VIDEO_MP4 = "video/mp4";
     // MOV
-    public static final String MIME_TYPE_VIDEO_MOV       = "video/quicktime";
+    public static final String MIME_TYPE_VIDEO_MOV = "video/quicktime";
     // 视频类型
-    public static final String MIME_TYPE_VIDEO           = "video/*";
+    public static final String MIME_TYPE_VIDEO = "video/*";
     // MP3
-    public static final String MIME_TYPE_AUDIO_MP3       = "audio/mpeg";
+    public static final String MIME_TYPE_AUDIO_MP3 = "audio/mpeg";
     // AAC
-    public static final String MIME_TYPE_AUDIO_AAC       = "audio/aac";
+    public static final String MIME_TYPE_AUDIO_AAC = "audio/aac";
     // WAV
-    public static final String MIME_TYPE_AUDIO_WAV       = "audio/x-wav";
+    public static final String MIME_TYPE_AUDIO_WAV = "audio/x-wav";
     // 音频类型
-    public static final String MIME_TYPE_AUDIO           = "audio/*";
+    public static final String MIME_TYPE_AUDIO = "audio/*";
     // PDF
     public static final String MIME_TYPE_APPLICATION_PDF = "application/pdf";
     // ZIP
     public static final String MIME_TYPE_APPLICATION_ZIP = "application/zip";
     // 应用文件类型
-    public static final String MIME_TYPE_APPLICATION     = "application/*";
+    public static final String MIME_TYPE_APPLICATION = "application/*";
     // 图片文件夹
-    public static final String RELATIVE_IMAGE_PATH       = Environment.DIRECTORY_PICTURES;
+    public static final String RELATIVE_IMAGE_PATH = Environment.DIRECTORY_PICTURES;
     // 视频文件夹
-    public static final String RELATIVE_VIDEO_PATH       = Environment.DIRECTORY_DCIM + "/Video";
+    public static final String RELATIVE_VIDEO_PATH = Environment.DIRECTORY_DCIM + "/Video";
     // 音频文件夹
-    public static final String RELATIVE_AUDIO_PATH       = Environment.DIRECTORY_MUSIC;
+    public static final String RELATIVE_AUDIO_PATH = Environment.DIRECTORY_MUSIC;
     // 下载文件夹
-    public static final String RELATIVE_DOWNLOAD_PATH    = Environment.DIRECTORY_DOWNLOADS;
+    public static final String RELATIVE_DOWNLOAD_PATH = Environment.DIRECTORY_DOWNLOADS;
 
     /**
      * 获取待显示名
+     *
      * @param prefix 前缀
      * @return DISPLAY_NAME
      */
@@ -175,6 +186,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取 Image 显示名
+     *
      * @return Image DISPLAY_NAME
      */
     public static String getImageDisplayName() {
@@ -183,6 +195,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取 Video 显示名
+     *
      * @return Video DISPLAY_NAME
      */
     public static String getVideoDisplayName() {
@@ -191,6 +204,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取 Audio 显示名
+     *
      * @return Audio DISPLAY_NAME
      */
     public static String getAudioDisplayName() {
@@ -203,6 +217,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建图片 Uri
+     *
      * @return 图片 Uri
      */
     public static Uri createImageUri() {
@@ -214,6 +229,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建图片 Uri
+     *
      * @param mimeType 资源类型
      * @return 图片 Uri
      */
@@ -226,6 +242,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建图片 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 图片 Uri
@@ -242,6 +259,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建图片 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -260,6 +278,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建图片 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -284,6 +303,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建视频 Uri
+     *
      * @return 视频 Uri
      */
     public static Uri createVideoUri() {
@@ -295,6 +315,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建视频 Uri
+     *
      * @param mimeType 资源类型
      * @return 视频 Uri
      */
@@ -307,6 +328,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建视频 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 视频 Uri
@@ -323,6 +345,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建视频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -341,6 +364,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建视频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -365,6 +389,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建音频 Uri
+     *
      * @return 音频 Uri
      */
     public static Uri createAudioUri() {
@@ -376,6 +401,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建音频 Uri
+     *
      * @param mimeType 资源类型
      * @return 音频 Uri
      */
@@ -388,6 +414,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建音频 Uri
+     *
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
      * @return 音频 Uri
@@ -404,6 +431,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建音频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -422,6 +450,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建音频 Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -446,6 +475,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName 显示名 ( 需后缀 )
      * @return Download Uri
      */
@@ -459,6 +489,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName 显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType    资源类型
      * @return Download Uri
@@ -476,6 +507,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建 Download Uri
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -498,6 +530,7 @@ public final class MediaStoreUtils {
      * <pre>
      *     Android Q ( 10.0 ) 以下直接通过 File 写入到 {@link Environment#DIRECTORY_DOWNLOADS}
      * </pre>
+     *
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
      * @param relativePath 存储目录 ( 如 DCIM、Video、Pictures、Music、Download )
@@ -523,6 +556,7 @@ public final class MediaStoreUtils {
 
     /**
      * 创建预存储 Media Uri
+     *
      * @param uri          MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
@@ -546,6 +580,7 @@ public final class MediaStoreUtils {
      * <pre>
      *     也可通过 {@link IntentUtils#getCreateDocumentIntent(String, String)} 创建
      * </pre>
+     *
      * @param uri          MediaStore.media-type.Media.EXTERNAL_CONTENT_URI
      * @param displayName  显示名 ( 无需后缀, 根据 mimeType 决定, 如果 mimeType 用了 xxx/* 则需指定后缀 )
      * @param mimeType     资源类型
@@ -558,10 +593,9 @@ public final class MediaStoreUtils {
             final String displayName,
             final String mimeType,
             final String relativePath,
-            final long createTime
-    ) {
-        boolean       isAndroidQ = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q);
-        ContentValues values     = new ContentValues(isAndroidQ ? 4 : 3);
+            final long createTime) {
+        boolean isAndroidQ = (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q);
+        ContentValues values = new ContentValues(isAndroidQ ? 4 : 3);
         // 文件名
         values.put(MediaStore.Files.FileColumns.DISPLAY_NAME, displayName);
         // 资源类型
@@ -590,6 +624,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param fileName 文件名
      * @return File Uri
      */
@@ -601,6 +636,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param fileName 文件名
      * @param filePath 文件路径
      * @return File Uri
@@ -616,6 +652,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过 File Path 创建 Uri
+     *
      * @param filePath 文件路径
      * @return File Uri
      */
@@ -631,6 +668,7 @@ public final class MediaStoreUtils {
      *     高版本使用 {@link #createDownloadUri(String)}
      *     并不局限 Download 文件夹操作
      * </pre>
+     *
      * @param file 文件
      * @return File Uri
      */
@@ -647,6 +685,7 @@ public final class MediaStoreUtils {
      * <pre>
      *     Android Q 已抛弃仍可用, 推荐使用传入 Uri 方式 {@link #createImageUri}
      * </pre>
+     *
      * @param filePath 文件路径
      * @param name     存储文件名
      * @param notify   是否通知相册
@@ -676,6 +715,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一张图片
+     *
      * @param uri      {@link #createImageUri} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @param format   如 Bitmap.CompressFormat.PNG
@@ -689,10 +729,10 @@ public final class MediaStoreUtils {
             @IntRange(from = 0, to = 100) final int quality
     ) {
         if (uri == null || inputUri == null || format == null) return false;
-        OutputStream         os             = null;
+        OutputStream os = null;
         ParcelFileDescriptor fileDescriptor = null;
         try {
-            os             = ResourceUtils.openOutputStream(uri);
+            os = ResourceUtils.openOutputStream(uri);
             fileDescriptor = ResourceUtils.openFileDescriptor(inputUri, "r");
             Bitmap bitmap = ImageUtils.decodeFileDescriptor(fileDescriptor.getFileDescriptor());
             return ImageUtils.saveBitmapToStream(bitmap, os, format, quality);
@@ -708,6 +748,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一张图片
+     *
      * @param uri      {@link #createImageUri} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -721,6 +762,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条视频
+     *
      * @param uri      {@link #createVideoUri} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -734,6 +776,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条音频
+     *
      * @param uri      {@link #createAudioUri()} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -747,6 +790,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条文件资源
+     *
      * @param uri      {@link #createDownloadUri} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
      * @return {@code true} success, {@code false} fail
@@ -762,6 +806,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      {@link #createImageUri} or {@link #createVideoUri} or
      *                 {@link #createAudioUri()} or {@link #createMediaUri}
      * @param inputUri 输入 Uri ( 待存储文件 Uri )
@@ -780,6 +825,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri         {@link #createImageUri} or {@link #createVideoUri} or
      *                    {@link #createAudioUri()} or {@link #createMediaUri}
      * @param inputStream {@link InputStream}
@@ -797,6 +843,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param outputStream {@link OutputStream}
      * @param inputStream  {@link InputStream}
      * @return {@code true} success, {@code false} fail
@@ -812,6 +859,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      {@link #createImageUri} or {@link #createVideoUri} or
      *                 {@link #createAudioUri()} or {@link #createMediaUri}
      * @param filePath 待存储文件路径
@@ -826,6 +874,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri  {@link #createImageUri} or {@link #createVideoUri} or
      *             {@link #createAudioUri()} or {@link #createMediaUri}
      * @param file 待存储文件
@@ -842,6 +891,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      {@link #createImageUri} or {@link #createVideoUri} or
      *                 {@link #createAudioUri()} or {@link #createMediaUri}
      * @param drawable 待保存图片
@@ -856,6 +906,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      {@link #createImageUri} or {@link #createVideoUri} or
      *                 {@link #createAudioUri()} or {@link #createMediaUri}
      * @param drawable 待保存图片
@@ -872,6 +923,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri      {@link #createImageUri} or {@link #createVideoUri} or
      *                 {@link #createAudioUri()} or {@link #createMediaUri}
      * @param drawable 待保存图片
@@ -892,6 +944,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri    {@link #createImageUri} or {@link #createVideoUri} or
      *               {@link #createAudioUri()} or {@link #createMediaUri}
      * @param bitmap 待保存图片
@@ -906,6 +959,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri    {@link #createImageUri} or {@link #createVideoUri} or
      *               {@link #createAudioUri()} or {@link #createMediaUri}
      * @param bitmap 待保存图片
@@ -922,6 +976,7 @@ public final class MediaStoreUtils {
 
     /**
      * 插入一条多媒体资源
+     *
      * @param uri     {@link #createImageUri} or {@link #createVideoUri} or
      *                {@link #createAudioUri()} or {@link #createMediaUri}
      * @param bitmap  待保存图片
@@ -946,6 +1001,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频时长
+     *
      * @param filePath 文件路径
      * @return 本地视频时长
      */
@@ -955,6 +1011,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频时长
+     *
      * @param filePath   文件路径
      * @param isAndroidQ 是否兼容 Android Q ( 私有目录传入 false )
      * @return 本地视频时长
@@ -981,6 +1038,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频时长
+     *
      * @param uri Video Uri content://
      * @return 本地视频时长
      */
@@ -1002,6 +1060,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频宽高
+     *
      * @param filePath 文件路径
      * @return 本地视频宽高 0 = 宽, 1 = 高
      */
@@ -1011,6 +1070,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频宽高
+     *
      * @param filePath   文件路径
      * @param isAndroidQ 是否兼容 Android Q ( 私有目录传入 false )
      * @return 本地视频宽高 0 = 宽, 1 = 高
@@ -1040,6 +1100,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地视频宽高
+     *
      * @param uri Video Uri
      * @return 本地视频宽高 0 = 宽, 1 = 高
      */
@@ -1064,6 +1125,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地图片宽高
+     *
      * @param filePath 文件路径
      * @return 本地图片宽高 0 = 宽, 1 = 高
      */
@@ -1073,6 +1135,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地图片宽高
+     *
      * @param filePath   文件路径
      * @param isAndroidQ 是否兼容 Android Q ( 私有目录传入 false )
      * @return 本地图片宽高 0 = 宽, 1 = 高
@@ -1094,6 +1157,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取本地图片宽高
+     *
      * @param uri Image Uri content://
      * @return 本地图片宽高 0 = 宽, 1 = 高
      */
@@ -1116,6 +1180,7 @@ public final class MediaStoreUtils {
      *     根据类型调用 {@link #getVideoSize}、{@link #getVideoDuration}、{@link #getImageWidthHeight}
      *     其余信息可通过 File 直接获取
      * </pre>
+     *
      * @param filePath 文件路径
      * @return 多媒体资源信息
      */
@@ -1132,6 +1197,7 @@ public final class MediaStoreUtils {
      *     根据类型调用 {@link #getVideoSize}、{@link #getVideoDuration}、{@link #getImageWidthHeight}
      *     其余信息可通过 File 直接获取
      * </pre>
+     *
      * @param uri Uri content://
      * @return 多媒体资源信息
      */
@@ -1153,6 +1219,7 @@ public final class MediaStoreUtils {
      *     <p></p>
      *     startIntentSenderForResult(pendingIntent.getIntentSender(), EDIT_REQUEST_CODE, null, 0, 0, 0)
      * </pre>
+     *
      * @param uris 待请求 Uri 集
      * @return {@link PendingIntent}
      */
@@ -1174,6 +1241,7 @@ public final class MediaStoreUtils {
      * <pre>
      *     对该文件具有读取访问权限的任何应用都可以看到用户已将该文件标记为收藏
      * </pre>
+     *
      * @param uris     待请求 Uri 集
      * @param favorite 是否喜欢
      * @return {@link PendingIntent}
@@ -1199,6 +1267,7 @@ public final class MediaStoreUtils {
      * <pre>
      *     垃圾箱中的内容会在系统定义的时间段后被永久删除
      * </pre>
+     *
      * @param uris    待请求 Uri 集
      * @param trashed 是否遗弃
      * @return {@link PendingIntent}
@@ -1221,6 +1290,7 @@ public final class MediaStoreUtils {
 
     /**
      * 获取用户立即永久删除指定的媒体文件 ( 而不是先将其放入垃圾箱 ) 的请求
+     *
      * @param uris 待请求 Uri 集
      * @return {@link PendingIntent}
      */
@@ -1243,6 +1313,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过后缀获取 MimeType
+     *
      * @param extension 文件后缀 ( 无 "." 单独后缀 )
      * @return MimeType
      */
@@ -1254,6 +1325,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过 MimeType 获取后缀 ( 不含 . )
+     *
      * @param mimeType 例: text/plain
      * @return 对应 Type 后缀
      */
@@ -1265,6 +1337,7 @@ public final class MediaStoreUtils {
 
     /**
      * 通过 Url 获取文件后缀
+     *
      * @param url 文件链接 ( 可传入文件路径 )
      * @return 文件后缀
      */
@@ -1277,6 +1350,7 @@ public final class MediaStoreUtils {
 
     /**
      * 判断 MimeMap 是否存在指定的 MimeType
+     *
      * @param mimeType 例: text/plain
      * @return {@code true} yes, {@code false} no
      */
@@ -1287,6 +1361,7 @@ public final class MediaStoreUtils {
 
     /**
      * 判断是否支持的 MimeType 后缀
+     *
      * @param extension 文件后缀 ( 无 "." 单独后缀 )
      * @return {@code true} yes, {@code false} no
      */
