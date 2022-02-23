@@ -38,6 +38,7 @@ Thanks：
 - https://github.com/dylan0755/DevLibrary
 - https://github.com/zhuanglee/CommonLibrary
 - https://github.com/ZJYZJY/arch
+- https://github.com/jerryliuinfo/FastAndroid
 
 - https://github.com/signalapp/Signal-Android
 - https://github.com/Aptoide/aptoide-client-v8
