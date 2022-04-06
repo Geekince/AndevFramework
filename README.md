@@ -29,6 +29,7 @@ Android Development Framework
 Thanks：
 
 - https://github.com/afkT/DevUtils (2021-8-24)
+- https://github.com/lihongmeng/Aviation
 - https://github.com/goldze/MVVMHabit
 - https://github.com/xuexiangjys/XUI
 - https://github.com/Blankj/AndroidUtilCode
